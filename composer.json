@@ -19,7 +19,4 @@
         "friendsofphp/php-cs-fixer": "^3.0"
     },
     "license": "MIT",
-    "scripts": {
-        "phpcsfixer": "./vendor/bin/php-cs-fixer"
-    }
 }

@@ -1,6 +1,16 @@
 <?php
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 if (!function_exists("widcol_testimonials_string_to_array_ints")) {
+    /**
+     * Convert a string of comma separated integers to an array of ints.
+     *
+     * @param string $input string of comma separated integers
+     * @return int[]
+     */
     function widcol_testimonials_string_to_array_ints(string $input): array
     {
         $splitted = explode(",", $input);

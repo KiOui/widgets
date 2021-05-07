@@ -1,14 +1,23 @@
 <?php
 
-if (!class_exists("WidgetsCollectionSettings")) {
-    class WidgetsCollectionSettings
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+/**
+ * WidCol Settings class
+ *
+ * @class WidColSettings
+ */
+if (!class_exists("WidColSettings")) {
+    class WidColSettings
     {
         /**
          * The single instance of the class
          *
-         * @var WidgetsCollectionSettings|null
+         * @var WidColSettings|null
          */
-        protected static ?WidgetsCollectionSettings $_instance = null;
+        protected static ?WidColSettings $_instance = null;
 
         /**
          * Widgets Collection Core
@@ -16,9 +25,9 @@ if (!class_exists("WidgetsCollectionSettings")) {
          * Uses the Singleton pattern to load 1 instance of this class at maximum
          *
          * @static
-         * @return WidgetsCollectionSettings
+         * @return WidColSettings
          */
-        public static function instance(): WidgetsCollectionSettings
+        public static function instance(): WidColSettings
         {
             if (is_null(self::$_instance)) {
                 self::$_instance = new self();
@@ -26,21 +35,30 @@ if (!class_exists("WidgetsCollectionSettings")) {
             return self::$_instance;
         }
 
+        /**
+         * WidColSettings constructor.
+         */
         public function __construct()
         {
             $this->actions_and_filters();
         }
 
+        /**
+         * Add actions and filters.
+         */
         public function actions_and_filters()
         {
             add_action('admin_menu', array( $this, 'add_menu_page' ), 99);
             add_action('admin_init', array( $this, 'register_settings'));
             if (get_option('widgets_collection_settings')['widgets_collection_testimonials_enabled']) {
-                include_once WIDGETS_COLLECTION_ABSPATH . '/includes/testimonials/widcol-testimonials-core.php';
-                WidgetsCollectionTestimonialsCore::instance();
+                include_once WIDCOL_ABSPATH . '/includes/testimonials/widcol-testimonials-core.php';
+                WidColTestimonialsCore::instance();
             }
         }
 
+        /**
+         * Add Widget Collection menu page.
+         */
         public function add_menu_page()
         {
             add_menu_page(
@@ -62,6 +80,9 @@ if (!class_exists("WidgetsCollectionSettings")) {
             );
         }
 
+        /**
+         * Register Widget Collection settings.
+         */
         public function register_settings()
         {
             register_setting(
@@ -86,12 +107,21 @@ if (!class_exists("WidgetsCollectionSettings")) {
             );
         }
 
+        /**
+         * Validate Widget Collection settings.
+         *
+         * @param $input
+         * @return array
+         */
         public function widgets_collection_settings_validate($input): array
         {
             $output['widgets_collection_testimonials_enabled'] = widgets_collection_sanitize_boolean_default_false($input['widgets_collection_testimonials_enabled']);
             return $output;
         }
 
+        /**
+         * Render widget collection testimonials enabled setting.
+         */
         public function widgets_collection_testimonials_enabled_renderer()
         {
             $options = get_option('widgets_collection_settings'); ?>
@@ -99,14 +129,20 @@ if (!class_exists("WidgetsCollectionSettings")) {
             <?php
         }
 
+        /**
+         * Render the section title of enabled widgets.
+         */
         public function widgets_collection_enabled_widgets_callback()
         {
             echo __('Enabled widgets', 'widgets-collection');
         }
 
+        /**
+         * Admin menu dashboard callback.
+         */
         public function widgets_admin_menu_dashboard_callback()
         {
-            include_once WIDGETS_COLLECTION_ABSPATH . 'views/widcol-admin-dashboard-view.php';
+            include_once WIDCOL_ABSPATH . 'views/widcol-admin-dashboard-view.php';
         }
     }
 }

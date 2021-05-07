@@ -1,7 +1,18 @@
 <?php
 
-if (!class_exists("WidgetCollectionMetabox")) {
-    class WidgetCollectionMetabox
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+/**
+ * WidCol Metabox class
+ *
+ * This class is able to render a custom metabox with a custom specification of fields.
+ *
+ * @class WidColMetabox
+ */
+if (!class_exists("WidColMetabox")) {
+    class WidColMetabox
     {
         private string $meta_box_name;
         private array $meta_fields;
