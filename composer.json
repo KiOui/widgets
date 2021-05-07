@@ -18,5 +18,5 @@
         "php": "^8.0",
         "friendsofphp/php-cs-fixer": "^3.0"
     },
-    "license": "MIT",
+    "license": "MIT"
 }
