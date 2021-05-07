@@ -1,9 +1,8 @@
 <?php
 
 if (!class_exists("WidgetsCollectionTestimonialsCore")) {
-
-    class WidgetsCollectionTestimonialsCore {
-
+    class WidgetsCollectionTestimonialsCore
+    {
         /**
          * The single instance of the class
          *
@@ -23,35 +22,40 @@ if (!class_exists("WidgetsCollectionTestimonialsCore")) {
          */
         public static function instance(): WidgetsCollectionTestimonialsCore
         {
-            if ( is_null( self::$_instance ) ) {
+            if (is_null(self::$_instance)) {
                 self::$_instance = new self();
             }
             return self::$_instance;
         }
 
-        private function __construct() {
+        private function __construct()
+        {
             $this->actions_and_filters();
             $this->add_meta_box_support();
             $this->add_shortcodes();
         }
 
-        public function actions_and_filters() {
-            add_action( 'init', array($this, 'add_post_type') );
-            add_action( 'wp_footer', array($this, 'localize_slider_script') );
+        public function actions_and_filters()
+        {
+            add_action('init', array($this, 'add_post_type'));
+            add_action('wp_footer', array($this, 'localize_slider_script'));
         }
 
-        public function localize_slider_script() {
+        public function localize_slider_script()
+        {
             if (sizeof($this->sliders) > 0) {
                 include_once WIDGETS_COLLECTION_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode.php';
                 WidgetsCollectionTestimonialsShortcode::localize_swiper_activation($this->sliders);
             }
         }
 
-        public function add_shortcodes() {
+        public function add_shortcodes()
+        {
             add_shortcode('widcol_testimonials', array($this, 'do_shortcode'));
         }
 
-        public function add_post_type() {
+        public function add_post_type()
+        {
             register_post_type('widcol_testimonials', array(
                 'label' => __('Testimonials', 'widgets-collection'),
                 'labels' => array(
@@ -88,23 +92,23 @@ if (!class_exists("WidgetsCollectionTestimonialsCore")) {
                     'item_updated' => __('Testimonial updated', 'widgets-collection'),
                 ),
                 'description' => __('Testimonial post type', 'widgets-collection'),
-                'public' => True,
-                'hierarchical' => False,
-                'exclude_from_search' => True,
-                'publicly_queryable' => False,
-                'show_ui' => True,
-                'show_in_menu' => True,
-                'show_in_nav_menus' => False,
-                'show_in_admin_bar' => True,
-                'show_in_rest' => True,
+                'public' => true,
+                'hierarchical' => false,
+                'exclude_from_search' => true,
+                'publicly_queryable' => false,
+                'show_ui' => true,
+                'show_in_menu' => true,
+                'show_in_nav_menus' => false,
+                'show_in_admin_bar' => true,
+                'show_in_rest' => true,
                 'menu_position' => 56,
                 'menu_icon' => 'dashicons-format-quote',
                 'taxonomies' => array(),
-                'has_archive' => False,
-                'can_export' => True,
-                'delete_with_user' => False
+                'has_archive' => false,
+                'can_export' => true,
+                'delete_with_user' => false
             ));
-            remove_post_type_support( 'widcol_testimonials', 'editor');
+            remove_post_type_support('widcol_testimonials', 'editor');
             register_taxonomy('widcol_testimonials_category', 'widcol_testimonials', array(
                 'labels' => array(
                     'name' => __('Testimonial Categories'),
@@ -127,20 +131,21 @@ if (!class_exists("WidgetsCollectionTestimonialsCore")) {
                     'filter_by_item' => __('Filter by testimonial category'),
                 ),
                 'description' => __('Testimonial Categories', 'widgets-collection'),
-                'public' => False,
-                'publicly_queryable' => False,
-                'hierarchical' => False,
-                'show_ui' => True,
-                'show_in_menu' => True,
-                'show_in_nav_menus' => False,
-                'show_in_rest' => True,
-                'show_tagcloud' => False,
-                'show_in_quick_edit' => True,
-                'show_admin_column' => True
+                'public' => false,
+                'publicly_queryable' => false,
+                'hierarchical' => false,
+                'show_ui' => true,
+                'show_in_menu' => true,
+                'show_in_nav_menus' => false,
+                'show_in_rest' => true,
+                'show_tagcloud' => false,
+                'show_in_quick_edit' => true,
+                'show_admin_column' => true
             ));
         }
 
-        private function add_meta_box_support () {
+        private function add_meta_box_support()
+        {
             include_once WIDGETS_COLLECTION_ABSPATH . '/includes/widcol-metaboxes.php';
             new WidgetCollectionMetabox('widcol_testimonials_metabox', array(
                 array(
@@ -166,12 +171,16 @@ if (!class_exists("WidgetsCollectionTestimonialsCore")) {
             ), 'widcol_testimonials', 'Testimonial settings');
         }
 
-        public function do_shortcode( $atts, $content ) {
+        public function do_shortcode($atts, $content)
+        {
+            if (gettype($atts) != "array") {
+                $atts = array();
+            }
+
             include_once WIDGETS_COLLECTION_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode.php';
-            $shortcode = new WidgetsCollectionTestimonialsShortcode();
-            $shortcode->do_shortcode();
+            $shortcode = new WidgetsCollectionTestimonialsShortcode($atts);
             $this->sliders[] = $shortcode;
+            return $shortcode->do_shortcode();
         }
     }
-
 }

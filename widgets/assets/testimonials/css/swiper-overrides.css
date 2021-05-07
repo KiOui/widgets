@@ -1,0 +1,69 @@
+.widcol-swiper-container .swiper-button-prev {
+    background-image: none;
+}
+
+.widcol-swiper-container .swiper-button-next {
+    background-image: none;
+}
+
+.widcol-swiper-container .text-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.widcol-swiper-container .swiper-slide {
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.13);
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.widcol-swiper-container .swiper-slide-header {
+    flex-grow: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.widcol-swiper-container .swiper-slide-body {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.widcol-swiper-container .swiper-slide-footer {
+    flex-grow: 0;
+}
+
+.widcol-swiper-container .testimonial-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.widcol-swiper-container .swiper-slide h3 {
+    margin-bottom: 5px;
+}
+
+.widcol-swiper-container {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.widcol-swiper-container .author {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.widcol-swiper-container .star-rating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

@@ -1,10 +1,8 @@
 <?php
 
 if (!class_exists("WidgetCollectionMetabox")) {
-
     class WidgetCollectionMetabox
     {
-
         private string $meta_box_name;
         private array $meta_fields;
         private string $post_type;
@@ -18,7 +16,7 @@ if (!class_exists("WidgetCollectionMetabox")) {
          * (used in database), type: Type of meta box (for input field)).
          * @param string $meta_box_name: meta box name
          */
-        function __construct(string $meta_box_name, array $meta_fields, string $post_type, string $meta_box_title)
+        public function __construct(string $meta_box_name, array $meta_fields, string $post_type, string $meta_box_title)
         {
             $this->meta_box_name = $meta_box_name;
             $this->meta_fields = $meta_fields;
@@ -30,20 +28,22 @@ if (!class_exists("WidgetCollectionMetabox")) {
         /**
          * Actions and filters.
          */
-        function actions_and_filters() {
-            add_action( 'add_meta_boxes', array($this, 'register_meta_box') );
-            add_action( 'save_post', array($this, 'save_meta_box') );
+        public function actions_and_filters()
+        {
+            add_action('add_meta_boxes', array($this, 'register_meta_box'));
+            add_action('save_post', array($this, 'save_meta_box'));
         }
 
         /**
          * Register meta box.
          */
-        public function register_meta_box() {
+        public function register_meta_box()
+        {
             add_meta_box(
                 $this->meta_box_name,
                 __($this->meta_box_title),
                 array($this, 'show_custom_meta_box'),
-                $this->post_type,
+                $this->post_type
             );
         }
 
@@ -60,64 +60,81 @@ if (!class_exists("WidgetCollectionMetabox")) {
         /**
          * Creates HTML for the custom meta box
          */
-        function show_custom_meta_box()
+        public function show_custom_meta_box()
         {
             global $post;
             // Use nonce for verification
-            wp_nonce_field(basename(__FILE__),  $this->get_nonce_name());
-            ?>
+            wp_nonce_field(basename(__FILE__), $this->get_nonce_name()); ?>
                 <table class="form-table">
-                    <?php foreach($this->meta_fields as $field): ?>
+                    <?php foreach ($this->meta_fields as $field) : ?>
                         <?php $meta = get_post_meta($post->ID, $field['id'], true); ?>
                         <tr>
                             <th><label for="<?php echo $field['id']; ?>"><?php echo $field['label']; ?></label></th>
                             <td>
                                 <?php
-                                    switch ($field['type']) :
-                                        case 'number':
-                                            ?>
+                                switch ($field['type']) :
+                                    case 'number':
+                                        ?>
                                                 <input type="number"
-                                                       <?php if (array_key_exists('required', $field) && $field['required']) : ?>required<?php endif; ?>
-                                                       <?php if (array_key_exists('any', $field) && $field['any']) : ?>step="any"<?php endif; ?>
-                                                       <?php if (array_key_exists('min', $field)) : ?>min=<?php echo $field['min']; ?><?php endif; ?>
-                                                       <?php if (array_key_exists('max', $field)) : ?>max=<?php echo $field['max']; ?><?php endif; ?>
+                                                   <?php if (array_key_exists('required', $field) && $field['required']) :
+                                                        ?>required<?php
+                                                   endif; ?>
+                                                   <?php if (array_key_exists('any', $field) && $field['any']) :
+                                                        ?>step="any"<?php
+                                                   endif; ?>
+                                                   <?php if (array_key_exists('min', $field)) :
+                                                        ?>min=<?php echo $field['min']; ?><?php
+                                                   endif; ?>
+                                                   <?php if (array_key_exists('max', $field)) :
+                                                        ?>max=<?php echo $field['max']; ?><?php
+                                                   endif; ?>
                                                        name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" value="<?php echo $meta; ?>" />
                                                 <br>
                                                 <span class="description"><?php echo $field['desc']; ?></span>
                                             <?php
-                                            break;
-                                        case 'text':
-                                            ?>
+                                        break;
+            case 'text':
+                                        ?>
                                             <input type="text"
-                                                   <?php if (array_key_exists('required', $field) && $field['required']) : ?>required<?php endif; ?>
+                                                   <?php if (array_key_exists('required', $field) && $field['required']) :
+                                                        ?>required<?php
+                                                   endif; ?>
                                                    name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" value="<?php echo $meta; ?>" />
                                             <br>
                                             <span class="description"><?php echo $field['desc']; ?></span>
-                                            <?php
-                                            break;
-                                        case 'textarea':
-                                            ?>
+                                                                    <?php
+                                        break;
+            case 'textarea':
+                                        ?>
                                             <textarea style="width: 100%; min-height: 200px;"
-                                                    <?php if (array_key_exists('required', $field) && $field['required']) : ?>required<?php endif; ?>
+                                                    <?php if (array_key_exists('required', $field) && $field['required']) :
+                                                        ?>required<?php
+                                                    endif; ?>
                                                    name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>"><?php echo $meta; ?></textarea>
                                             <br>
                                             <span class="description"><?php echo $field['desc']; ?></span>
-                                            <?php
-                                            break;
-                                        case 'checkbox':
-                                            ?>
+                                                                    <?php
+                                        break;
+            case 'checkbox':
+                                        ?>
                                             <input type="checkbox"
-                                                   <?php if (array_key_exists('required', $field) && $field['required']) : ?>required<?php endif; ?>
-                                                   name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" <?php if ($meta) : echo "checked=checked"; endif; ?> />
+                                                   <?php if (array_key_exists('required', $field) && $field['required']) :
+                                                        ?>required<?php
+                                                   endif; ?>
+                                                   name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" <?php if ($meta) :
+                                                        echo "checked=checked";
+            endif; ?> />
                                             <br>
                                             <span class="description"><?php echo $field['desc']; ?></span>
                                             <?php
-                                            break;
-                                        case 'select':
-                                            ?>
+                                        break;
+            case 'select':
+                                        ?>
                                             <select name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>">
                                                 <?php foreach ($field['options'] as $option) : ?>
-                                                    <option <?php if ($meta == $option['value']) : echo 'selected="selected"'; endif ?> value="<?php echo $option['value']; ?>">
+                                                    <option <?php if ($meta == $option['value']) :
+                                                        echo 'selected="selected"';
+            endif ?> value="<?php echo $option['value']; ?>">
                                                         <?php echo $option['label']; ?>
                                                     </option>
                                                 <?php endforeach ?>
@@ -125,9 +142,8 @@ if (!class_exists("WidgetCollectionMetabox")) {
                                             <br>
                                             <span class="description"><?php echo $field['desc']; ?></span>
                                             <?php
-                                            break;
-                                    endswitch;
-                                ?>
+                                        break;
+            endswitch; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -140,16 +156,18 @@ if (!class_exists("WidgetCollectionMetabox")) {
          * @param int $post_id : the post id to save the data for
          * @return int: post_id
          */
-        function save_meta_box(int $post_id)
+        public function save_meta_box(int $post_id): int
         {
-            if (!wp_verify_nonce($_POST[$this->get_nonce_name()], basename(__FILE__)))
+            if (!wp_verify_nonce($_POST[$this->get_nonce_name()], basename(__FILE__))) {
                 return $post_id;
+            }
 
-            if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+            if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
                 return $post_id;
+            }
 
             if ($_POST['post_type'] == $this->post_type && current_user_can('edit_post')) {
-                foreach ( $this->meta_fields as $field ) {
+                foreach ($this->meta_fields as $field) {
                     $old = get_post_meta($post_id, $field['id'], true);
                     $new = $_POST[$field['id']];
                     if ($new && $new != $old) {

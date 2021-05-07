@@ -1,3 +1,9 @@
 .DS_Store
 wordpress/
 .idea
+
+# Php CS Fixer
+.php-cs-fixer.cache
+
+# Composer
+vendor
