@@ -43,7 +43,6 @@ if (!class_exists("WidColTestimonialsCore")) {
         private function __construct()
         {
             $this->actions_and_filters();
-            $this->add_meta_box_support();
             $this->add_shortcodes();
         }
 
@@ -53,6 +52,7 @@ if (!class_exists("WidColTestimonialsCore")) {
         public function actions_and_filters()
         {
             add_action('init', array($this, 'add_post_type'));
+            add_action('widgets_collection_init', array($this, 'add_meta_box_support'));
             add_action('wp_footer', array($this, 'localize_slider_script'));
         }
 
@@ -171,7 +171,7 @@ if (!class_exists("WidColTestimonialsCore")) {
         /**
          * Add meta box support to Testimonials.
          */
-        private function add_meta_box_support()
+        public function add_meta_box_support()
         {
             include_once WIDCOL_ABSPATH . '/includes/widcol-metaboxes.php';
             new WidColMetabox('widcol_testimonials_metabox', array(
@@ -195,7 +195,7 @@ if (!class_exists("WidColTestimonialsCore")) {
                     'min'   => 1,
                     'max'   => 5,
                 ),
-            ), 'widcol_testimonials', 'Testimonial settings');
+            ), 'widcol_testimonials', __('Testimonial settings'));
         }
 
         /**

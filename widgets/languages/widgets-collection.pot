@@ -3,9 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Widgets Collection 0.0.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets-"
-"collection\n"
-"POT-Creation-Date: 2021-05-08 09:25:09+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
+"POT-Creation-Date: 2021-05-08 11:19:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -236,6 +235,10 @@ msgstr ""
 msgid "Rating of the testimonial (1-5)"
 msgstr ""
 
+#: includes/testimonials/widcol-testimonials-core.php:198
+msgid "Testimonial settings"
+msgstr ""
+
 #: includes/widcol-settings.php:65 includes/widcol-settings.php:66
 msgid "Widgets"
 msgstr ""
@@ -249,7 +252,7 @@ msgid "Dashboard"
 msgstr ""
 
 #: includes/widcol-settings.php:96 includes/widcol-settings.php:137
-msgid "Enabled widgets-collection"
+msgid "Enabled widgets"
 msgstr ""
 
 #: includes/widcol-settings.php:103
@@ -273,7 +276,7 @@ msgid "https://github.com/KiOui/widgets"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "A collection of custom-made widgets-collection for Wordpress websites"
+msgid "A collection of custom-made widgets for Wordpress websites"
 msgstr ""
 
 #. Author of the plugin/theme

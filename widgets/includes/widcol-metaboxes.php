@@ -41,7 +41,7 @@ if (!class_exists("WidColMetabox")) {
          */
         public function actions_and_filters()
         {
-            add_action('add_meta_boxes', array($this, 'register_meta_box'));
+            add_action('add_meta_boxes_' . $this->post_type, array($this, 'register_meta_box'));
             add_action('save_post', array($this, 'save_meta_box'));
         }
 
@@ -52,7 +52,7 @@ if (!class_exists("WidColMetabox")) {
         {
             add_meta_box(
                 $this->meta_box_name,
-                __($this->meta_box_title),
+                $this->meta_box_title,
                 array($this, 'show_custom_meta_box'),
                 $this->post_type
             );

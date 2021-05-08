@@ -93,14 +93,14 @@ if (!class_exists("WidColSettings")) {
 
             add_settings_section(
                 'enabled_widgets_section',
-                __('Enabled widgets', 'widgets_collection'),
+                __('Enabled widgets', 'widgets-collection'),
                 'widgets_collection_enabled_widgets_callback',
                 'widgets_collection_settings'
             );
 
             add_settings_field(
                 'widgets_collection_testimonials_enabled',
-                __('Enable Testimonials', 'widgets_collection'),
+                __('Enable Testimonials', 'widgets-collection'),
                 array($this, 'widgets_collection_testimonials_enabled_renderer'),
                 'widgets_collection_settings',
                 'enabled_widgets_section'

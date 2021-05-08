@@ -19,7 +19,7 @@ if (!class_exists("WidColTestimonialsShortcode")) {
         private bool $pagination_enabled = true;
         private int $slides_per_view = 1;
         private bool $enable_star_rating = true;
-        private array $category = array(0);
+        private array $category = array();
 
         /**
          * WidgetsCollectionTestimonialsShortcode constructor.
@@ -88,17 +88,21 @@ if (!class_exists("WidColTestimonialsShortcode")) {
          */
         public function get_posts(): array
         {
-            return get_posts(array(
+            $atts = array(
                 'post_type' => 'widcol_testimonials',
                 'post_status' => 'publish',
                 'numberposts' => '-1',
-                'tax_query' => array(
+            );
+            if (sizeof($this->category) > 0) {
+                $atts['tax_query'] = array(
                     array(
                         'taxonomy' => 'widcol_testimonials_category',
                         'field' => 'term_id',
                         'terms' => $this->category
-                    ))
-                ));
+                    )
+                );
+            }
+            return get_posts($atts);
         }
 
         /**

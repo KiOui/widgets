@@ -134,9 +134,9 @@ if (!class_exists("WidColCore")) {
          */
         private function actions_and_filters()
         {
-            include_once WIDCOL_ABSPATH . '/includes/widcol-settings.php';
             add_action('after_setup_theme', array( $this, 'pluggable' ));
             add_action('init', array( $this, 'init' ));
+            include_once WIDCOL_ABSPATH . '/includes/widcol-settings.php';
             WidColSettings::instance();
         }
     }

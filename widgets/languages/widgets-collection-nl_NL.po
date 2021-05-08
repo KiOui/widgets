@@ -1,8 +1,11 @@
+# Copyright (C) 2021 Widgets Collection
+# This file is distributed under the same license as the Widgets Collection package.
 msgid ""
 msgstr ""
-"Project-Id-Version: widgets-collection-collection\n"
-"POT-Creation-Date: 2021-05-08 09:27+0200\n"
-"PO-Revision-Date: 2021-05-08 09:35+0200\n"
+"Project-Id-Version: Widgets Collection 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
+"POT-Creation-Date: 2021-05-08 11:19:40+00:00\n"
+"PO-Revision-Date: 2021-05-08 13:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -10,10 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.3\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #: includes/testimonials/widcol-testimonials-core.php:84
 #: includes/testimonials/widcol-testimonials-core.php:86
@@ -27,7 +27,7 @@ msgstr "Recensie"
 
 #: includes/testimonials/widcol-testimonials-core.php:88
 msgid "Add New"
-msgstr "Nieuwe Recensie"
+msgstr "Voeg Nieuwe toe"
 
 #: includes/testimonials/widcol-testimonials-core.php:89
 msgid "Add New Testimonial"
@@ -59,7 +59,7 @@ msgstr "Geen recensies gevonden"
 
 #: includes/testimonials/widcol-testimonials-core.php:96
 msgid "No testimonials found in trash"
-msgstr "Geen recensies gevonden in de prullenbak"
+msgstr "Geen recensies gevonden in prullenbak"
 
 #: includes/testimonials/widcol-testimonials-core.php:97
 msgid "Parent Testimonial"
@@ -103,7 +103,7 @@ msgstr "Gebruik als uitgelichte afbeelding"
 
 #: includes/testimonials/widcol-testimonials-core.php:108
 msgid "Filter testimonials list"
-msgstr "Filter recensie lijst"
+msgstr "Filter recensies lijst"
 
 #: includes/testimonials/widcol-testimonials-core.php:109
 msgid "Filter by date"
@@ -119,11 +119,11 @@ msgstr "Recensies lijst"
 
 #: includes/testimonials/widcol-testimonials-core.php:112
 msgid "Testimonial published"
-msgstr "Recensie gepubliceerd"
+msgstr "Gepubliceerde Recensies"
 
 #: includes/testimonials/widcol-testimonials-core.php:113
 msgid "Testimonial published privately"
-msgstr "Recensie privé gepubliceerd"
+msgstr "Privé gepubliceerde Recensies"
 
 #: includes/testimonials/widcol-testimonials-core.php:114
 msgid "Testimonial reverted to draft"
@@ -135,7 +135,7 @@ msgstr "Recensie ingepland"
 
 #: includes/testimonials/widcol-testimonials-core.php:116
 msgid "Testimonial updated"
-msgstr "Recensie bijgewerkt"
+msgstr "Recensie ge-update"
 
 #: includes/testimonials/widcol-testimonials-core.php:118
 msgid "Testimonial post type"
@@ -152,7 +152,7 @@ msgstr "Recensie Categorie"
 
 #: includes/testimonials/widcol-testimonials-core.php:140
 msgid "Search Testimonial Categories"
-msgstr "Zoek Recensie Categorie"
+msgstr "Zoek Recensie Categorieën"
 
 #: includes/testimonials/widcol-testimonials-core.php:141
 msgid "Popular Testimonial Categories"
@@ -168,7 +168,7 @@ msgstr "Hoofd Recensie Categorie"
 
 #: includes/testimonials/widcol-testimonials-core.php:144
 msgid "Parent Testimonial Category:"
-msgstr "Hoofd Recensie Categorie:"
+msgstr "Recensie Categorie:"
 
 #: includes/testimonials/widcol-testimonials-core.php:145
 msgid "Edit Testimonial Category"
@@ -180,11 +180,11 @@ msgstr "Bekijk Recensie Categorie"
 
 #: includes/testimonials/widcol-testimonials-core.php:147
 msgid "Update Testimonial Category"
-msgstr "Werk Recensie Categorie bij"
+msgstr "Update Recensie Categorie"
 
 #: includes/testimonials/widcol-testimonials-core.php:148
 msgid "Add New Testimonial Category"
-msgstr "Nieuwe Recensie Categorie"
+msgstr "Nieuwe Recensie Categorie Toevoegen"
 
 #: includes/testimonials/widcol-testimonials-core.php:149
 msgid "New Testimonial Category Name"
@@ -192,7 +192,7 @@ msgstr "Nieuwe Recensie Categorie Naam"
 
 #: includes/testimonials/widcol-testimonials-core.php:150
 msgid "Separate Testimonial Categories with commas"
-msgstr "Separate Testimonial Categories with commas"
+msgstr "Scheidt Recensie Categorieën met komma’s"
 
 #: includes/testimonials/widcol-testimonials-core.php:151
 msgid "Add or remove testimonial categories"
@@ -208,7 +208,7 @@ msgstr "Geen recensie categorieën gevonden"
 
 #: includes/testimonials/widcol-testimonials-core.php:154
 msgid "No testimonial categories"
-msgstr "Geen recensie categorieën"
+msgstr "Geen recensie categorie"
 
 #: includes/testimonials/widcol-testimonials-core.php:155
 msgid "Filter by testimonial category"
@@ -238,10 +238,54 @@ msgstr "Recensie score"
 msgid "Rating of the testimonial (1-5)"
 msgstr "Score van de recensie (1-5)"
 
+#: includes/testimonials/widcol-testimonials-core.php:198
+msgid "Testimonial settings"
+msgstr "Recensie instellingen"
+
+#: includes/widcol-settings.php:65 includes/widcol-settings.php:66
+msgid "Widgets"
+msgstr "Widgets"
+
+#: includes/widcol-settings.php:75
+msgid "Widgets Dashboard"
+msgstr "Widgets Dashboard"
+
+#: includes/widcol-settings.php:76
+msgid "Dashboard"
+msgstr "Dashboard"
+
 #: includes/widcol-settings.php:96 includes/widcol-settings.php:137
-msgid "Enabled widgets-collection"
-msgstr "Ingeschakelde widgets-collection"
+msgid "Enabled widgets"
+msgstr "Ingeschakelde widgets"
 
 #: includes/widcol-settings.php:103
 msgid "Enable Testimonials"
 msgstr "Schakel Recensies in"
+
+#: views/widcol-admin-dashboard-view.php:5
+msgid "Widgets Collection Dashboard"
+msgstr "Widgets Collection Dashboard"
+
+#: views/widcol-admin-dashboard-view.php:7
+msgid "Widgets Collection settings"
+msgstr "Widgets Collection instellingen"
+
+#. Plugin Name of the plugin/theme
+msgid "Widgets Collection"
+msgstr "Widgets Collection"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/KiOui/widgets"
+msgstr "https://github.com/KiOui/widgets"
+
+#. Description of the plugin/theme
+msgid "A collection of custom-made widgets for Wordpress websites"
+msgstr "Een collectie van widgets voor Wordpress websites"
+
+#. Author of the plugin/theme
+msgid "Lars van Rhijn"
+msgstr "Lars van Rhijn"
+
+#. Author URI of the plugin/theme
+msgid "https://larsvanrhijn.nl/"
+msgstr "https://larsvanrhijn.nl/"
