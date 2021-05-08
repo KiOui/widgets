@@ -7,6 +7,8 @@ Plugin URI: https://github.com/KiOui/widgets
 Version: 0.0.1
 Author: Lars van Rhijn
 Author URI: https://larsvanrhijn.nl/
+Text Domain: widgets-collection
+Domain Path: /languages/
 */
 
 if (!defined('ABSPATH')) {
