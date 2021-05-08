@@ -72,7 +72,7 @@ if (!class_exists("WidColCore")) {
          */
         private function initialise_localisation()
         {
-            load_plugin_textdomain('widgets-collection', false, plugin_basename(dirname(WIDCOL_PLUGIN_FILE)) . '/i18n/');
+            load_plugin_textdomain('widgets-collection', false, plugin_basename(dirname(WIDCOL_PLUGIN_FILE)) . '/languages/');
         }
 
         /**
@@ -136,6 +136,7 @@ if (!class_exists("WidColCore")) {
         {
             include_once WIDCOL_ABSPATH . '/includes/widcol-settings.php';
             add_action('after_setup_theme', array( $this, 'pluggable' ));
+            add_action('init', array( $this, 'init' ));
             WidColSettings::instance();
         }
     }

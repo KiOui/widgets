@@ -11,7 +11,7 @@ The collection of widgets currently includes:
 ## Testimonial slider
 
 A customizable testimonial slider based on [swiperjs](https://swiperjs.com/). Enabling this widget will add a 
-`Testimonials` post type within the Wordpress admin. This allows for easily editing testimonials by your anyone with
+`Testimonials` post type within the Wordpress admin. This allows for easily editing testimonials by anyone with
 admin access to your site (so your clients for example). The `Testimonials` post type also has a registered category 
 such that you can display one category of testimonials in one slider and another in another slider.
 
