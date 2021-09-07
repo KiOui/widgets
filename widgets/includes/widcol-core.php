@@ -53,7 +53,7 @@ if (!class_exists("WidColCore")) {
         }
 
         /**
-         * Initialise WooCommerce Sales Agents
+         * Initialise Widgets Collection
          */
         public function init()
         {

@@ -5,12 +5,12 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Testimonials Shortcode class
+ * Testimonials Shortcode Slider class
  *
- * @class WidColTestimonialsShortcode
+ * @class WidColTestimonialsShortcodeSlider
  */
-if (!class_exists("WidColTestimonialsShortcode")) {
-    class WidColTestimonialsShortcode
+if (!class_exists("WidColTestimonialsShortcodeSlider")) {
+    class WidColTestimonialsShortcodeSlider
     {
         private string $id;
         private ?string $theme_color = null;
@@ -158,7 +158,7 @@ if (!class_exists("WidColTestimonialsShortcode")) {
         /**
          * Localize the slider activation javascript file to activate all activated sliders.
          *
-         * @param WidColTestimonialsShortcode[] $sliders sliders to localize the activation script for
+         * @param WidColTestimonialsShortcodeSlider[] $sliders sliders to localize the activation script for
          */
         public static function localize_swiper_activation(array $sliders)
         {

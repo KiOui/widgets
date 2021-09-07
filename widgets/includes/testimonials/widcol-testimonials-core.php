@@ -62,8 +62,8 @@ if (!class_exists("WidColTestimonialsCore")) {
         public function localize_slider_script()
         {
             if (sizeof($this->sliders) > 0) {
-                include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode.php';
-                WidColTestimonialsShortcode::localize_swiper_activation($this->sliders);
+                include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode-slider.php';
+                WidColTestimonialsShortcodeSlider::localize_swiper_activation($this->sliders);
             }
         }
 
@@ -72,7 +72,8 @@ if (!class_exists("WidColTestimonialsCore")) {
          */
         public function add_shortcodes()
         {
-            add_shortcode('widcol_testimonials', array($this, 'do_shortcode'));
+            add_shortcode('widcol_testimonials_slider', array($this, 'do_shortcode_slider'));
+            add_shortcode('widcol_testimonials_page', array($this, 'do_shortcode_page'));
         }
 
         /**
@@ -133,6 +134,7 @@ if (!class_exists("WidColTestimonialsCore")) {
                 'delete_with_user' => false
             ));
             remove_post_type_support('widcol_testimonials', 'editor');
+            add_post_type_support('widcol_testimonials', 'thumbnail');
             register_taxonomy('widcol_testimonials_category', 'widcol_testimonials', array(
                 'labels' => array(
                     'name' => __('Testimonial Categories', 'widgets-collection'),
@@ -204,15 +206,32 @@ if (!class_exists("WidColTestimonialsCore")) {
          * @param $atts
          * @return false|string
          */
-        public function do_shortcode($atts)
+        public function do_shortcode_slider($atts)
         {
             if (gettype($atts) != "array") {
                 $atts = array();
             }
 
-            include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode.php';
-            $shortcode = new WidColTestimonialsShortcode($atts);
+            include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode-slider.php';
+            $shortcode = new WidColTestimonialsShortcodeSlider($atts);
             $this->sliders[] = $shortcode;
+            return $shortcode->do_shortcode();
+        }
+
+        /**
+         * Do the shortcode of a testimonials page.
+         *
+         * @param $atts
+         * @return false|string
+         */
+        public function do_shortcode_page($atts)
+        {
+            if (gettype($atts) != "array") {
+                $atts = array();
+            }
+
+            include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode-page.php';
+            $shortcode = new WidColTestimonialsShortcodePage($atts);
             return $shortcode->do_shortcode();
         }
     }

@@ -15,7 +15,7 @@ A customizable testimonial slider based on [swiperjs](https://swiperjs.com/). En
 admin access to your site (so your clients for example). The `Testimonials` post type also has a registered category 
 such that you can display one category of testimonials in one slider and another in another slider.
 
-To include the testimonial slider within your webpage, use the `widcol_testimonials` shortcode. This shortcode has the 
+To include the testimonial slider within your webpage, use the `widcol_testimonials_slider` shortcode. This shortcode has the 
 following optional parameters:
 
 - `id`: The id for the slider, the slider will get the CSS id of `swiper-container-$id`. Useful if you want to edit the 
@@ -32,5 +32,18 @@ small.
 Example slider:
 
 ```
-[widcol_testimonials theme_color="#2c4010" slides_per_view="3" secondary_theme_color="#7eb82e" category="2, 3"]
+[widcol_testimonials_slider theme_color="#2c4010" slides_per_view="3" secondary_theme_color="#7eb82e" category="2, 3"]
 ```
+
+## Testimonial page
+
+The same testimonials as previously discussed can also be displayed in a page format. Use the `widcol_testimonials_page`
+shortcode. This shortcode has the following optional parameters:
+
+- `id`: The id for the testimonial page, the page will get the CSS id of `testimonial-page-container-$id`. Useful if you want 
+  to edit the CSS of one single testimonial page.
+- `theme_color`: Primary theme color used for the page (can also be changed with CSS).
+- `secondary_theme_color`: Secondary theme color used for the page (can also be changed with CSS).
+- `text_color`: Text color used for the text in the page (can also be changed with CSS).
+- `enable_star_rating`: Enable the star rating in the page (can be set in the Testimonial post type).
+- `category`: List of ints of the categories of testimonials to display on the page (example: "1, 3").
