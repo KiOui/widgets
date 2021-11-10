@@ -1,4 +1,9 @@
 <?php
+/**
+ * Widgets Collection functions
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

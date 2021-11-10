@@ -1,4 +1,9 @@
 <?php
+/**
+ * Functions for Widgets Testimonials
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -8,7 +13,7 @@ if ( ! function_exists( 'widcol_testimonials_string_to_array_ints' ) ) {
 	/**
 	 * Convert a string of comma separated integers to an array of ints.
 	 *
-	 * @param string $input string of comma separated integers
+	 * @param string $input string of comma separated integers.
 	 * @return int[]
 	 */
 	function widcol_testimonials_string_to_array_ints( string $input ): array {
@@ -25,7 +30,7 @@ if ( ! function_exists( 'widcol_testimonials_string_to_array_ints' ) ) {
 					),
 				)
 			);
-			if ( $converted_int != null ) {
+			if ( isset( $converted_int ) ) {
 				$array_ids[] = $converted_int;
 			}
 		}

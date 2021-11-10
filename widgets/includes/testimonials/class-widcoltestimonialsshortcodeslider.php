@@ -1,24 +1,76 @@
 <?php
+/**
+ * Widgets Testimonials Slider
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Testimonials Shortcode Slider class
- *
- * @class WidColTestimonialsShortcodeSlider
- */
 if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
+	/**
+	 * Testimonials Shortcode Slider class
+	 *
+	 * @class WidColTestimonialsShortcodeSlider
+	 */
 	class WidColTestimonialsShortcodeSlider {
 
+		/**
+		 * Identifier of slider.
+		 *
+		 * @var string
+		 */
 		private string $id;
+
+		/**
+		 * Theme color for slider.
+		 *
+		 * @var string|null
+		 */
 		private ?string $theme_color = null;
+
+		/**
+		 * Secondary theme color for slider.
+		 *
+		 * @var string|null
+		 */
 		private ?string $secondary_theme_color = null;
+
+		/**
+		 * Whether arrows are enabled on slider.
+		 *
+		 * @var bool
+		 */
 		private bool $arrow_enabled = true;
+
+		/**
+		 * Wheter pagination is enabled on slider.
+		 *
+		 * @var bool
+		 */
 		private bool $pagination_enabled = true;
+
+		/**
+		 * Number of slides per view.
+		 *
+		 * @var int
+		 */
 		private int $slides_per_view = 1;
+
+		/**
+		 * Whether star rating should be shown.
+		 *
+		 * @var bool
+		 */
 		private bool $enable_star_rating = true;
+
+		/**
+		 * Categories to include in slider.
+		 *
+		 * @var array
+		 */
 		private array $category = array();
 
 		/**
@@ -44,7 +96,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		 * }
 		 */
 		public function __construct( array $atts = array() ) {
-			if ( key_exists( 'id', $atts ) && gettype( $atts['id'] ) == 'string' ) {
+			if ( key_exists( 'id', $atts ) && 'string' === gettype( $atts['id'] ) ) {
 				$this->id = $atts['id'];
 			} else {
 				$this->id = uniqid();
@@ -57,11 +109,11 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 			}
 			if ( key_exists( 'arrow_enabled', $atts ) && gettype( $atts['arrow_enabled'] ) == 'string' ) {
 				$arrow_enabled = filter_var( $atts['arrow_enabled'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
-				$this->arrow_enabled = $arrow_enabled == null ? false : $arrow_enabled;
+				$this->arrow_enabled = $arrow_enabled ?? false;
 			}
 			if ( key_exists( 'pagination_enabled', $atts ) && gettype( $atts['pagination_enabled'] ) == 'string' ) {
 				$pagination_enabled = filter_var( $atts['pagination_enabled'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
-				$this->pagination_enabled = $pagination_enabled == null ? false : $pagination_enabled;
+				$this->pagination_enabled = $pagination_enabled ?? false;
 			}
 			if ( key_exists( 'slides_per_view', $atts ) && gettype( $atts['slides_per_view'] ) == 'string' ) {
 				$this->slides_per_view = filter_var(
@@ -73,11 +125,11 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 					)
 				);
 			}
-			if ( key_exists( 'enable_star_rating', $atts ) & gettype( $atts['enable_star_rating'] ) == 'string' ) {
+			if ( key_exists( 'enable_star_rating', $atts ) & 'string' === gettype( $atts['enable_star_rating'] ) ) {
 				$star_rating_enabled = filter_var( $atts['enable_star_rating'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
-				$this->enable_star_rating = $star_rating_enabled == null ? false : $star_rating_enabled;
+				$this->enable_star_rating = $star_rating_enabled ?? false;
 			}
-			if ( key_exists( 'category', $atts ) & gettype( $atts['category'] ) == 'string' ) {
+			if ( key_exists( 'category', $atts ) & 'string' === gettype( $atts['category'] ) ) {
 				include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-functions.php';
 				$this->category = widcol_testimonials_string_to_array_ints( $atts['category'] );
 			}
@@ -95,7 +147,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 				'post_status' => 'publish',
 				'numberposts' => '-1',
 			);
-			if ( sizeof( $this->category ) > 0 ) {
+			if ( count( $this->category ) > 0 ) {
 				$atts['tax_query'] = array(
 					array(
 						'taxonomy' => 'widcol_testimonials_category',
@@ -129,28 +181,28 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		 * Include all styles and scripts required for this slider to work.
 		 */
 		public function include_styles_and_scripts() {
-			wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
-			wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js' );
-			wp_enqueue_script( 'swiper-activation', WIDCOL_PLUGIN_URI . 'assets/testimonials/js/swiper-activation.js', array( 'swiper-js' ), false, true );
-			wp_enqueue_style( 'swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/testimonials/css/swiper-overrides.css' );
+			wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), '1.0' );
+			wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), '1.0' );
+			wp_enqueue_script( 'swiper-activation', WIDCOL_PLUGIN_URI . 'assets/testimonials/js/swiper-activation.js', array( 'swiper-js' ), '1.0', true );
+			wp_enqueue_style( 'swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/testimonials/css/swiper-overrides.css', array(), '1.0' );
 			if ( $this->theme_color ) {
 				wp_add_inline_style(
 					'swiper-overrides',
 					'
-                    #swiper-container-' . $this->get_id() . ' .swiper-pagination .swiper-pagination-bullet-active {
-                        ' . ( $this->theme_color ? 'background: ' . $this->theme_color : '' ) . '
+                    #swiper-container-' . esc_attr( $this->get_id() ) . ' .swiper-pagination .swiper-pagination-bullet-active {
+                        ' . ( $this->theme_color ? 'background: ' . esc_attr( $this->theme_color ) : '' ) . '
                     }
                     
-                    #swiper-container-' . $this->get_id() . ' .swiper-slide .text-content {
-                        ' . ( $this->theme_color ? 'color: ' . $this->theme_color : '' ) . '
+                    #swiper-container-' . esc_attr( $this->get_id() ) . ' .swiper-slide .text-content {
+                        ' . ( $this->theme_color ? 'color: ' . esc_attr( $this->theme_color ) : '' ) . '
                     }
                     
-                    #swiper-container-' . $this->get_id() . ' .swiper-slide .text-content h3 {
-                        ' . ( $this->theme_color ? 'color: ' . $this->theme_color : '' ) . '
+                    #swiper-container-' . esc_attr( $this->get_id() ) . ' .swiper-slide .text-content h3 {
+                        ' . ( $this->theme_color ? 'color: ' . esc_attr( $this->theme_color ) : '' ) . '
                     }
                     
-                    #swiper-container-' . $this->get_id() . ' .dashicons-star-filled {
-                        ' . ( $this->secondary_theme_color ? 'color: ' . $this->secondary_theme_color : '' ) . '
+                    #swiper-container-' . esc_attr( $this->get_id() ) . ' .dashicons-star-filled {
+                        ' . ( $this->secondary_theme_color ? 'color: ' . esc_attr( $this->secondary_theme_color ) : '' ) . '
                     }
                 '
 				);
@@ -160,7 +212,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		/**
 		 * Localize the slider activation javascript file to activate all activated sliders.
 		 *
-		 * @param WidColTestimonialsShortcodeSlider[] $sliders sliders to localize the activation script for
+		 * @param WidColTestimonialsShortcodeSlider[] $sliders sliders to localize the activation script for.
 		 */
 		public static function localize_swiper_activation( array $sliders ) {
 			$configs = array();
@@ -181,7 +233,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		public function do_shortcode() {
 			ob_start();
 			$posts = $this->get_posts(); ?>
-				<div id="swiper-container-<?php echo $this->id; ?>" class="swiper-container widcol-swiper-container">
+				<div id="swiper-container-<?php echo esc_attr( $this->id ); ?>" class="swiper-container widcol-swiper-container">
 					<div class="swiper-wrapper">
 						<?php
 						foreach ( $posts as $post ) {
@@ -198,18 +250,18 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 								</div>
 								<div class="swiper-slide-body">
 									<div class="text-content">
-										<h3><?php echo get_the_title( $post ); ?></h3>
-										<p class="testimonial-text"><?php echo get_post_meta( $post->ID, 'widcol_testimonials_content', true ); ?></p>
+										<h3><?php echo esc_html( get_the_title( $post ) ); ?></h3>
+										<p class="testimonial-text"><?php echo esc_html( get_post_meta( $post->ID, 'widcol_testimonials_content', true ) ); ?></p>
 									</div>
 								</div>
 								<div class="swiper-slide-footer">
 									<p class="author" style="
 									<?php
 									if ( $this->theme_color ) :
-										echo 'color: ' . $this->theme_color;
+										echo 'color: ' . esc_attr( $this->theme_color );
 							endif
 									?>
-							"><?php echo get_post_meta( $post->ID, 'widcol_testimonials_author', true ); ?></p>
+							"><?php echo esc_html( get_post_meta( $post->ID, 'widcol_testimonials_author', true ) ); ?></p>
 								</div>
 							</div>
 							<?php
@@ -223,14 +275,14 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 						<div class="swiper-button-prev" style="
 						<?php
 						if ( $this->theme_color ) :
-							echo 'color: ' . $this->theme_color;
+							echo 'color: ' . esc_attr( $this->theme_color );
 			endif
 						?>
 			"></div>
 						<div class="swiper-button-next" style="
 						<?php
 						if ( $this->theme_color ) :
-							echo 'color: ' . $this->theme_color;
+							echo 'color: ' . esc_attr( $this->theme_color );
 			endif
 						?>
 			"></div>

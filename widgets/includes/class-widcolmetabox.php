@@ -1,31 +1,60 @@
 <?php
+/**
+ * Metabox class
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * WidCol Metabox class
- *
- * This class is able to render a custom metabox with a custom specification of fields.
- *
- * @class WidColMetabox
- */
 if ( ! class_exists( 'WidColMetabox' ) ) {
+	/**
+	 * WidCol Metabox class
+	 *
+	 * This class is able to render a custom metabox with a custom specification of fields.
+	 *
+	 * @class WidColMetabox
+	 */
 	class WidColMetabox {
 
+		/**
+		 * Name of the meta box
+		 *
+		 * @var string
+		 */
 		private string $meta_box_name;
+
+		/**
+		 * Meta fields of this meta box.
+		 *
+		 * @var array
+		 */
 		private array $meta_fields;
+
+		/**
+		 * Post type meta box should be registered on
+		 *
+		 * @var string
+		 */
 		private string $post_type;
+
+		/**
+		 * Title of the meta box
+		 *
+		 * @var string
+		 */
 		private string $meta_box_title;
 
 		/**
 		 * WidgetCollectionMetabox constructor.
 		 *
-		 * @param string $post_type : the post type to add this custom meta box to.
-		 * @param array  $meta_fields: array of (label: Label of meta box, desc: Description of meta box, id: ID of meta box
+		 * @param string $meta_box_name the post type to add this custom meta box to.
+		 * @param array  $meta_fields array of (label: Label of meta box, desc: Description of meta box, id: ID of meta box
 		 *  (used in database), type: Type of meta box (for input field)).
-		 * @param string $meta_box_name: meta box name
+		 * @param string $post_type post type to register meta box on.
+		 * @param string $meta_box_title title of the meta box.
 		 */
 		public function __construct( string $meta_box_name, array $meta_fields, string $post_type, string $meta_box_title ) {
 			$this->meta_box_name = $meta_box_name;
@@ -69,13 +98,12 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 		 */
 		public function show_custom_meta_box() {
 			global $post;
-			// Use nonce for verification
 			wp_nonce_field( basename( __FILE__ ), $this->get_nonce_name() ); ?>
 				<table class="form-table">
 					<?php foreach ( $this->meta_fields as $field ) : ?>
 						<?php $meta = get_post_meta( $post->ID, $field['id'], true ); ?>
 						<tr>
-							<th><label for="<?php echo $field['id']; ?>"><?php echo $field['label']; ?></label></th>
+							<th><label for="<?php echo esc_attr( $field['id'] ); ?>"><?php echo esc_html( $field['label'] ); ?></label></th>
 							<td>
 								<?php
 								switch ( $field['type'] ) :
@@ -99,20 +127,20 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 												   <?php
 													if ( array_key_exists( 'min', $field ) ) :
 														?>
-														min=<?php echo $field['min']; ?>
+														min=<?php echo esc_attr( $field['min'] ); ?>
 														<?php
 												   endif;
 													?>
 												   <?php
 													if ( array_key_exists( 'max', $field ) ) :
 														?>
-														max=<?php echo $field['max']; ?>
+														max=<?php echo esc_attr( $field['max'] ); ?>
 														<?php
 												   endif;
 													?>
-													   name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" value="<?php echo $meta; ?>" />
+													   name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo esc_attr( $meta ); ?>" />
 												<br>
-												<span class="description"><?php echo $field['desc']; ?></span>
+												<span class="description"><?php echo esc_html( $field['desc'] ); ?></span>
 											<?php
 										break;
 									case 'text':
@@ -125,9 +153,9 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 														<?php
 												   endif;
 													?>
-												   name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" value="<?php echo $meta; ?>" />
+												   name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo esc_attr( $meta ); ?>" />
 											<br>
-											<span class="description"><?php echo $field['desc']; ?></span>
+											<span class="description"><?php echo esc_html( $field['desc'] ); ?></span>
 																	<?php
 										break;
 									case 'textarea':
@@ -140,9 +168,9 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 														<?php
 													endif;
 													?>
-												   name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>"><?php echo $meta; ?></textarea>
+												   name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>"><?php echo esc_textarea( $meta ); ?></textarea>
 											<br>
-											<span class="description"><?php echo $field['desc']; ?></span>
+											<span class="description"><?php echo esc_html( $field['desc'] ); ?></span>
 																	<?php
 										break;
 									case 'checkbox':
@@ -155,7 +183,7 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 														<?php
 												   endif;
 													?>
-												   name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" 
+												   name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>"
 																	<?php
 																	if ( $meta ) :
 																		echo 'checked=checked';
@@ -163,12 +191,12 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 																	?>
 			 />
 											<br>
-											<span class="description"><?php echo $field['desc']; ?></span>
+											<span class="description"><?php echo esc_html( $field['desc'] ); ?></span>
 											<?php
 										break;
 									case 'select':
 										?>
-											<select name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>">
+											<select name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>">
 												<?php foreach ( $field['options'] as $option ) : ?>
 													<option 
 													<?php
@@ -176,13 +204,13 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 														echo 'selected="selected"';
 			endif
 													?>
-			 value="<?php echo $option['value']; ?>">
-														<?php echo $option['label']; ?>
+			 value="<?php echo esc_attr( $option['value'] ); ?>">
+														<?php echo esc_html( $option['label'] ); ?>
 													</option>
 												<?php endforeach ?>
 											</select>
 											<br>
-											<span class="description"><?php echo $field['desc']; ?></span>
+											<span class="description"><?php echo esc_html( $field['desc'] ); ?></span>
 											<?php
 										break;
 			endswitch;
@@ -197,11 +225,11 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 		/**
 		 * Saves custom meta tag data
 		 *
-		 * @param int $post_id : the post id to save the data for
+		 * @param int $post_id the post id to save the data for.
 		 * @return int: post_id
 		 */
 		public function save_meta_box( int $post_id ): int {
-			if ( ! wp_verify_nonce( $_POST[ $this->get_nonce_name() ], basename( __FILE__ ) ) ) {
+			if ( ! isset( $_POST[ $this->get_nonce_name() ] ) || ! wp_verify_nonce( wp_unslash( $_POST[ $this->get_nonce_name() ] ), basename( __FILE__ ) ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				return $post_id;
 			}
 
@@ -209,10 +237,10 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 				return $post_id;
 			}
 
-			if ( $_POST['post_type'] == $this->post_type && current_user_can( 'edit_post' ) ) {
+			if ( isset( $_POST['post_type'] ) && wp_unslash( $_POST['post_type'] ) == $this->post_type && current_user_can( 'edit_post' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				foreach ( $this->meta_fields as $field ) {
 					$old = get_post_meta( $post_id, $field['id'], true );
-					$new = $_POST[ $field['id'] ];
+					$new = isset( $_POST[ $field['id'] ] ) ?? wp_unslash( $_POST[ $field['id'] ] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 					if ( $new && $new != $old ) {
 						update_post_meta( $post_id, $field['id'], $new );
 					} elseif ( ! $new && $old ) {

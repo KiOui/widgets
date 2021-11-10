@@ -1,15 +1,20 @@
 <?php
+/**
+ * Widgets Testimonials Core
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Testimonials Core class
- *
- * @class WidColTestimonialsCore
- */
 if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
+	/**
+	 * Testimonials Core class
+	 *
+	 * @class WidColTestimonialsCore
+	 */
 	class WidColTestimonialsCore {
 
 		/**
@@ -19,6 +24,11 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 		 */
 		protected static ?WidColTestimonialsCore $_instance = null;
 
+		/**
+		 * Registered sliders.
+		 *
+		 * @var array
+		 */
 		private array $sliders = array();
 
 		/**
@@ -57,8 +67,8 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 		 * Localize the slider script so that the sliders activate.
 		 */
 		public function localize_slider_script() {
-			if ( sizeof( $this->sliders ) > 0 ) {
-				include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode-slider.php';
+			if ( count( $this->sliders ) > 0 ) {
+				include_once WIDCOL_ABSPATH . 'includes/testimonials/class-widcoltestimonialsshortcodeslider.php';
 				WidColTestimonialsShortcodeSlider::localize_swiper_activation( $this->sliders );
 			}
 		}
@@ -175,7 +185,7 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 		 * Add meta box support to Testimonials.
 		 */
 		public function add_meta_box_support() {
-			include_once WIDCOL_ABSPATH . '/includes/widcol-metaboxes.php';
+			include_once WIDCOL_ABSPATH . '/includes/class-widcolmetabox.php';
 			new WidColMetabox(
 				'widcol_testimonials_metabox',
 				array(
@@ -216,7 +226,7 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 				$atts = array();
 			}
 
-			include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode-slider.php';
+			include_once WIDCOL_ABSPATH . 'includes/testimonials/class-widcoltestimonialsshortcodeslider.php';
 			$shortcode = new WidColTestimonialsShortcodeSlider( $atts );
 			$this->sliders[] = $shortcode;
 			return $shortcode->do_shortcode();
@@ -233,7 +243,7 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 				$atts = array();
 			}
 
-			include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-shortcode-page.php';
+			include_once WIDCOL_ABSPATH . 'includes/testimonials/class-widcoltestimonialsshortcodepage.php';
 			$shortcode = new WidColTestimonialsShortcodePage( $atts );
 			return $shortcode->do_shortcode();
 		}

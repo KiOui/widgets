@@ -1,15 +1,20 @@
 <?php
+/**
+ * Widgets Collection Core
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * WidCol Core class
- *
- * @class WidColCore
- */
 if ( ! class_exists( 'WidColCore' ) ) {
+	/**
+	 * WidCol Core class
+	 *
+	 * @class WidColCore
+	 */
 	class WidColCore {
 
 		/**
@@ -54,7 +59,7 @@ if ( ! class_exists( 'WidColCore' ) ) {
 		 * Initialise Widgets Collection
 		 */
 		public function init() {
-			include_once WIDCOL_ABSPATH . 'includes/widcol-install.php';
+			include_once WIDCOL_ABSPATH . 'includes/class-widcolinstall.php';
 
 			$this->initialise_localisation();
 			do_action( 'widgets_collection_before_init' );
@@ -83,8 +88,8 @@ if ( ! class_exists( 'WidColCore' ) ) {
 		/**
 		 * Define if not already set
 		 *
-		 * @param string $name
-		 * @param string $value
+		 * @param string $name name of the variable to define.
+		 * @param string $value value of the variable to define.
 		 */
 		private static function define( string $name, string $value ) {
 			if ( ! defined( $name ) ) {
@@ -125,7 +130,7 @@ if ( ! class_exists( 'WidColCore' ) ) {
 		private function actions_and_filters() {
 			add_action( 'after_setup_theme', array( $this, 'pluggable' ) );
 			add_action( 'init', array( $this, 'init' ) );
-			include_once WIDCOL_ABSPATH . '/includes/widcol-settings.php';
+			include_once WIDCOL_ABSPATH . '/includes/class-widcolsettings.php';
 			WidColSettings::instance();
 		}
 	}

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Print admin dashboard
+ *
+ * @package widgets
+ */
 
 ?>
 <div class="wrap">

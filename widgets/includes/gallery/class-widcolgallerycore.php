@@ -1,15 +1,20 @@
 <?php
+/**
+ * Gallery core class
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Testimonials Core class
- *
- * @class WidColTestimonialsCore
- */
 if ( ! class_exists( 'WidColGalleryCore' ) ) {
+	/**
+	 * Gallery Core class
+	 *
+	 * @class WidColTestimonialsCore
+	 */
 	class WidColGalleryCore {
 
 		/**
@@ -19,6 +24,11 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		 */
 		protected static ?WidColGalleryCore $_instance = null;
 
+		/**
+		 * Registered galleries
+		 *
+		 * @var array
+		 */
 		private array $galleries = array();
 
 		/**
@@ -60,21 +70,21 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		 */
 		public function admin_scripts() {
 			wp_enqueue_media();
-			wp_enqueue_script( 'widcol-gallery-metabox', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-metabox.js', array( 'jquery' ), false, true );
+			wp_enqueue_script( 'widcol-gallery-metabox', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-metabox.js', array( 'jquery' ), '1.0', true );
 		}
 
 		/**
 		 * Localize the gallery script so that the sliders activate.
 		 */
 		public function localize_gallery_script() {
-			if ( sizeof( $this->galleries ) > 0 ) {
-				include_once WIDCOL_ABSPATH . 'includes/gallery/widcol-gallery-shortcode.php';
+			if ( count( $this->galleries ) > 0 ) {
+				include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcode.php';
 				WidColGalleryShortcode::localize_gallery_activation( $this->galleries );
 			}
 		}
 
 		/**
-		 * Add the Testimonials shortcode.
+		 * Add the Gallery shortcode.
 		 */
 		public function add_shortcodes() {
 			add_shortcode( 'widcol_gallery', array( $this, 'do_shortcode' ) );
@@ -213,7 +223,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 							}
 							?>
 							<li class="image" data-attachment_id="<?php echo esc_attr( $attachment_id ); ?>">
-								<?php echo $attachment; ?>
+								<?php echo esc_html( $attachment ); ?>
 								<ul class="actions">
 									<li><a href="#" class="delete tips" data-tip="<?php esc_attr_e( 'Delete image', 'widgets-collection' ); ?>"><?php esc_html_e( 'Delete', 'widgets-collection' ); ?></a></li>
 								</ul>
@@ -246,7 +256,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		 */
 		public function save_meta_box_gallery( int $post_id ): int {
 			include_once WIDCOL_ABSPATH . 'includes/gallery/widcol-gallery-functions.php';
-			if ( ! wp_verify_nonce( $_POST['widcol-gallery_nonce'], basename( __FILE__ ) ) ) {
+			if ( empty( $_POST['widcol-gallery_nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['widcol-gallery_nonce'] ), basename( __FILE__ ) ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				return $post_id;
 			}
 
@@ -257,7 +267,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 			if ( ! current_user_can( 'edit_posts', $post_id ) ) {
 				return $post_id;
 			}
-			$attachment_ids = isset( $_POST['gallery-images'] ) ? widcol_gallery_sanitize_image_id_array( $_POST['gallery-images'] ) : array();
+			$attachment_ids = isset( $_POST['gallery-images'] ) ? widcol_gallery_sanitize_image_id_array( wp_unslash( $_POST['gallery-images'] ) ) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 			update_post_meta( $post_id, 'widcol_gallery_images', $attachment_ids );
 			return $post_id;
 		}
@@ -273,7 +283,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 				$atts = array();
 			}
 
-			include_once WIDCOL_ABSPATH . 'includes/gallery/widcol-gallery-shortcode.php';
+			include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcode.php';
 			$shortcode = new WidColGalleryShortcode( $atts );
 			$this->galleries[] = $shortcode;
 			return $shortcode->do_shortcode();

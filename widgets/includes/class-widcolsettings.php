@@ -1,15 +1,20 @@
 <?php
+/**
+ * Settings class
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * WidCol Settings class
- *
- * @class WidColSettings
- */
 if ( ! class_exists( 'WidColSettings' ) ) {
+	/**
+	 * WidCol Settings class
+	 *
+	 * @class WidColSettings
+	 */
 	class WidColSettings {
 
 		/**
@@ -48,11 +53,11 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 			add_action( 'admin_menu', array( $this, 'add_menu_page' ), 99 );
 			add_action( 'admin_init', array( $this, 'register_settings' ) );
 			if ( get_option( 'widgets_collection_settings' )['widgets_collection_testimonials_enabled'] ) {
-				include_once WIDCOL_ABSPATH . '/includes/testimonials/widcol-testimonials-core.php';
+				include_once WIDCOL_ABSPATH . '/includes/testimonials/class-widcoltestimonialscore.php';
 				WidColTestimonialsCore::instance();
 			}
 			if ( get_option( 'widgets_collection_settings' )['widgets_collection_gallery_enabled'] ) {
-				include_once WIDCOL_ABSPATH . '/includes/gallery/widcol-gallery-core.php';
+				include_once WIDCOL_ABSPATH . '/includes/gallery/class-widcolgallerycore.php';
 				WidColGalleryCore::instance();
 			}
 		}
@@ -149,7 +154,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		 * Render the section title of enabled widgets.
 		 */
 		public function widgets_collection_enabled_widgets_callback() {
-			echo __( 'Enabled widgets', 'widgets-collection' );
+			echo esc_html( __( 'Enabled widgets', 'widgets-collection' ) );
 		}
 
 		/**

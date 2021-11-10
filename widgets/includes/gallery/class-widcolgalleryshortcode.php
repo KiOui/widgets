@@ -1,17 +1,27 @@
 <?php
+/**
+ * Gallery shortcode
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Gallery Shortcode class
- *
- * @class WidColGalleryShortcode
- */
 if ( ! class_exists( 'WidColGalleryShortcode' ) ) {
+	/**
+	 * Gallery Shortcode class
+	 *
+	 * @class WidColGalleryShortcode
+	 */
 	class WidColGalleryShortcode {
 
+		/**
+		 * Identifier of the gallery.
+		 *
+		 * @var int|null
+		 */
 		private ?int $id;
 
 		/**
@@ -59,13 +69,13 @@ if ( ! class_exists( 'WidColGalleryShortcode' ) ) {
 		 */
 		public function include_styles_and_scripts() {
 			wp_enqueue_script( 'macy-js', 'https://cdn.jsdelivr.net/npm/macy@2', array(), true, false );
-			wp_enqueue_script( 'gallery-activation', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-activation.js', array( 'macy-js' ), false, true );
+			wp_enqueue_script( 'gallery-activation', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-activation.js', array( 'macy-js' ), '1.0', true );
 		}
 
 		/**
 		 * Localize the gallery activation javascript file to activate all activated galleries.
 		 *
-		 * @param WidColGalleryShortcode[] $galleries galleries to localize the activation script for
+		 * @param WidColGalleryShortcode[] $galleries galleries to localize the activation script for.
 		 */
 		public static function localize_gallery_activation( array $galleries ) {
 			$configs = array();
@@ -86,7 +96,7 @@ if ( ! class_exists( 'WidColGalleryShortcode' ) ) {
 			if ( isset( $gallery_post ) ) {
 				$attachement_ids = get_post_meta( $gallery_post->ID, 'widcol_gallery_images', true );
 				?>
-				<div id="widcol-gallery-<?php echo $this->get_id(); ?>">
+				<div id="widcol-gallery-<?php echo esc_attr( $this->get_id() ); ?>">
 					<?php foreach ( $attachement_ids as $attachement_id ) : ?>
 						<div>
 							<?php echo wp_get_attachment_image( $attachement_id, 'full' ); ?>

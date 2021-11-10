@@ -1,15 +1,16 @@
 <?php
-
-/*
-Plugin Name: Widgets Collection
-Description: A collection of custom-made widgets for Wordpress websites
-Plugin URI: https://github.com/KiOui/widgets
-Version: 0.0.2
-Author: Lars van Rhijn
-Author URI: https://larsvanrhijn.nl/
-Text Domain: widgets-collection
-Domain Path: /languages/
-*/
+/**
+ * Plugin Name: Widgets Collection
+ * Description: A collection of custom-made widgets for Wordpress websites
+ * Plugin URI: https://github.com/KiOui/widgets
+ * Version: 0.0.2
+ * Author: Lars van Rhijn
+ * Author URI: https://larsvanrhijn.nl/
+ * Text Domain: widgets-collection
+ * Domain Path: /languages/
+ *
+ * @package widgets
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -22,6 +23,6 @@ if ( ! defined( 'WIDCOL_PLUGIN_URI' ) ) {
 	define( 'WIDCOL_PLUGIN_URI', plugin_dir_url( __FILE__ ) );
 }
 
-include_once dirname( __FILE__ ) . '/includes/widcol-core.php';
+include_once dirname( __FILE__ ) . '/includes/class-widcolcore.php';
 
 WidColCore::instance();
