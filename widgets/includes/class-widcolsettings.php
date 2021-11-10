@@ -98,7 +98,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 			add_settings_section(
 				'enabled_widgets_section',
 				__( 'Enabled widgets', 'widgets-collection' ),
-				'widgets_collection_enabled_widgets_callback',
+				array( $this, 'widgets_collection_enabled_widgets_callback' ),
 				'widgets_collection_settings'
 			);
 

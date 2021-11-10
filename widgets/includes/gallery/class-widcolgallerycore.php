@@ -223,7 +223,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 							}
 							?>
 							<li class="image" data-attachment_id="<?php echo esc_attr( $attachment_id ); ?>">
-								<?php echo esc_html( $attachment ); ?>
+								<?php echo $attachment; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 								<ul class="actions">
 									<li><a href="#" class="delete tips" data-tip="<?php esc_attr_e( 'Delete image', 'widgets-collection' ); ?>"><?php esc_html_e( 'Delete', 'widgets-collection' ); ?></a></li>
 								</ul>
@@ -242,7 +242,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 
 			</div>
 			<p class="add-gallery-images hide-if-no-js">
-				<a href="#" data-choose="<?php esc_attr_e( 'Add images to product gallery', 'widgets-collection' ); ?>" data-update="<?php esc_attr_e( 'Add to gallery', 'widgets-collection' ); ?>" data-delete="<?php esc_attr_e( 'Delete image', 'widgets-collection' ); ?>" data-text="<?php esc_attr_e( 'Delete', 'widgets-collection' ); ?>"><?php esc_html_e( 'Add product gallery images', 'widgets-collection' ); ?></a>
+				<a href="#" data-choose="<?php esc_attr_e( 'Add images to gallery', 'widgets-collection' ); ?>" data-update="<?php esc_attr_e( 'Add to gallery', 'widgets-collection' ); ?>" data-delete="<?php esc_attr_e( 'Delete image', 'widgets-collection' ); ?>" data-text="<?php esc_attr_e( 'Delete', 'widgets-collection' ); ?>"><?php esc_html_e( 'Add gallery images', 'widgets-collection' ); ?></a>
 			</p>
 			<?php
 		}
