@@ -11,17 +11,17 @@ Text Domain: widgets-collection
 Domain Path: /languages/
 */
 
-if (!defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
-if (! defined('WIDCOL_PLUGIN_FILE')) {
-    define('WIDCOL_PLUGIN_FILE', __FILE__);
+if ( ! defined( 'WIDCOL_PLUGIN_FILE' ) ) {
+	define( 'WIDCOL_PLUGIN_FILE', __FILE__ );
 }
-if (! defined('WIDCOL_PLUGIN_URI')) {
-    define('WIDCOL_PLUGIN_URI', plugin_dir_url(__FILE__));
+if ( ! defined( 'WIDCOL_PLUGIN_URI' ) ) {
+	define( 'WIDCOL_PLUGIN_URI', plugin_dir_url( __FILE__ ) );
 }
 
-include_once dirname(__FILE__) . '/includes/widcol-core.php';
+include_once dirname( __FILE__ ) . '/includes/widcol-core.php';
 
 WidColCore::instance();

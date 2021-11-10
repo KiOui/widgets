@@ -4,14 +4,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'widcol_testimonials_string_to_array_ints' ) ) {
+if ( ! function_exists( 'widcol_gallery_sanitize_image_id_array' ) ) {
 	/**
 	 * Convert a string of comma separated integers to an array of ints.
 	 *
 	 * @param string $input string of comma separated integers
 	 * @return int[]
 	 */
-	function widcol_testimonials_string_to_array_ints( string $input ): array {
+	function widcol_gallery_sanitize_image_id_array( string $input ): array {
 		$splitted = explode( ',', $input );
 		$array_ids = array();
 		foreach ( $splitted as $element ) {
@@ -26,7 +26,10 @@ if ( ! function_exists( 'widcol_testimonials_string_to_array_ints' ) ) {
 				)
 			);
 			if ( $converted_int != null ) {
-				$array_ids[] = $converted_int;
+				$image = wp_get_attachment_image( $converted_int );
+				if ( $image !== '' ) {
+					$array_ids[] = $converted_int;
+				}
 			}
 		}
 		return $array_ids;

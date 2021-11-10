@@ -1,7 +1,7 @@
 <?php
 
-if (!defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
 /**
@@ -9,135 +9,124 @@ if (!defined('ABSPATH')) {
  *
  * @class WidColCore
  */
-if (!class_exists("WidColCore")) {
-    class WidColCore
-    {
-        /**
-         * Plugin version
-         *
-         * @var string
-         */
-        public string $version = '0.0.2';
+if ( ! class_exists( 'WidColCore' ) ) {
+	class WidColCore {
 
-        /**
-         * The single instance of the class
-         *
-         * @var WidColCore|null
-         */
-        protected static ?WidColCore $_instance = null;
+		/**
+		 * Plugin version
+		 *
+		 * @var string
+		 */
+		public string $version = '0.0.2';
 
-        /**
-         * Widgets Collection Core
-         *
-         * Uses the Singleton pattern to load 1 instance of this class at maximum
-         *
-         * @static
-         * @return WidColCore
-         */
-        public static function instance(): WidColCore
-        {
-            if (is_null(self::$_instance)) {
-                self::$_instance = new self();
-            }
-            return self::$_instance;
-        }
+		/**
+		 * The single instance of the class
+		 *
+		 * @var WidColCore|null
+		 */
+		protected static ?WidColCore $_instance = null;
 
-        /**
-         * Constructor
-         */
-        private function __construct()
-        {
-            $this->define_constants();
-            $this->init_hooks();
-            $this->actions_and_filters();
-        }
+		/**
+		 * Widgets Collection Core
+		 *
+		 * Uses the Singleton pattern to load 1 instance of this class at maximum
+		 *
+		 * @static
+		 * @return WidColCore
+		 */
+		public static function instance(): WidColCore {
+			if ( is_null( self::$_instance ) ) {
+				self::$_instance = new self();
+			}
+			return self::$_instance;
+		}
 
-        /**
-         * Initialise Widgets Collection
-         */
-        public function init()
-        {
-            include_once WIDCOL_ABSPATH . 'includes/widcol-install.php';
+		/**
+		 * Constructor
+		 */
+		private function __construct() {
+			$this->define_constants();
+			$this->init_hooks();
+			$this->actions_and_filters();
+		}
 
-            $this->initialise_localisation();
-            do_action('widgets_collection_before_init');
+		/**
+		 * Initialise Widgets Collection
+		 */
+		public function init() {
+			include_once WIDCOL_ABSPATH . 'includes/widcol-install.php';
 
-            WidColInstall::install();
+			$this->initialise_localisation();
+			do_action( 'widgets_collection_before_init' );
 
-            do_action('widgets_collection_init');
-        }
+			WidColInstall::install();
 
-        /**
-         * Initialise the localisation of the plugin.
-         */
-        private function initialise_localisation()
-        {
-            load_plugin_textdomain('widgets-collection', false, plugin_basename(dirname(WIDCOL_PLUGIN_FILE)) . '/languages/');
-        }
+			do_action( 'widgets_collection_init' );
+		}
 
-        /**
-         * Define constants of the plugin.
-         */
-        private function define_constants()
-        {
-            $this->define('WIDCOL_ABSPATH', dirname(WIDCOL_PLUGIN_FILE) . '/');
-            $this->define('WIDCOL_VERSION', $this->version);
-            $this->define('WIDCOL_FULLNAME', 'widgets-collection');
-        }
+		/**
+		 * Initialise the localisation of the plugin.
+		 */
+		private function initialise_localisation() {
+			load_plugin_textdomain( 'widgets-collection', false, plugin_basename( dirname( WIDCOL_PLUGIN_FILE ) ) . '/languages/' );
+		}
 
-        /**
-         * Define if not already set
-         *
-         * @param string $name
-         * @param string $value
-         */
-        private static function define(string $name, string $value)
-        {
-            if (! defined($name)) {
-                define($name, $value);
-            }
-        }
+		/**
+		 * Define constants of the plugin.
+		 */
+		private function define_constants() {
+			$this->define( 'WIDCOL_ABSPATH', dirname( WIDCOL_PLUGIN_FILE ) . '/' );
+			$this->define( 'WIDCOL_VERSION', $this->version );
+			$this->define( 'WIDCOL_FULLNAME', 'widgets-collection' );
+		}
 
-        /**
-         * Initialise activation and deactivation hooks.
-         */
-        private function init_hooks()
-        {
-            register_activation_hook(WIDCOL_PLUGIN_FILE, array( $this, 'activation' ));
-            register_deactivation_hook(WIDCOL_PLUGIN_FILE, array( $this, 'deactivation' ));
-        }
+		/**
+		 * Define if not already set
+		 *
+		 * @param string $name
+		 * @param string $value
+		 */
+		private static function define( string $name, string $value ) {
+			if ( ! defined( $name ) ) {
+				define( $name, $value );
+			}
+		}
 
-        /**
-         * Activation hook call.
-         */
-        public function activation()
-        {
-        }
+		/**
+		 * Initialise activation and deactivation hooks.
+		 */
+		private function init_hooks() {
+			register_activation_hook( WIDCOL_PLUGIN_FILE, array( $this, 'activation' ) );
+			register_deactivation_hook( WIDCOL_PLUGIN_FILE, array( $this, 'deactivation' ) );
+		}
 
-        /**
-         * Deactivation hook call.
-         */
-        public function deactivation()
-        {
-        }
+		/**
+		 * Activation hook call.
+		 */
+		public function activation() {
+		}
 
-        /**
-         * Add pluggable support to functions
-         */
-        public function pluggable()
-        {
-            include_once WIDCOL_ABSPATH . 'includes/widcol-functions.php';
-        }
+		/**
+		 * Deactivation hook call.
+		 */
+		public function deactivation() {
+		}
 
-        /**
-         * Add actions and filters.
-         */
-        private function actions_and_filters()
-        {
-            add_action('after_setup_theme', array( $this, 'pluggable' ));
-            add_action('init', array( $this, 'init' ));
-            include_once WIDCOL_ABSPATH . '/includes/widcol-settings.php';
-            WidColSettings::instance();
-        }
-    }
+		/**
+		 * Add pluggable support to functions
+		 */
+		public function pluggable() {
+			include_once WIDCOL_ABSPATH . 'includes/widcol-functions.php';
+		}
+
+		/**
+		 * Add actions and filters.
+		 */
+		private function actions_and_filters() {
+			add_action( 'after_setup_theme', array( $this, 'pluggable' ) );
+			add_action( 'init', array( $this, 'init' ) );
+			include_once WIDCOL_ABSPATH . '/includes/widcol-settings.php';
+			WidColSettings::instance();
+		}
+	}
 }
