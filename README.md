@@ -6,7 +6,8 @@ won't slow down due to widgets that you are not using).
 
 The collection of widgets currently includes:
 
-- Testimonial slider
+- Testimonial slider and page
+- Image masonry gallery
 
 ## Testimonial slider
 
@@ -47,3 +48,26 @@ shortcode. This shortcode has the following optional parameters:
 - `text_color`: Text color used for the text in the page (can also be changed with CSS).
 - `enable_star_rating`: Enable the star rating in the page (can be set in the Testimonial post type).
 - `category`: List of ints of the categories of testimonials to display on the page (example: "1, 3").
+
+Example page:
+
+```
+[widcol_testimonials_page enable_star_rating="false" secondary_theme_color="#BED6DC"]
+```
+
+## Image masonry gallery
+
+A masonry image gallery shortcode is added to this plugin as well. The plugin uses 
+[MacyJS](https://github.com/bigbite/macy.js) to create a masonry layout for images. The shortcode `[widcol_gallery]` can
+be used to create an image gallery. Gallery images can be set in the administration dashboard of Wordpress. The meta
+box used works in the same way as WooCommerce's product image gallery. Select and order your images and display your 
+gallery with the shortcode. The shortcode has the following parameters:
+
+- `id`: The id of the Gallery to use for the shortcode. This parameter is obligatory, without it the gallery will show a 
+  warning message.
+
+Example gallery:
+
+```
+[widcol_gallery id="44"]
+```

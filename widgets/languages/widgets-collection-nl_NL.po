@@ -4,288 +4,502 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Widgets Collection 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
-"POT-Creation-Date: 2021-05-08 11:19:40+00:00\n"
-"PO-Revision-Date: 2021-05-08 13:20+0200\n"
+"POT-Creation-Date: 2021-11-10T20:21:09+00:00\n"
+"PO-Revision-Date: 2021-11-10 21:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/testimonials/widcol-testimonials-core.php:84
-#: includes/testimonials/widcol-testimonials-core.php:86
-#: includes/testimonials/widcol-testimonials-core.php:107
-msgid "Testimonials"
-msgstr "Recensies"
-
-#: includes/testimonials/widcol-testimonials-core.php:87
-msgid "Testimonial"
-msgstr "Recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:88
-msgid "Add New"
-msgstr "Voeg Nieuwe toe"
-
-#: includes/testimonials/widcol-testimonials-core.php:89
-msgid "Add New Testimonial"
-msgstr "Voeg Nieuwe Recensie toe"
-
-#: includes/testimonials/widcol-testimonials-core.php:90
-msgid "Edit Testimonial"
-msgstr "Bewerk Recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:91
-msgid "New Testimonial"
-msgstr "Nieuwe Recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:92
-msgid "View Testimonial"
-msgstr "Bekijk Recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:93
-msgid "View Testimonials"
-msgstr "Bekijk Recensies"
-
-#: includes/testimonials/widcol-testimonials-core.php:94
-msgid "Search Testimonials"
-msgstr "Zoek Recensies"
-
-#: includes/testimonials/widcol-testimonials-core.php:95
-msgid "No testimonials found"
-msgstr "Geen recensies gevonden"
-
-#: includes/testimonials/widcol-testimonials-core.php:96
-msgid "No testimonials found in trash"
-msgstr "Geen recensies gevonden in prullenbak"
-
-#: includes/testimonials/widcol-testimonials-core.php:97
-msgid "Parent Testimonial"
-msgstr "Hoofd Recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:98
-msgid "All Testimonials"
-msgstr "Alle Recensies"
-
-#: includes/testimonials/widcol-testimonials-core.php:99
-msgid "Testimonial Archives"
-msgstr "Recensie Archieven"
-
-#: includes/testimonials/widcol-testimonials-core.php:100
-msgid "Testimonial Attributes"
-msgstr "Recensie Attributen"
-
-#: includes/testimonials/widcol-testimonials-core.php:101
-msgid "Insert into testimonial"
-msgstr "Invoegen in recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:102
-msgid "Uploaded to this testimonial"
-msgstr "Geupload naar deze recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:103
-msgid "Featured image"
-msgstr "Uitgelichte afbeelding"
-
-#: includes/testimonials/widcol-testimonials-core.php:104
-msgid "Set featured image"
-msgstr "Stel uitgelichte afbeelding in"
-
-#: includes/testimonials/widcol-testimonials-core.php:105
-msgid "Remove featured image"
-msgstr "Verwijder uitgelichte afbeelding"
-
-#: includes/testimonials/widcol-testimonials-core.php:106
-msgid "Use as featured image"
-msgstr "Gebruik als uitgelichte afbeelding"
-
-#: includes/testimonials/widcol-testimonials-core.php:108
-msgid "Filter testimonials list"
-msgstr "Filter recensies lijst"
-
-#: includes/testimonials/widcol-testimonials-core.php:109
-msgid "Filter by date"
-msgstr "Filter op datum"
-
-#: includes/testimonials/widcol-testimonials-core.php:110
-msgid "Testimonials list navigation"
-msgstr "Recensies lijst navigatie"
-
-#: includes/testimonials/widcol-testimonials-core.php:111
-msgid "Testimonials list"
-msgstr "Recensies lijst"
-
-#: includes/testimonials/widcol-testimonials-core.php:112
-msgid "Testimonial published"
-msgstr "Gepubliceerde Recensies"
-
-#: includes/testimonials/widcol-testimonials-core.php:113
-msgid "Testimonial published privately"
-msgstr "Privé gepubliceerde Recensies"
-
-#: includes/testimonials/widcol-testimonials-core.php:114
-msgid "Testimonial reverted to draft"
-msgstr "Recensie teruggezet naar concept"
-
-#: includes/testimonials/widcol-testimonials-core.php:115
-msgid "Testimonial scheduled"
-msgstr "Recensie ingepland"
-
-#: includes/testimonials/widcol-testimonials-core.php:116
-msgid "Testimonial updated"
-msgstr "Recensie ge-update"
-
-#: includes/testimonials/widcol-testimonials-core.php:118
-msgid "Testimonial post type"
-msgstr "Recensie post type"
-
-#: includes/testimonials/widcol-testimonials-core.php:138
-#: includes/testimonials/widcol-testimonials-core.php:157
-msgid "Testimonial Categories"
-msgstr "Recensie Categorieën"
-
-#: includes/testimonials/widcol-testimonials-core.php:139
-msgid "Testimonial Category"
-msgstr "Recensie Categorie"
-
-#: includes/testimonials/widcol-testimonials-core.php:140
-msgid "Search Testimonial Categories"
-msgstr "Zoek Recensie Categorieën"
-
-#: includes/testimonials/widcol-testimonials-core.php:141
-msgid "Popular Testimonial Categories"
-msgstr "Populaire Recensie Categorieën"
-
-#: includes/testimonials/widcol-testimonials-core.php:142
-msgid "All Testimonial Categories"
-msgstr "Alle Recensie Categorieën"
-
-#: includes/testimonials/widcol-testimonials-core.php:143
-msgid "Parent Testimonial Category"
-msgstr "Hoofd Recensie Categorie"
-
-#: includes/testimonials/widcol-testimonials-core.php:144
-msgid "Parent Testimonial Category:"
-msgstr "Recensie Categorie:"
-
-#: includes/testimonials/widcol-testimonials-core.php:145
-msgid "Edit Testimonial Category"
-msgstr "Bewerk Recensie Categorie"
-
-#: includes/testimonials/widcol-testimonials-core.php:146
-msgid "View Testimonial Category"
-msgstr "Bekijk Recensie Categorie"
-
-#: includes/testimonials/widcol-testimonials-core.php:147
-msgid "Update Testimonial Category"
-msgstr "Update Recensie Categorie"
-
-#: includes/testimonials/widcol-testimonials-core.php:148
-msgid "Add New Testimonial Category"
-msgstr "Nieuwe Recensie Categorie Toevoegen"
-
-#: includes/testimonials/widcol-testimonials-core.php:149
-msgid "New Testimonial Category Name"
-msgstr "Nieuwe Recensie Categorie Naam"
-
-#: includes/testimonials/widcol-testimonials-core.php:150
-msgid "Separate Testimonial Categories with commas"
-msgstr "Scheidt Recensie Categorieën met komma’s"
-
-#: includes/testimonials/widcol-testimonials-core.php:151
-msgid "Add or remove testimonial categories"
-msgstr "Recensie Categorieën toevoegen of verwijderen"
-
-#: includes/testimonials/widcol-testimonials-core.php:152
-msgid "Choose from the most used testimonial categories"
-msgstr "Kies uit de meest gebruikte recensie categorieën"
-
-#: includes/testimonials/widcol-testimonials-core.php:153
-msgid "No testimonial categories found"
-msgstr "Geen recensie categorieën gevonden"
-
-#: includes/testimonials/widcol-testimonials-core.php:154
-msgid "No testimonial categories"
-msgstr "Geen recensie categorie"
-
-#: includes/testimonials/widcol-testimonials-core.php:155
-msgid "Filter by testimonial category"
-msgstr "Filter op recensie categorie"
-
-#: includes/testimonials/widcol-testimonials-core.php:179
-msgid "Testimonial content"
-msgstr "Recensie inhoud"
-
-#: includes/testimonials/widcol-testimonials-core.php:180
-msgid "Content of the testimonial"
-msgstr "Inhoud van de recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:185
-msgid "Testimonial author"
-msgstr "Recensie auteur"
-
-#: includes/testimonials/widcol-testimonials-core.php:186
-msgid "Author of the testimonial"
-msgstr "Auteur van de recensie"
-
-#: includes/testimonials/widcol-testimonials-core.php:191
-msgid "Testimonial rating"
-msgstr "Recensie score"
-
-#: includes/testimonials/widcol-testimonials-core.php:192
-msgid "Rating of the testimonial (1-5)"
-msgstr "Score van de recensie (1-5)"
-
-#: includes/testimonials/widcol-testimonials-core.php:198
-msgid "Testimonial settings"
-msgstr "Recensie instellingen"
-
-#: includes/widcol-settings.php:65 includes/widcol-settings.php:66
-msgid "Widgets"
-msgstr "Widgets"
-
-#: includes/widcol-settings.php:75
-msgid "Widgets Dashboard"
-msgstr "Widgets Dashboard"
-
-#: includes/widcol-settings.php:76
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: includes/widcol-settings.php:96 includes/widcol-settings.php:137
-msgid "Enabled widgets"
-msgstr "Ingeschakelde widgets"
-
-#: includes/widcol-settings.php:103
-msgid "Enable Testimonials"
-msgstr "Schakel Recensies in"
-
-#: views/widcol-admin-dashboard-view.php:5
-msgid "Widgets Collection Dashboard"
-msgstr "Widgets Collection Dashboard"
-
-#: views/widcol-admin-dashboard-view.php:7
-msgid "Widgets Collection settings"
-msgstr "Widgets Collection instellingen"
-
-#. Plugin Name of the plugin/theme
+#. Plugin Name of the plugin
 msgid "Widgets Collection"
 msgstr "Widgets Collection"
 
-#. Plugin URI of the plugin/theme
+#. Plugin URI of the plugin
 msgid "https://github.com/KiOui/widgets"
 msgstr "https://github.com/KiOui/widgets"
 
-#. Description of the plugin/theme
+#. Description of the plugin
 msgid "A collection of custom-made widgets for Wordpress websites"
 msgstr "Een collectie van widgets voor Wordpress websites"
 
-#. Author of the plugin/theme
+#. Author of the plugin
 msgid "Lars van Rhijn"
 msgstr "Lars van Rhijn"
 
-#. Author URI of the plugin/theme
+#. Author URI of the plugin
 msgid "https://larsvanrhijn.nl/"
 msgstr "https://larsvanrhijn.nl/"
+
+#: includes/class-widcolsettings.php:70 includes/class-widcolsettings.php:71
+msgid "Widgets"
+msgstr "Widgets"
+
+#: includes/class-widcolsettings.php:80
+msgid "Widgets Dashboard"
+msgstr "Widgets Dashboard"
+
+#: includes/class-widcolsettings.php:81
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: includes/class-widcolsettings.php:100 includes/class-widcolsettings.php:157
+msgid "Enabled widgets"
+msgstr "Ingeschakelde widgets"
+
+#: includes/class-widcolsettings.php:107
+msgid "Enable Testimonials"
+msgstr "Schakel Recensies in"
+
+#: includes/class-widcolsettings.php:115
+msgid "Enable Galleries"
+msgstr "Schakel Galerijen in"
+
+#: includes/gallery/class-widcolgallerycore.php:100
+#: includes/gallery/class-widcolgallerycore.php:102
+#: includes/gallery/class-widcolgallerycore.php:123
+msgid "Galleries"
+msgstr "Galerijen"
+
+#: includes/gallery/class-widcolgallerycore.php:103
+msgid "Gallery"
+msgstr "Galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:104
+#: includes/testimonials/class-widcoltestimonialscore.php:95
+msgid "Add New"
+msgstr "Voeg Nieuwe toe"
+
+#: includes/gallery/class-widcolgallerycore.php:105
+msgid "Add New Gallery"
+msgstr "Voeg Nieuwe Galerij toe"
+
+#: includes/gallery/class-widcolgallerycore.php:106
+msgid "Edit Gallery"
+msgstr "Bewerk Galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:107
+msgid "New Gallery"
+msgstr "Nieuwe Galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:108
+msgid "View Gallery"
+msgstr "Bekijk Galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:109
+msgid "View Galleries"
+msgstr "Bekijk Galerijen"
+
+#: includes/gallery/class-widcolgallerycore.php:110
+msgid "Search Galleries"
+msgstr "Zoek Galerijen"
+
+#: includes/gallery/class-widcolgallerycore.php:111
+msgid "No galleries found"
+msgstr "Geen galerijen gevonden"
+
+#: includes/gallery/class-widcolgallerycore.php:112
+msgid "No galleries found in trash"
+msgstr "Geen galerijen gevonden in prullenbak"
+
+#: includes/gallery/class-widcolgallerycore.php:113
+msgid "Parent Gallery"
+msgstr "Hoofd Galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:114
+msgid "All Galleries"
+msgstr "Alle Galerijen"
+
+#: includes/gallery/class-widcolgallerycore.php:115
+msgid "Gallery Archives"
+msgstr "Galerij Archieven"
+
+#: includes/gallery/class-widcolgallerycore.php:116
+msgid "Gallery Attributes"
+msgstr "Galerij Attributen"
+
+#: includes/gallery/class-widcolgallerycore.php:117
+msgid "Insert into gallery"
+msgstr "Invoegen in galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:118
+msgid "Uploaded to this gallery"
+msgstr "Geupload naar deze galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:119
+#: includes/testimonials/class-widcoltestimonialscore.php:110
+msgid "Featured image"
+msgstr "Uitgelichte afbeelding"
+
+#: includes/gallery/class-widcolgallerycore.php:120
+#: includes/testimonials/class-widcoltestimonialscore.php:111
+msgid "Set featured image"
+msgstr "Stel uitgelichte afbeelding in"
+
+#: includes/gallery/class-widcolgallerycore.php:121
+#: includes/testimonials/class-widcoltestimonialscore.php:112
+msgid "Remove featured image"
+msgstr "Verwijder uitgelichte afbeelding"
+
+#: includes/gallery/class-widcolgallerycore.php:122
+#: includes/testimonials/class-widcoltestimonialscore.php:113
+msgid "Use as featured image"
+msgstr "Gebruik als uitgelichte afbeelding"
+
+#: includes/gallery/class-widcolgallerycore.php:124
+msgid "Filter galleries list"
+msgstr "Filter galerijen lijst"
+
+#: includes/gallery/class-widcolgallerycore.php:125
+#: includes/testimonials/class-widcoltestimonialscore.php:116
+msgid "Filter by date"
+msgstr "Filter op datum"
+
+#: includes/gallery/class-widcolgallerycore.php:126
+msgid "Galleries list navigation"
+msgstr "Galerijen lijst navigatie"
+
+#: includes/gallery/class-widcolgallerycore.php:127
+msgid "Galleries list"
+msgstr "Galerijen lijst"
+
+#: includes/gallery/class-widcolgallerycore.php:128
+msgid "Gallery published"
+msgstr "Galerij gepubliceerd"
+
+#: includes/gallery/class-widcolgallerycore.php:129
+msgid "Gallery published privately"
+msgstr "Galerij privé gepubliceerd"
+
+#: includes/gallery/class-widcolgallerycore.php:130
+msgid "Gallery reverted to draft"
+msgstr "Galerij teruggezet naar concept"
+
+#: includes/gallery/class-widcolgallerycore.php:131
+msgid "Gallery scheduled"
+msgstr "Galerij ingepland"
+
+#: includes/gallery/class-widcolgallerycore.php:132
+msgid "Gallery updated"
+msgstr "Galerij bijgewerkt"
+
+#: includes/gallery/class-widcolgallerycore.php:134
+msgid "Gallery post type"
+msgstr "Galerij post type"
+
+#: includes/gallery/class-widcolgallerycore.php:158
+#: includes/gallery/class-widcolgallerycore.php:177
+msgid "Gallery Categories"
+msgstr "Galerij Categorieën"
+
+#: includes/gallery/class-widcolgallerycore.php:159
+msgid "Gallery Category"
+msgstr "Galerij Categorie"
+
+#: includes/gallery/class-widcolgallerycore.php:160
+msgid "Search Gallery Categories"
+msgstr "Zoek Galerij Categorieën"
+
+#: includes/gallery/class-widcolgallerycore.php:161
+msgid "Popular Gallery Categories"
+msgstr "Populaire Galerij Categorieën"
+
+#: includes/gallery/class-widcolgallerycore.php:162
+msgid "All Gallery Categories"
+msgstr "Alle Galerij Categorieën"
+
+#: includes/gallery/class-widcolgallerycore.php:163
+msgid "Parent Gallery Category"
+msgstr "Hoofd Galerij Categorie"
+
+#: includes/gallery/class-widcolgallerycore.php:164
+msgid "Parent Gallery Category:"
+msgstr "Hoofd Galerij Categorie:"
+
+#: includes/gallery/class-widcolgallerycore.php:165
+msgid "Edit Gallery Category"
+msgstr "Bewerk Galerij Categorie"
+
+#: includes/gallery/class-widcolgallerycore.php:166
+msgid "View Gallery Category"
+msgstr "Bekijk Galerij Categorie"
+
+#: includes/gallery/class-widcolgallerycore.php:167
+msgid "Update Gallery Category"
+msgstr "Update Galerij Categorie"
+
+#: includes/gallery/class-widcolgallerycore.php:168
+msgid "Add New Gallery Category"
+msgstr "Nieuwe Galerij Categorie Toevoegen"
+
+#: includes/gallery/class-widcolgallerycore.php:169
+msgid "New Gallery Category Name"
+msgstr "Nieuwe Galerij Categorie Naam"
+
+#: includes/gallery/class-widcolgallerycore.php:170
+msgid "Separate Gallery Categories with commas"
+msgstr "Scheidt Galerij Categorieën met komma’s"
+
+#: includes/gallery/class-widcolgallerycore.php:171
+msgid "Add or remove gallery categories"
+msgstr "Galerij Categorieën toevoegen of verwijderen"
+
+#: includes/gallery/class-widcolgallerycore.php:172
+msgid "Choose from the most used gallery categories"
+msgstr "Kies uit de meest gebruikte galerij categorieën"
+
+#: includes/gallery/class-widcolgallerycore.php:173
+msgid "No gallery categories found"
+msgstr "Geen galerij categorieën gevonden"
+
+#: includes/gallery/class-widcolgallerycore.php:174
+msgid "No gallery categories"
+msgstr "Geen galerij categorie"
+
+#: includes/gallery/class-widcolgallerycore.php:175
+msgid "Filter by gallery category"
+msgstr "Filter op galerij categorie"
+
+#: includes/gallery/class-widcolgallerycore.php:196
+msgid "Gallery images"
+msgstr "Galerij afbeeldingen"
+
+#: includes/gallery/class-widcolgallerycore.php:228
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Delete image"
+msgstr "Afbeelding verwijderen"
+
+#: includes/gallery/class-widcolgallerycore.php:228
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Add images to gallery"
+msgstr "Voeg afbeeldingen toe aan galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Add to gallery"
+msgstr "Toevoegen aan galerij"
+
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Add gallery images"
+msgstr "Voeg galerij afbeeldingen toe"
+
+#: includes/gallery/class-widcolgalleryshortcode.php:107
+msgid "Please set an ID for this gallery to work."
+msgstr "Galerij werkt niet. Stel een ID in voor deze galerij."
+
+#: includes/testimonials/class-widcoltestimonialscore.php:91
+#: includes/testimonials/class-widcoltestimonialscore.php:93
+#: includes/testimonials/class-widcoltestimonialscore.php:114
+msgid "Testimonials"
+msgstr "Recensies"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:94
+msgid "Testimonial"
+msgstr "Recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:96
+msgid "Add New Testimonial"
+msgstr "Voeg Nieuwe Recensie toe"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:97
+msgid "Edit Testimonial"
+msgstr "Bewerk Recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:98
+msgid "New Testimonial"
+msgstr "Nieuwe Recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:99
+msgid "View Testimonial"
+msgstr "Bekijk Recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:100
+msgid "View Testimonials"
+msgstr "Bekijk Recensies"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:101
+msgid "Search Testimonials"
+msgstr "Zoek Recensies"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:102
+msgid "No testimonials found"
+msgstr "Geen recensies gevonden"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:103
+msgid "No testimonials found in trash"
+msgstr "Geen recensies gevonden in prullenbak"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:104
+msgid "Parent Testimonial"
+msgstr "Hoofd Recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:105
+msgid "All Testimonials"
+msgstr "Alle Recensies"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:106
+msgid "Testimonial Archives"
+msgstr "Recensie Archieven"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:107
+msgid "Testimonial Attributes"
+msgstr "Recensie Attributen"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:108
+msgid "Insert into testimonial"
+msgstr "Invoegen in recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:109
+msgid "Uploaded to this testimonial"
+msgstr "Geupload naar deze recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:115
+msgid "Filter testimonials list"
+msgstr "Filter recensies lijst"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:117
+msgid "Testimonials list navigation"
+msgstr "Recensies lijst navigatie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:118
+msgid "Testimonials list"
+msgstr "Recensies lijst"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:119
+msgid "Testimonial published"
+msgstr "Gepubliceerde Recensies"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:120
+msgid "Testimonial published privately"
+msgstr "Privé gepubliceerde Recensies"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:121
+msgid "Testimonial reverted to draft"
+msgstr "Recensie teruggezet naar concept"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:122
+msgid "Testimonial scheduled"
+msgstr "Recensie ingepland"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:123
+msgid "Testimonial updated"
+msgstr "Recensie ge-update"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:125
+msgid "Testimonial post type"
+msgstr "Recensie post type"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:150
+#: includes/testimonials/class-widcoltestimonialscore.php:169
+msgid "Testimonial Categories"
+msgstr "Recensie Categorieën"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:151
+msgid "Testimonial Category"
+msgstr "Recensie Categorie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:152
+msgid "Search Testimonial Categories"
+msgstr "Zoek Recensie Categorieën"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:153
+msgid "Popular Testimonial Categories"
+msgstr "Populaire Recensie Categorieën"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:154
+msgid "All Testimonial Categories"
+msgstr "Alle Recensie Categorieën"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:155
+msgid "Parent Testimonial Category"
+msgstr "Hoofd Recensie Categorie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:156
+msgid "Parent Testimonial Category:"
+msgstr "Recensie Categorie:"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:157
+msgid "Edit Testimonial Category"
+msgstr "Bewerk Recensie Categorie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:158
+msgid "View Testimonial Category"
+msgstr "Bekijk Recensie Categorie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:159
+msgid "Update Testimonial Category"
+msgstr "Update Recensie Categorie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:160
+msgid "Add New Testimonial Category"
+msgstr "Nieuwe Recensie Categorie Toevoegen"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:161
+msgid "New Testimonial Category Name"
+msgstr "Nieuwe Recensie Categorie Naam"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:162
+msgid "Separate Testimonial Categories with commas"
+msgstr "Scheidt Recensie Categorieën met komma’s"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:163
+msgid "Add or remove testimonial categories"
+msgstr "Recensie Categorieën toevoegen of verwijderen"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:164
+msgid "Choose from the most used testimonial categories"
+msgstr "Kies uit de meest gebruikte recensie categorieën"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:165
+msgid "No testimonial categories found"
+msgstr "Geen recensie categorieën gevonden"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:166
+msgid "No testimonial categories"
+msgstr "Geen recensie categorie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:167
+msgid "Filter by testimonial category"
+msgstr "Filter op recensie categorie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:193
+msgid "Testimonial content"
+msgstr "Recensie inhoud"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:194
+msgid "Content of the testimonial"
+msgstr "Inhoud van de recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:199
+msgid "Testimonial author"
+msgstr "Recensie auteur"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:200
+msgid "Author of the testimonial"
+msgstr "Auteur van de recensie"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:205
+msgid "Testimonial rating"
+msgstr "Recensie score"
+
+#: includes/testimonials/class-widcoltestimonialscore.php:206
+msgid "Rating of the testimonial (1-5)"
+msgstr "Score van de recensie (1-5)"
+
+#: views/widcol-admin-dashboard-view.php:10
+msgid "Widgets Collection Dashboard"
+msgstr "Widgets Collection Dashboard"
+
+#: views/widcol-admin-dashboard-view.php:12
+msgid "Widgets Collection settings"
+msgstr "Widgets Collection instellingen"
+
+#~ msgid "Testimonial settings"
+#~ msgstr "Recensie instellingen"

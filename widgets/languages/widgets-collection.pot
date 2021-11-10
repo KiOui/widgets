@@ -1,288 +1,503 @@
-# Copyright (C) 2021 Widgets Collection
-# This file is distributed under the same license as the Widgets Collection package.
+# Copyright (C) 2021 Lars van Rhijn
+# This file is distributed under the same license as the Widgets Collection plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Widgets Collection 0.0.1\n"
+"Project-Id-Version: Widgets Collection 0.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
-"POT-Creation-Date: 2021-05-08 11:19:40+00:00\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-
-#: includes/testimonials/widcol-testimonials-core.php:84
-#: includes/testimonials/widcol-testimonials-core.php:86
-#: includes/testimonials/widcol-testimonials-core.php:107
-msgid "Testimonials"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:87
-msgid "Testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:88
-msgid "Add New"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:89
-msgid "Add New Testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:90
-msgid "Edit Testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:91
-msgid "New Testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:92
-msgid "View Testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:93
-msgid "View Testimonials"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:94
-msgid "Search Testimonials"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:95
-msgid "No testimonials found"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:96
-msgid "No testimonials found in trash"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:97
-msgid "Parent Testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:98
-msgid "All Testimonials"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:99
-msgid "Testimonial Archives"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:100
-msgid "Testimonial Attributes"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:101
-msgid "Insert into testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:102
-msgid "Uploaded to this testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:103
-msgid "Featured image"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:104
-msgid "Set featured image"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:105
-msgid "Remove featured image"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:106
-msgid "Use as featured image"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:108
-msgid "Filter testimonials list"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:109
-msgid "Filter by date"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:110
-msgid "Testimonials list navigation"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:111
-msgid "Testimonials list"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:112
-msgid "Testimonial published"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:113
-msgid "Testimonial published privately"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:114
-msgid "Testimonial reverted to draft"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:115
-msgid "Testimonial scheduled"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:116
-msgid "Testimonial updated"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:118
-msgid "Testimonial post type"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:138
-#: includes/testimonials/widcol-testimonials-core.php:157
-msgid "Testimonial Categories"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:139
-msgid "Testimonial Category"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:140
-msgid "Search Testimonial Categories"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:141
-msgid "Popular Testimonial Categories"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:142
-msgid "All Testimonial Categories"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:143
-msgid "Parent Testimonial Category"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:144
-msgid "Parent Testimonial Category:"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:145
-msgid "Edit Testimonial Category"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:146
-msgid "View Testimonial Category"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:147
-msgid "Update Testimonial Category"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:148
-msgid "Add New Testimonial Category"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:149
-msgid "New Testimonial Category Name"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:150
-msgid "Separate Testimonial Categories with commas"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:151
-msgid "Add or remove testimonial categories"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:152
-msgid "Choose from the most used testimonial categories"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:153
-msgid "No testimonial categories found"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:154
-msgid "No testimonial categories"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:155
-msgid "Filter by testimonial category"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:179
-msgid "Testimonial content"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:180
-msgid "Content of the testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:185
-msgid "Testimonial author"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:186
-msgid "Author of the testimonial"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:191
-msgid "Testimonial rating"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:192
-msgid "Rating of the testimonial (1-5)"
-msgstr ""
-
-#: includes/testimonials/widcol-testimonials-core.php:198
-msgid "Testimonial settings"
-msgstr ""
-
-#: includes/widcol-settings.php:65 includes/widcol-settings.php:66
-msgid "Widgets"
-msgstr ""
-
-#: includes/widcol-settings.php:75
-msgid "Widgets Dashboard"
-msgstr ""
-
-#: includes/widcol-settings.php:76
-msgid "Dashboard"
-msgstr ""
-
-#: includes/widcol-settings.php:96 includes/widcol-settings.php:137
-msgid "Enabled widgets"
-msgstr ""
-
-#: includes/widcol-settings.php:103
-msgid "Enable Testimonials"
-msgstr ""
-
-#: views/widcol-admin-dashboard-view.php:5
-msgid "Widgets Collection Dashboard"
-msgstr ""
-
-#: views/widcol-admin-dashboard-view.php:7
-msgid "Widgets Collection settings"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
+"POT-Creation-Date: 2021-11-10T20:21:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: widgets-collection\n"
+
+#. Plugin Name of the plugin
 msgid "Widgets Collection"
 msgstr ""
 
-#. Plugin URI of the plugin/theme
+#. Plugin URI of the plugin
 msgid "https://github.com/KiOui/widgets"
 msgstr ""
 
-#. Description of the plugin/theme
+#. Description of the plugin
 msgid "A collection of custom-made widgets for Wordpress websites"
 msgstr ""
 
-#. Author of the plugin/theme
+#. Author of the plugin
 msgid "Lars van Rhijn"
 msgstr ""
 
-#. Author URI of the plugin/theme
+#. Author URI of the plugin
 msgid "https://larsvanrhijn.nl/"
+msgstr ""
+
+#: includes/class-widcolsettings.php:70
+#: includes/class-widcolsettings.php:71
+msgid "Widgets"
+msgstr ""
+
+#: includes/class-widcolsettings.php:80
+msgid "Widgets Dashboard"
+msgstr ""
+
+#: includes/class-widcolsettings.php:81
+msgid "Dashboard"
+msgstr ""
+
+#: includes/class-widcolsettings.php:100
+#: includes/class-widcolsettings.php:157
+msgid "Enabled widgets"
+msgstr ""
+
+#: includes/class-widcolsettings.php:107
+msgid "Enable Testimonials"
+msgstr ""
+
+#: includes/class-widcolsettings.php:115
+msgid "Enable Galleries"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:100
+#: includes/gallery/class-widcolgallerycore.php:102
+#: includes/gallery/class-widcolgallerycore.php:123
+msgid "Galleries"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:103
+msgid "Gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:104
+#: includes/testimonials/class-widcoltestimonialscore.php:95
+msgid "Add New"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:105
+msgid "Add New Gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:106
+msgid "Edit Gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:107
+msgid "New Gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:108
+msgid "View Gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:109
+msgid "View Galleries"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:110
+msgid "Search Galleries"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:111
+msgid "No galleries found"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:112
+msgid "No galleries found in trash"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:113
+msgid "Parent Gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:114
+msgid "All Galleries"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:115
+msgid "Gallery Archives"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:116
+msgid "Gallery Attributes"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:117
+msgid "Insert into gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:118
+msgid "Uploaded to this gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:119
+#: includes/testimonials/class-widcoltestimonialscore.php:110
+msgid "Featured image"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:120
+#: includes/testimonials/class-widcoltestimonialscore.php:111
+msgid "Set featured image"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:121
+#: includes/testimonials/class-widcoltestimonialscore.php:112
+msgid "Remove featured image"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:122
+#: includes/testimonials/class-widcoltestimonialscore.php:113
+msgid "Use as featured image"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:124
+msgid "Filter galleries list"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:125
+#: includes/testimonials/class-widcoltestimonialscore.php:116
+msgid "Filter by date"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:126
+msgid "Galleries list navigation"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:127
+msgid "Galleries list"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:128
+msgid "Gallery published"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:129
+msgid "Gallery published privately"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:130
+msgid "Gallery reverted to draft"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:131
+msgid "Gallery scheduled"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:132
+msgid "Gallery updated"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:134
+msgid "Gallery post type"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:158
+#: includes/gallery/class-widcolgallerycore.php:177
+msgid "Gallery Categories"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:159
+msgid "Gallery Category"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:160
+msgid "Search Gallery Categories"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:161
+msgid "Popular Gallery Categories"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:162
+msgid "All Gallery Categories"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:163
+msgid "Parent Gallery Category"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:164
+msgid "Parent Gallery Category:"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:165
+msgid "Edit Gallery Category"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:166
+msgid "View Gallery Category"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:167
+msgid "Update Gallery Category"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:168
+msgid "Add New Gallery Category"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:169
+msgid "New Gallery Category Name"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:170
+msgid "Separate Gallery Categories with commas"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:171
+msgid "Add or remove gallery categories"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:172
+msgid "Choose from the most used gallery categories"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:173
+msgid "No gallery categories found"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:174
+msgid "No gallery categories"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:175
+msgid "Filter by gallery category"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:196
+msgid "Gallery images"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:228
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Delete image"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:228
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Delete"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Add images to gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Add to gallery"
+msgstr ""
+
+#: includes/gallery/class-widcolgallerycore.php:245
+msgid "Add gallery images"
+msgstr ""
+
+#: includes/gallery/class-widcolgalleryshortcode.php:107
+msgid "Please set an ID for this gallery to work."
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:91
+#: includes/testimonials/class-widcoltestimonialscore.php:93
+#: includes/testimonials/class-widcoltestimonialscore.php:114
+msgid "Testimonials"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:94
+msgid "Testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:96
+msgid "Add New Testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:97
+msgid "Edit Testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:98
+msgid "New Testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:99
+msgid "View Testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:100
+msgid "View Testimonials"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:101
+msgid "Search Testimonials"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:102
+msgid "No testimonials found"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:103
+msgid "No testimonials found in trash"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:104
+msgid "Parent Testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:105
+msgid "All Testimonials"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:106
+msgid "Testimonial Archives"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:107
+msgid "Testimonial Attributes"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:108
+msgid "Insert into testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:109
+msgid "Uploaded to this testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:115
+msgid "Filter testimonials list"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:117
+msgid "Testimonials list navigation"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:118
+msgid "Testimonials list"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:119
+msgid "Testimonial published"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:120
+msgid "Testimonial published privately"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:121
+msgid "Testimonial reverted to draft"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:122
+msgid "Testimonial scheduled"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:123
+msgid "Testimonial updated"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:125
+msgid "Testimonial post type"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:150
+#: includes/testimonials/class-widcoltestimonialscore.php:169
+msgid "Testimonial Categories"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:151
+msgid "Testimonial Category"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:152
+msgid "Search Testimonial Categories"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:153
+msgid "Popular Testimonial Categories"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:154
+msgid "All Testimonial Categories"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:155
+msgid "Parent Testimonial Category"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:156
+msgid "Parent Testimonial Category:"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:157
+msgid "Edit Testimonial Category"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:158
+msgid "View Testimonial Category"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:159
+msgid "Update Testimonial Category"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:160
+msgid "Add New Testimonial Category"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:161
+msgid "New Testimonial Category Name"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:162
+msgid "Separate Testimonial Categories with commas"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:163
+msgid "Add or remove testimonial categories"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:164
+msgid "Choose from the most used testimonial categories"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:165
+msgid "No testimonial categories found"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:166
+msgid "No testimonial categories"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:167
+msgid "Filter by testimonial category"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:193
+msgid "Testimonial content"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:194
+msgid "Content of the testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:199
+msgid "Testimonial author"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:200
+msgid "Author of the testimonial"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:205
+msgid "Testimonial rating"
+msgstr ""
+
+#: includes/testimonials/class-widcoltestimonialscore.php:206
+msgid "Rating of the testimonial (1-5)"
+msgstr ""
+
+#: views/widcol-admin-dashboard-view.php:10
+msgid "Widgets Collection Dashboard"
+msgstr ""
+
+#: views/widcol-admin-dashboard-view.php:12
+msgid "Widgets Collection settings"
 msgstr ""
