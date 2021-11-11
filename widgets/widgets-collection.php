@@ -3,7 +3,7 @@
  * Plugin Name: Widgets Collection
  * Description: A collection of custom-made widgets for Wordpress websites
  * Plugin URI: https://github.com/KiOui/widgets
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: Lars van Rhijn
  * Author URI: https://larsvanrhijn.nl/
  * Text Domain: widgets-collection
