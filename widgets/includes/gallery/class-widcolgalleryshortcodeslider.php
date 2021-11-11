@@ -65,12 +65,13 @@ if ( ! class_exists( 'WidColGalleryShortcodeSlider' ) ) {
 		 * @param array $atts {
 		 *      Optional. Array of Widget parameters.
 		 *
-		 *      @type int    $id                        ID of the gallery to show.
+		 *      @type int       $id                     ID of the gallery to show.
 		 *      @type string    $theme_color            Primary theme color, if empty the color will not be included in
 		 *                                              CSS.
-		 *      @type string    $arrow_enabled          Whether or not to enable the arrows on the slider, defaults to
+		 *      @type string    $auto_height            Whether to set auto height for the slider.
+		 *      @type string    $arrow_enabled          Whether to enable the arrows on the slider, defaults to
 		 *                                              true.
-		 *      @type string    $pagination_enabled     Whether or not to enable the pagination on the slider, defaults
+		 *      @type string    $pagination_enabled     Whether to enable the pagination on the slider, defaults
 		 *                                              to true.
 		 *      @type string    $slides_per_view        How many slides per view to show. Defaults to 1.
 		 * }
