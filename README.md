@@ -69,5 +69,18 @@ gallery with the shortcode. The shortcode has the following parameters:
 Example gallery:
 
 ```
-[widcol_gallery id="44"]
+[widcol_gallery_masonry id="44"]
 ```
+
+## Image slider gallery
+
+Alternatively, a slider is available to display your image galleries. The slider can be called wit the following
+shortcode: `[widcol_gallery_slider]`. The shortcode has the following parameters:
+
+- `id`: The id of the Gallery to use for the shortcode. This parameter is obligatory, without it the gallery will show a
+  warning message.
+- `theme_color`: Primary theme color used for the page (can also be changed with CSS).
+- `arrow_enabled`: Whether to enable the arrows of the slider.
+- `pagination_enabled`: Wheter to enable pagination of the slider.
+- `slides_per_view`: Amount of slides to display per view. Will automatically default to 1 if the screen size gets too
+  small.

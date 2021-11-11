@@ -1,6 +1,6 @@
 <?php
 /**
- * Gallery shortcode
+ * Gallery shortcode masonry
  *
  * @package widgets
  */
@@ -9,13 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'WidColGalleryShortcode' ) ) {
+if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 	/**
 	 * Gallery Shortcode class
 	 *
-	 * @class WidColGalleryShortcode
+	 * @class WidColGalleryShortcodeMasonry
 	 */
-	class WidColGalleryShortcode {
+	class WidColGalleryShortcodeMasonry {
 
 		/**
 		 * Identifier of the gallery.
@@ -25,7 +25,7 @@ if ( ! class_exists( 'WidColGalleryShortcode' ) ) {
 		private ?int $id;
 
 		/**
-		 * WidColGalleryShortcode constructor.
+		 * WidColGalleryShortcodeMasonry constructor.
 		 *
 		 * @param array $atts {
 		 *      Optional. Array of Widget parameters.
@@ -69,20 +69,20 @@ if ( ! class_exists( 'WidColGalleryShortcode' ) ) {
 		 */
 		public function include_styles_and_scripts() {
 			wp_enqueue_script( 'macy-js', 'https://cdn.jsdelivr.net/npm/macy@2', array(), true, false );
-			wp_enqueue_script( 'gallery-activation', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-activation.js', array( 'macy-js' ), '1.0', true );
+			wp_enqueue_script( 'gallery-masonry-activation', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-masonry-activation.js', array( 'macy-js' ), '1.0', true );
 		}
 
 		/**
 		 * Localize the gallery activation javascript file to activate all activated galleries.
 		 *
-		 * @param WidColGalleryShortcode[] $galleries galleries to localize the activation script for.
+		 * @param WidColGalleryShortcodeMasonry[] $galleries galleries to localize the activation script for.
 		 */
 		public static function localize_gallery_activation( array $galleries ) {
 			$configs = array();
 			foreach ( $galleries as $gallery ) {
-				$configs[] = array( 'id' => 'widcol-gallery-' . $gallery->get_id() );
+				$configs[] = array( 'id' => 'widcol-gallery-masonry-' . $gallery->get_id() );
 			}
-			wp_localize_script( 'gallery-activation', 'gallery_configs', $configs );
+			wp_localize_script( 'gallery-masonry-activation', 'gallery_configs', $configs );
 		}
 
 		/**
@@ -96,7 +96,7 @@ if ( ! class_exists( 'WidColGalleryShortcode' ) ) {
 			if ( isset( $gallery_post ) ) {
 				$attachement_ids = get_post_meta( $gallery_post->ID, 'widcol_gallery_images', true );
 				?>
-				<div id="widcol-gallery-<?php echo esc_attr( $this->get_id() ); ?>">
+				<div id="widcol-gallery-masonry-<?php echo esc_attr( $this->get_id() ); ?>">
 					<?php foreach ( $attachement_ids as $attachement_id ) : ?>
 						<div>
 							<?php echo wp_get_attachment_image( $attachement_id, 'full' ); ?>

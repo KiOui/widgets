@@ -1,0 +1,30 @@
+.widcol-gallery-swiper-container .swiper-button-prev {
+    background-image: none;
+}
+
+.widcol-gallery-swiper-container .swiper-button-next {
+    background-image: none;
+}
+
+.widcol-gallery-swiper-container .swiper-slide {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.widcol-gallery-swiper-container .swiper-slide .swiper-slide-body {
+    padding: 15px;
+}
+
+.widcol-gallery-swiper-container .swiper-slide .swiper-slide-body .img-content img {
+    width: 100%;
+}
+
+
+.widcol-gallery-swiper-container {
+    padding: 20px;
+    margin-bottom: 30px;
+}
