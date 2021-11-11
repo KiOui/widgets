@@ -25,11 +25,18 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		protected static ?WidColGalleryCore $_instance = null;
 
 		/**
-		 * Registered galleries
+		 * Registered Masonry galleries
 		 *
 		 * @var array
 		 */
-		private array $galleries = array();
+		private array $masonries = array();
+
+		/**
+		 * Registered Slider galleries
+		 *
+		 * @var array
+		 */
+		private array $sliders = array();
 
 		/**
 		 * Widgets Collection Gallery Core
@@ -77,9 +84,13 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		 * Localize the gallery script so that the sliders activate.
 		 */
 		public function localize_gallery_script() {
-			if ( count( $this->galleries ) > 0 ) {
-				include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcode.php';
-				WidColGalleryShortcode::localize_gallery_activation( $this->galleries );
+			if ( count( $this->masonries ) > 0 ) {
+				include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcodemasonry.php';
+				WidColGalleryShortcodeMasonry::localize_gallery_activation( $this->masonries );
+			}
+			if ( count( $this->sliders ) > 0 ) {
+				include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcodeslider.php';
+				WidColGalleryShortcodeSlider::localize_gallery_activation( $this->sliders );
 			}
 		}
 
@@ -87,7 +98,8 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		 * Add the Gallery shortcode.
 		 */
 		public function add_shortcodes() {
-			add_shortcode( 'widcol_gallery', array( $this, 'do_shortcode' ) );
+			add_shortcode( 'widcol_gallery_masonry', array( $this, 'do_shortcode_masonry' ) );
+			add_shortcode( 'widcol_gallery_slider', array( $this, 'do_shortcode_slider' ) );
 		}
 
 		/**
@@ -108,8 +120,8 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 						'view_item' => __( 'View Gallery', 'widgets-collection' ),
 						'view_items' => __( 'View Galleries', 'widgets-collection' ),
 						'search_items' => __( 'Search Galleries', 'widgets-collection' ),
-						'not_found' => __( 'No galleries found', 'widgets-collection' ),
-						'not_found_in_trash' => __( 'No galleries found in trash', 'widgets-collection' ),
+						'not_found' => __( 'No $masonries found', 'widgets-collection' ),
+						'not_found_in_trash' => __( 'No $masonries found in trash', 'widgets-collection' ),
 						'parent_item_colon' => __( 'Parent Gallery', 'widgets-collection' ),
 						'all_items' => __( 'All Galleries', 'widgets-collection' ),
 						'archives' => __( 'Gallery Archives', 'widgets-collection' ),
@@ -121,7 +133,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 						'remove_featured_image' => __( 'Remove featured image', 'widgets-collection' ),
 						'use_featured_image' => __( 'Use as featured image', 'widgets-collection' ),
 						'menu_name' => __( 'Galleries', 'widgets-collection' ),
-						'filter_items_list' => __( 'Filter galleries list', 'widgets-collection' ),
+						'filter_items_list' => __( 'Filter $masonries list', 'widgets-collection' ),
 						'filter_by_date' => __( 'Filter by date', 'widgets-collection' ),
 						'items_list_navigation' => __( 'Galleries list navigation', 'widgets-collection' ),
 						'items_list' => __( 'Galleries list', 'widgets-collection' ),
@@ -273,19 +285,36 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		}
 
 		/**
-		 * Do the shortcode of a gallery.
+		 * Do the masonry shortcode of a gallery.
 		 *
 		 * @param $atts string|array shortcode attributes
 		 * @return false|string a string with the shortcode or false on failure
 		 */
-		public function do_shortcode( string|array $atts ): string|false {
+		public function do_shortcode_masonry( string|array $atts ): string|false {
 			if ( gettype( $atts ) != 'array' ) {
 				$atts = array();
 			}
 
-			include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcode.php';
-			$shortcode = new WidColGalleryShortcode( $atts );
-			$this->galleries[] = $shortcode;
+			include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcodemasonry.php';
+			$shortcode = new WidColGalleryShortcodeMasonry( $atts );
+			$this->masonries[] = $shortcode;
+			return $shortcode->do_shortcode();
+		}
+
+		/**
+		 * Do the slider shortcode of a gallery.
+		 *
+		 * @param $atts string|array shortcode attributes
+		 * @return false|string a string with the shortcode or false on failure
+		 */
+		public function do_shortcode_slider( string|array $atts ): string|false {
+			if ( gettype( $atts ) != 'array' ) {
+				$atts = array();
+			}
+
+			include_once WIDCOL_ABSPATH . 'includes/gallery/class-widcolgalleryshortcodeslider.php';
+			$shortcode = new WidColGalleryShortcodeSlider( $atts );
+			$this->sliders[] = $shortcode;
 			return $shortcode->do_shortcode();
 		}
 	}
