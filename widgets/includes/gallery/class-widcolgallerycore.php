@@ -133,7 +133,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 						'remove_featured_image' => __( 'Remove featured image', 'widgets-collection' ),
 						'use_featured_image' => __( 'Use as featured image', 'widgets-collection' ),
 						'menu_name' => __( 'Galleries', 'widgets-collection' ),
-						'filter_items_list' => __( 'Filter galleries list', 'widgets-collection' ),
+						'filter_items_list' => __( 'Filter $masonries list', 'widgets-collection' ),
 						'filter_by_date' => __( 'Filter by date', 'widgets-collection' ),
 						'items_list_navigation' => __( 'Galleries list navigation', 'widgets-collection' ),
 						'items_list' => __( 'Galleries list', 'widgets-collection' ),
