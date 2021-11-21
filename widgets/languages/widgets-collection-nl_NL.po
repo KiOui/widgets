@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Widgets Collection 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
-"POT-Creation-Date: 2021-11-10T20:21:09+00:00\n"
-"PO-Revision-Date: 2021-11-10 21:21+0100\n"
+"POT-Creation-Date: 2021-11-21T18:47:11+00:00\n"
+"PO-Revision-Date: 2021-11-21 19:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -59,240 +59,244 @@ msgstr "Schakel Recensies in"
 msgid "Enable Galleries"
 msgstr "Schakel Galerijen in"
 
-#: includes/gallery/class-widcolgallerycore.php:100
-#: includes/gallery/class-widcolgallerycore.php:102
-#: includes/gallery/class-widcolgallerycore.php:123
+#: includes/gallery/class-widcolgallerycore.php:112
+#: includes/gallery/class-widcolgallerycore.php:114
+#: includes/gallery/class-widcolgallerycore.php:135
 msgid "Galleries"
 msgstr "Galerijen"
 
-#: includes/gallery/class-widcolgallerycore.php:103
+#: includes/gallery/class-widcolgallerycore.php:115
 msgid "Gallery"
 msgstr "Galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:104
+#: includes/gallery/class-widcolgallerycore.php:116
 #: includes/testimonials/class-widcoltestimonialscore.php:95
 msgid "Add New"
 msgstr "Voeg Nieuwe toe"
 
-#: includes/gallery/class-widcolgallerycore.php:105
+#: includes/gallery/class-widcolgallerycore.php:117
 msgid "Add New Gallery"
 msgstr "Voeg Nieuwe Galerij toe"
 
-#: includes/gallery/class-widcolgallerycore.php:106
+#: includes/gallery/class-widcolgallerycore.php:118
 msgid "Edit Gallery"
 msgstr "Bewerk Galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:107
+#: includes/gallery/class-widcolgallerycore.php:119
 msgid "New Gallery"
 msgstr "Nieuwe Galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:108
+#: includes/gallery/class-widcolgallerycore.php:120
 msgid "View Gallery"
 msgstr "Bekijk Galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:109
+#: includes/gallery/class-widcolgallerycore.php:121
 msgid "View Galleries"
 msgstr "Bekijk Galerijen"
 
-#: includes/gallery/class-widcolgallerycore.php:110
+#: includes/gallery/class-widcolgallerycore.php:122
 msgid "Search Galleries"
 msgstr "Zoek Galerijen"
 
-#: includes/gallery/class-widcolgallerycore.php:111
-msgid "No galleries found"
+#: includes/gallery/class-widcolgallerycore.php:123
+msgid "No Galleries found"
 msgstr "Geen galerijen gevonden"
 
-#: includes/gallery/class-widcolgallerycore.php:112
-msgid "No galleries found in trash"
+#: includes/gallery/class-widcolgallerycore.php:124
+msgid "No Galleries found in trash"
 msgstr "Geen galerijen gevonden in prullenbak"
 
-#: includes/gallery/class-widcolgallerycore.php:113
+#: includes/gallery/class-widcolgallerycore.php:125
 msgid "Parent Gallery"
 msgstr "Hoofd Galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:114
+#: includes/gallery/class-widcolgallerycore.php:126
 msgid "All Galleries"
 msgstr "Alle Galerijen"
 
-#: includes/gallery/class-widcolgallerycore.php:115
+#: includes/gallery/class-widcolgallerycore.php:127
 msgid "Gallery Archives"
 msgstr "Galerij Archieven"
 
-#: includes/gallery/class-widcolgallerycore.php:116
+#: includes/gallery/class-widcolgallerycore.php:128
 msgid "Gallery Attributes"
 msgstr "Galerij Attributen"
 
-#: includes/gallery/class-widcolgallerycore.php:117
+#: includes/gallery/class-widcolgallerycore.php:129
 msgid "Insert into gallery"
 msgstr "Invoegen in galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:118
+#: includes/gallery/class-widcolgallerycore.php:130
 msgid "Uploaded to this gallery"
 msgstr "Geupload naar deze galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:119
+#: includes/gallery/class-widcolgallerycore.php:131
 #: includes/testimonials/class-widcoltestimonialscore.php:110
 msgid "Featured image"
 msgstr "Uitgelichte afbeelding"
 
-#: includes/gallery/class-widcolgallerycore.php:120
+#: includes/gallery/class-widcolgallerycore.php:132
 #: includes/testimonials/class-widcoltestimonialscore.php:111
 msgid "Set featured image"
 msgstr "Stel uitgelichte afbeelding in"
 
-#: includes/gallery/class-widcolgallerycore.php:121
+#: includes/gallery/class-widcolgallerycore.php:133
 #: includes/testimonials/class-widcoltestimonialscore.php:112
 msgid "Remove featured image"
 msgstr "Verwijder uitgelichte afbeelding"
 
-#: includes/gallery/class-widcolgallerycore.php:122
+#: includes/gallery/class-widcolgallerycore.php:134
 #: includes/testimonials/class-widcoltestimonialscore.php:113
 msgid "Use as featured image"
 msgstr "Gebruik als uitgelichte afbeelding"
 
-#: includes/gallery/class-widcolgallerycore.php:124
+#: includes/gallery/class-widcolgallerycore.php:136
 msgid "Filter galleries list"
 msgstr "Filter galerijen lijst"
 
-#: includes/gallery/class-widcolgallerycore.php:125
+#: includes/gallery/class-widcolgallerycore.php:137
 #: includes/testimonials/class-widcoltestimonialscore.php:116
 msgid "Filter by date"
 msgstr "Filter op datum"
 
-#: includes/gallery/class-widcolgallerycore.php:126
+#: includes/gallery/class-widcolgallerycore.php:138
 msgid "Galleries list navigation"
 msgstr "Galerijen lijst navigatie"
 
-#: includes/gallery/class-widcolgallerycore.php:127
+#: includes/gallery/class-widcolgallerycore.php:139
 msgid "Galleries list"
 msgstr "Galerijen lijst"
 
-#: includes/gallery/class-widcolgallerycore.php:128
+#: includes/gallery/class-widcolgallerycore.php:140
 msgid "Gallery published"
 msgstr "Galerij gepubliceerd"
 
-#: includes/gallery/class-widcolgallerycore.php:129
+#: includes/gallery/class-widcolgallerycore.php:141
 msgid "Gallery published privately"
 msgstr "Galerij privé gepubliceerd"
 
-#: includes/gallery/class-widcolgallerycore.php:130
+#: includes/gallery/class-widcolgallerycore.php:142
 msgid "Gallery reverted to draft"
 msgstr "Galerij teruggezet naar concept"
 
-#: includes/gallery/class-widcolgallerycore.php:131
+#: includes/gallery/class-widcolgallerycore.php:143
 msgid "Gallery scheduled"
 msgstr "Galerij ingepland"
 
-#: includes/gallery/class-widcolgallerycore.php:132
+#: includes/gallery/class-widcolgallerycore.php:144
 msgid "Gallery updated"
 msgstr "Galerij bijgewerkt"
 
-#: includes/gallery/class-widcolgallerycore.php:134
+#: includes/gallery/class-widcolgallerycore.php:146
 msgid "Gallery post type"
 msgstr "Galerij post type"
 
-#: includes/gallery/class-widcolgallerycore.php:158
-#: includes/gallery/class-widcolgallerycore.php:177
+#: includes/gallery/class-widcolgallerycore.php:170
+#: includes/gallery/class-widcolgallerycore.php:189
 msgid "Gallery Categories"
 msgstr "Galerij Categorieën"
 
-#: includes/gallery/class-widcolgallerycore.php:159
+#: includes/gallery/class-widcolgallerycore.php:171
 msgid "Gallery Category"
 msgstr "Galerij Categorie"
 
-#: includes/gallery/class-widcolgallerycore.php:160
+#: includes/gallery/class-widcolgallerycore.php:172
 msgid "Search Gallery Categories"
 msgstr "Zoek Galerij Categorieën"
 
-#: includes/gallery/class-widcolgallerycore.php:161
+#: includes/gallery/class-widcolgallerycore.php:173
 msgid "Popular Gallery Categories"
 msgstr "Populaire Galerij Categorieën"
 
-#: includes/gallery/class-widcolgallerycore.php:162
+#: includes/gallery/class-widcolgallerycore.php:174
 msgid "All Gallery Categories"
 msgstr "Alle Galerij Categorieën"
 
-#: includes/gallery/class-widcolgallerycore.php:163
+#: includes/gallery/class-widcolgallerycore.php:175
 msgid "Parent Gallery Category"
 msgstr "Hoofd Galerij Categorie"
 
-#: includes/gallery/class-widcolgallerycore.php:164
+#: includes/gallery/class-widcolgallerycore.php:176
 msgid "Parent Gallery Category:"
 msgstr "Hoofd Galerij Categorie:"
 
-#: includes/gallery/class-widcolgallerycore.php:165
+#: includes/gallery/class-widcolgallerycore.php:177
 msgid "Edit Gallery Category"
 msgstr "Bewerk Galerij Categorie"
 
-#: includes/gallery/class-widcolgallerycore.php:166
+#: includes/gallery/class-widcolgallerycore.php:178
 msgid "View Gallery Category"
 msgstr "Bekijk Galerij Categorie"
 
-#: includes/gallery/class-widcolgallerycore.php:167
+#: includes/gallery/class-widcolgallerycore.php:179
 msgid "Update Gallery Category"
 msgstr "Update Galerij Categorie"
 
-#: includes/gallery/class-widcolgallerycore.php:168
+#: includes/gallery/class-widcolgallerycore.php:180
 msgid "Add New Gallery Category"
 msgstr "Nieuwe Galerij Categorie Toevoegen"
 
-#: includes/gallery/class-widcolgallerycore.php:169
+#: includes/gallery/class-widcolgallerycore.php:181
 msgid "New Gallery Category Name"
 msgstr "Nieuwe Galerij Categorie Naam"
 
-#: includes/gallery/class-widcolgallerycore.php:170
+#: includes/gallery/class-widcolgallerycore.php:182
 msgid "Separate Gallery Categories with commas"
 msgstr "Scheidt Galerij Categorieën met komma’s"
 
-#: includes/gallery/class-widcolgallerycore.php:171
+#: includes/gallery/class-widcolgallerycore.php:183
 msgid "Add or remove gallery categories"
 msgstr "Galerij Categorieën toevoegen of verwijderen"
 
-#: includes/gallery/class-widcolgallerycore.php:172
+#: includes/gallery/class-widcolgallerycore.php:184
 msgid "Choose from the most used gallery categories"
 msgstr "Kies uit de meest gebruikte galerij categorieën"
 
-#: includes/gallery/class-widcolgallerycore.php:173
+#: includes/gallery/class-widcolgallerycore.php:185
 msgid "No gallery categories found"
 msgstr "Geen galerij categorieën gevonden"
 
-#: includes/gallery/class-widcolgallerycore.php:174
+#: includes/gallery/class-widcolgallerycore.php:186
 msgid "No gallery categories"
 msgstr "Geen galerij categorie"
 
-#: includes/gallery/class-widcolgallerycore.php:175
+#: includes/gallery/class-widcolgallerycore.php:187
 msgid "Filter by gallery category"
 msgstr "Filter op galerij categorie"
 
-#: includes/gallery/class-widcolgallerycore.php:196
+#: includes/gallery/class-widcolgallerycore.php:208
 msgid "Gallery images"
 msgstr "Galerij afbeeldingen"
 
-#: includes/gallery/class-widcolgallerycore.php:228
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:240
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Delete image"
 msgstr "Afbeelding verwijderen"
 
-#: includes/gallery/class-widcolgallerycore.php:228
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:240
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Add images to gallery"
 msgstr "Voeg afbeeldingen toe aan galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Add to gallery"
 msgstr "Toevoegen aan galerij"
 
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Add gallery images"
 msgstr "Voeg galerij afbeeldingen toe"
 
-#: includes/gallery/class-widcolgalleryshortcode.php:107
+#: includes/gallery/class-widcolgalleryshortcodemasonry.php:136
 msgid "Please set an ID for this gallery to work."
 msgstr "Galerij werkt niet. Stel een ID in voor deze galerij."
+
+#: includes/gallery/class-widcolgalleryshortcodeslider.php:230
+msgid "Please set an ID for this gallery slider to work."
+msgstr "Galerij werkt niet. Stel een ID in voor deze galerij slider."
 
 #: includes/testimonials/class-widcoltestimonialscore.php:91
 #: includes/testimonials/class-widcoltestimonialscore.php:93

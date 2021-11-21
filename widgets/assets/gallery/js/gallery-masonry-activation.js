@@ -3,7 +3,7 @@ for (let i = 0; i < gallery_configs.length; i++) {
     let macy_config = gallery_configs[i];
     Macy({
         container: '#' + macy_config.id,
-        columns: 3,
+        columns: macy_config.columns,
         waitForImages: false,
         margin: 10,
         breakAt: {

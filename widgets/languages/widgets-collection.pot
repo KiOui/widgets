@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Widgets Collection plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Widgets Collection 0.0.2\n"
+"Project-Id-Version: Widgets Collection 0.0.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-11-10T20:21:09+00:00\n"
+"POT-Creation-Date: 2021-11-21T18:47:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: widgets-collection\n"
@@ -60,239 +60,243 @@ msgstr ""
 msgid "Enable Galleries"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:100
-#: includes/gallery/class-widcolgallerycore.php:102
-#: includes/gallery/class-widcolgallerycore.php:123
+#: includes/gallery/class-widcolgallerycore.php:112
+#: includes/gallery/class-widcolgallerycore.php:114
+#: includes/gallery/class-widcolgallerycore.php:135
 msgid "Galleries"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:103
+#: includes/gallery/class-widcolgallerycore.php:115
 msgid "Gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:104
+#: includes/gallery/class-widcolgallerycore.php:116
 #: includes/testimonials/class-widcoltestimonialscore.php:95
 msgid "Add New"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:105
+#: includes/gallery/class-widcolgallerycore.php:117
 msgid "Add New Gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:106
+#: includes/gallery/class-widcolgallerycore.php:118
 msgid "Edit Gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:107
+#: includes/gallery/class-widcolgallerycore.php:119
 msgid "New Gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:108
+#: includes/gallery/class-widcolgallerycore.php:120
 msgid "View Gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:109
+#: includes/gallery/class-widcolgallerycore.php:121
 msgid "View Galleries"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:110
+#: includes/gallery/class-widcolgallerycore.php:122
 msgid "Search Galleries"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:111
-msgid "No galleries found"
+#: includes/gallery/class-widcolgallerycore.php:123
+msgid "No Galleries found"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:112
-msgid "No galleries found in trash"
+#: includes/gallery/class-widcolgallerycore.php:124
+msgid "No Galleries found in trash"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:113
+#: includes/gallery/class-widcolgallerycore.php:125
 msgid "Parent Gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:114
+#: includes/gallery/class-widcolgallerycore.php:126
 msgid "All Galleries"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:115
+#: includes/gallery/class-widcolgallerycore.php:127
 msgid "Gallery Archives"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:116
+#: includes/gallery/class-widcolgallerycore.php:128
 msgid "Gallery Attributes"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:117
+#: includes/gallery/class-widcolgallerycore.php:129
 msgid "Insert into gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:118
+#: includes/gallery/class-widcolgallerycore.php:130
 msgid "Uploaded to this gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:119
+#: includes/gallery/class-widcolgallerycore.php:131
 #: includes/testimonials/class-widcoltestimonialscore.php:110
 msgid "Featured image"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:120
+#: includes/gallery/class-widcolgallerycore.php:132
 #: includes/testimonials/class-widcoltestimonialscore.php:111
 msgid "Set featured image"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:121
+#: includes/gallery/class-widcolgallerycore.php:133
 #: includes/testimonials/class-widcoltestimonialscore.php:112
 msgid "Remove featured image"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:122
+#: includes/gallery/class-widcolgallerycore.php:134
 #: includes/testimonials/class-widcoltestimonialscore.php:113
 msgid "Use as featured image"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:124
+#: includes/gallery/class-widcolgallerycore.php:136
 msgid "Filter galleries list"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:125
+#: includes/gallery/class-widcolgallerycore.php:137
 #: includes/testimonials/class-widcoltestimonialscore.php:116
 msgid "Filter by date"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:126
+#: includes/gallery/class-widcolgallerycore.php:138
 msgid "Galleries list navigation"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:127
+#: includes/gallery/class-widcolgallerycore.php:139
 msgid "Galleries list"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:128
+#: includes/gallery/class-widcolgallerycore.php:140
 msgid "Gallery published"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:129
+#: includes/gallery/class-widcolgallerycore.php:141
 msgid "Gallery published privately"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:130
+#: includes/gallery/class-widcolgallerycore.php:142
 msgid "Gallery reverted to draft"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:131
+#: includes/gallery/class-widcolgallerycore.php:143
 msgid "Gallery scheduled"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:132
+#: includes/gallery/class-widcolgallerycore.php:144
 msgid "Gallery updated"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:134
+#: includes/gallery/class-widcolgallerycore.php:146
 msgid "Gallery post type"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:158
-#: includes/gallery/class-widcolgallerycore.php:177
+#: includes/gallery/class-widcolgallerycore.php:170
+#: includes/gallery/class-widcolgallerycore.php:189
 msgid "Gallery Categories"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:159
+#: includes/gallery/class-widcolgallerycore.php:171
 msgid "Gallery Category"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:160
+#: includes/gallery/class-widcolgallerycore.php:172
 msgid "Search Gallery Categories"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:161
+#: includes/gallery/class-widcolgallerycore.php:173
 msgid "Popular Gallery Categories"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:162
+#: includes/gallery/class-widcolgallerycore.php:174
 msgid "All Gallery Categories"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:163
+#: includes/gallery/class-widcolgallerycore.php:175
 msgid "Parent Gallery Category"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:164
+#: includes/gallery/class-widcolgallerycore.php:176
 msgid "Parent Gallery Category:"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:165
+#: includes/gallery/class-widcolgallerycore.php:177
 msgid "Edit Gallery Category"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:166
+#: includes/gallery/class-widcolgallerycore.php:178
 msgid "View Gallery Category"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:167
+#: includes/gallery/class-widcolgallerycore.php:179
 msgid "Update Gallery Category"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:168
+#: includes/gallery/class-widcolgallerycore.php:180
 msgid "Add New Gallery Category"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:169
+#: includes/gallery/class-widcolgallerycore.php:181
 msgid "New Gallery Category Name"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:170
+#: includes/gallery/class-widcolgallerycore.php:182
 msgid "Separate Gallery Categories with commas"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:171
+#: includes/gallery/class-widcolgallerycore.php:183
 msgid "Add or remove gallery categories"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:172
+#: includes/gallery/class-widcolgallerycore.php:184
 msgid "Choose from the most used gallery categories"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:173
+#: includes/gallery/class-widcolgallerycore.php:185
 msgid "No gallery categories found"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:174
+#: includes/gallery/class-widcolgallerycore.php:186
 msgid "No gallery categories"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:175
+#: includes/gallery/class-widcolgallerycore.php:187
 msgid "Filter by gallery category"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:196
+#: includes/gallery/class-widcolgallerycore.php:208
 msgid "Gallery images"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:228
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:240
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Delete image"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:228
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:240
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Delete"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Add images to gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Add to gallery"
 msgstr ""
 
-#: includes/gallery/class-widcolgallerycore.php:245
+#: includes/gallery/class-widcolgallerycore.php:257
 msgid "Add gallery images"
 msgstr ""
 
-#: includes/gallery/class-widcolgalleryshortcode.php:107
+#: includes/gallery/class-widcolgalleryshortcodemasonry.php:136
 msgid "Please set an ID for this gallery to work."
+msgstr ""
+
+#: includes/gallery/class-widcolgalleryshortcodeslider.php:230
+msgid "Please set an ID for this gallery slider to work."
 msgstr ""
 
 #: includes/testimonials/class-widcoltestimonialscore.php:91
