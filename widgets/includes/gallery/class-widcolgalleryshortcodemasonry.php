@@ -25,6 +25,13 @@ if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 		private ?int $id;
 
 		/**
+		 * Amount of columns in the gallery.
+		 *
+		 * @var int
+		 */
+		private int $columns = 3;
+
+		/**
 		 * WidColGalleryShortcodeMasonry constructor.
 		 *
 		 * @param array $atts {
@@ -38,6 +45,16 @@ if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 				$this->id = absint( $atts['id'] );
 			} else {
 				$this->id = null;
+			}
+			if ( key_exists( 'columns', $atts ) && gettype( $atts['columns'] ) == 'string' ) {
+				$this->columns = filter_var(
+					$atts['columns'],
+					FILTER_VALIDATE_INT,
+					array(
+						'default' => $this->columns,
+						'min_range' => 1,
+					)
+				);
 			}
 			$this->include_styles_and_scripts();
 		}
@@ -65,6 +82,15 @@ if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 		}
 
 		/**
+		 * Get the amount of columns for this gallery.
+		 *
+		 * @return int
+		 */
+		public function get_columns(): int {
+			return $this->columns;
+		}
+
+		/**
 		 * Include all styles and scripts required for the gallery to work.
 		 */
 		public function include_styles_and_scripts() {
@@ -80,7 +106,10 @@ if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 		public static function localize_gallery_activation( array $galleries ) {
 			$configs = array();
 			foreach ( $galleries as $gallery ) {
-				$configs[] = array( 'id' => 'widcol-gallery-masonry-' . $gallery->get_id() );
+				$configs[] = array(
+					'id' => 'widcol-gallery-masonry-' . $gallery->get_id(),
+					'columns' => $gallery->get_columns(),
+				);
 			}
 			wp_localize_script( 'gallery-masonry-activation', 'gallery_configs', $configs );
 		}
