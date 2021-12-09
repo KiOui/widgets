@@ -60,6 +60,10 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 				include_once WIDCOL_ABSPATH . '/includes/gallery/class-widcolgallerycore.php';
 				WidColGalleryCore::instance();
 			}
+			if ( get_option( 'widgets_collection_settings' )['widgets_collection_text_slider_enabled'] ) {
+				include_once WIDCOL_ABSPATH . '/includes/textslider/class-widcoltextslidercore.php';
+				WidColTextSliderCore::instance();
+			}
 		}
 
 		/**
@@ -94,14 +98,12 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 				'widgets_collection_settings',
 				array( $this, 'widgets_collection_settings_validate' )
 			);
-
 			add_settings_section(
 				'enabled_widgets_section',
 				__( 'Enabled widgets', 'widgets-collection' ),
 				array( $this, 'widgets_collection_enabled_widgets_callback' ),
 				'widgets_collection_settings'
 			);
-
 			add_settings_field(
 				'widgets_collection_testimonials_enabled',
 				__( 'Enable Testimonials', 'widgets-collection' ),
@@ -109,11 +111,17 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 				'widgets_collection_settings',
 				'enabled_widgets_section'
 			);
-
 			add_settings_field(
 				'widgets_collection_gallery_enabled',
 				__( 'Enable Galleries', 'widgets-collection' ),
 				array( $this, 'widgets_collection_gallery_enabled_renderer' ),
+				'widgets_collection_settings',
+				'enabled_widgets_section'
+			);
+			add_settings_field(
+				'widgets_collection_text_slider_enabled',
+				__( 'Enable Text Sliders', 'widgets-collection' ),
+				array( $this, 'widgets_collection_text_slider_enabled_renderer' ),
 				'widgets_collection_settings',
 				'enabled_widgets_section'
 			);
@@ -128,6 +136,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		public function widgets_collection_settings_validate( $input ): array {
 			$output['widgets_collection_testimonials_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_testimonials_enabled'] );
 			$output['widgets_collection_gallery_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_gallery_enabled'] );
+			$output['widgets_collection_text_slider_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_text_slider_enabled'] );
 			return $output;
 		}
 
@@ -147,6 +156,16 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 			$options = get_option( 'widgets_collection_settings' );
 			?>
 			<input type='checkbox' name='widgets_collection_settings[widgets_collection_gallery_enabled]' <?php checked( $options['widgets_collection_gallery_enabled'], 1 ); ?> value='1'>
+			<?php
+		}
+
+		/**
+		 * Render widget collection gallery enabled setting.
+		 */
+		public function widgets_collection_text_slider_enabled_renderer() {
+			$options = get_option( 'widgets_collection_settings' );
+			?>
+			<input type='checkbox' name='widgets_collection_settings[widgets_collection_text_slider_enabled]' <?php checked( $options['widgets_collection_text_slider_enabled'], 1 ); ?> value='1'>
 			<?php
 		}
 

@@ -22,7 +22,7 @@ if ( ! class_exists( 'WidColCore' ) ) {
 		 *
 		 * @var string
 		 */
-		public string $version = '0.0.5';
+		public string $version = '0.0.6';
 
 		/**
 		 * The single instance of the class
