@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Widgets Collection 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
-"POT-Creation-Date: 2021-11-21T18:47:11+00:00\n"
-"PO-Revision-Date: 2021-11-21 19:47+0100\n"
+"POT-Creation-Date: 2021-12-09T09:33:52+00:00\n"
+"PO-Revision-Date: 2021-12-09 10:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -35,29 +35,33 @@ msgstr "Lars van Rhijn"
 msgid "https://larsvanrhijn.nl/"
 msgstr "https://larsvanrhijn.nl/"
 
-#: includes/class-widcolsettings.php:70 includes/class-widcolsettings.php:71
+#: includes/class-widcolsettings.php:74 includes/class-widcolsettings.php:75
 msgid "Widgets"
 msgstr "Widgets"
 
-#: includes/class-widcolsettings.php:80
+#: includes/class-widcolsettings.php:84
 msgid "Widgets Dashboard"
 msgstr "Widgets Dashboard"
 
-#: includes/class-widcolsettings.php:81
+#: includes/class-widcolsettings.php:85
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: includes/class-widcolsettings.php:100 includes/class-widcolsettings.php:157
+#: includes/class-widcolsettings.php:103 includes/class-widcolsettings.php:176
 msgid "Enabled widgets"
 msgstr "Ingeschakelde widgets"
 
-#: includes/class-widcolsettings.php:107
+#: includes/class-widcolsettings.php:109
 msgid "Enable Testimonials"
 msgstr "Schakel Recensies in"
 
-#: includes/class-widcolsettings.php:115
+#: includes/class-widcolsettings.php:116
 msgid "Enable Galleries"
 msgstr "Schakel Galerijen in"
+
+#: includes/class-widcolsettings.php:123
+msgid "Enable Text Sliders"
+msgstr "Ingeschakelde Text Sliders"
 
 #: includes/gallery/class-widcolgallerycore.php:112
 #: includes/gallery/class-widcolgallerycore.php:114
@@ -71,6 +75,7 @@ msgstr "Galerij"
 
 #: includes/gallery/class-widcolgallerycore.php:116
 #: includes/testimonials/class-widcoltestimonialscore.php:95
+#: includes/textslider/class-widcoltextslidercore.php:94
 msgid "Add New"
 msgstr "Voeg Nieuwe toe"
 
@@ -137,25 +142,29 @@ msgstr "Uitgelichte afbeelding"
 
 #: includes/gallery/class-widcolgallerycore.php:132
 #: includes/testimonials/class-widcoltestimonialscore.php:111
+#: includes/textslider/class-widcoltextslidercore.php:110
 msgid "Set featured image"
 msgstr "Stel uitgelichte afbeelding in"
 
 #: includes/gallery/class-widcolgallerycore.php:133
 #: includes/testimonials/class-widcoltestimonialscore.php:112
+#: includes/textslider/class-widcoltextslidercore.php:111
 msgid "Remove featured image"
 msgstr "Verwijder uitgelichte afbeelding"
 
 #: includes/gallery/class-widcolgallerycore.php:134
 #: includes/testimonials/class-widcoltestimonialscore.php:113
+#: includes/textslider/class-widcoltextslidercore.php:112
 msgid "Use as featured image"
 msgstr "Gebruik als uitgelichte afbeelding"
 
 #: includes/gallery/class-widcolgallerycore.php:136
-msgid "Filter galleries list"
-msgstr "Filter galerijen lijst"
+msgid "Filter $masonries list"
+msgstr "Filter $masonries lijst"
 
 #: includes/gallery/class-widcolgallerycore.php:137
 #: includes/testimonials/class-widcoltestimonialscore.php:116
+#: includes/textslider/class-widcoltextslidercore.php:115
 msgid "Filter by date"
 msgstr "Filter op datum"
 
@@ -497,6 +506,204 @@ msgstr "Recensie score"
 msgid "Rating of the testimonial (1-5)"
 msgstr "Score van de recensie (1-5)"
 
+#: includes/textslider/class-widcoltextslidercore.php:90
+#: includes/textslider/class-widcoltextslidercore.php:92
+#: includes/textslider/class-widcoltextslidercore.php:93
+msgid "Text slider"
+msgstr "Text slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:95
+msgid "Add New Text slider"
+msgstr "Voeg Nieuwe Text Slider toe"
+
+#: includes/textslider/class-widcoltextslidercore.php:96
+msgid "Edit Text slider"
+msgstr "Bewerk Text Slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:97
+msgid "New Text slider"
+msgstr "Nieuwe Text slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:98
+msgid "View Text slider"
+msgstr "Bekijk Text slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:99
+msgid "View Text sliders"
+msgstr "Bekijk Text sliders"
+
+#: includes/textslider/class-widcoltextslidercore.php:100
+msgid "Search Text sliders"
+msgstr "Zoek Text sliders"
+
+#: includes/textslider/class-widcoltextslidercore.php:101
+msgid "No text sliders found"
+msgstr "Geen text sliders gevonden"
+
+#: includes/textslider/class-widcoltextslidercore.php:102
+msgid "No text sliders found in trash"
+msgstr "Geen text sliders gevonden in prullenbak"
+
+#: includes/textslider/class-widcoltextslidercore.php:103
+msgid "Parent Text slider"
+msgstr "Hoofd Text slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:104
+msgid "All Text sliders"
+msgstr "Alle Text sliders"
+
+#: includes/textslider/class-widcoltextslidercore.php:105
+msgid "Text slider Archives"
+msgstr "Text slider Archieven"
+
+#: includes/textslider/class-widcoltextslidercore.php:106
+msgid "Text slider Attributes"
+msgstr "Text slider Attributen"
+
+#: includes/textslider/class-widcoltextslidercore.php:107
+msgid "Insert into text slider"
+msgstr "Invoegen in text slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:108
+msgid "Uploaded to this text slider"
+msgstr "Geupload naar deze text slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:109
+msgid "Text slider image"
+msgstr "Text slider afbeelding"
+
+#: includes/textslider/class-widcoltextslidercore.php:113
+msgid "Text sliders"
+msgstr "Text sliders"
+
+#: includes/textslider/class-widcoltextslidercore.php:114
+msgid "Filter text slider list"
+msgstr "Filter text slider lijst"
+
+#: includes/textslider/class-widcoltextslidercore.php:116
+msgid "Text slider list navigation"
+msgstr "Text slider lijst navigatie"
+
+#: includes/textslider/class-widcoltextslidercore.php:117
+msgid "Text sliders list"
+msgstr "Text sliders lijst"
+
+#: includes/textslider/class-widcoltextslidercore.php:118
+msgid "Text slider published"
+msgstr "Text slider gepubliceerd"
+
+#: includes/textslider/class-widcoltextslidercore.php:119
+msgid "Text slider published privately"
+msgstr "Text slider privé gepubliceerd"
+
+#: includes/textslider/class-widcoltextslidercore.php:120
+msgid "Text slider reverted to draft"
+msgstr "Text slider teruggezet naar concept"
+
+#: includes/textslider/class-widcoltextslidercore.php:121
+msgid "Text slider scheduled"
+msgstr "Text slider ingepland"
+
+#: includes/textslider/class-widcoltextslidercore.php:122
+msgid "Text slider updated"
+msgstr "Text slider bijgewerkt"
+
+#: includes/textslider/class-widcoltextslidercore.php:124
+msgid "Text slider post type"
+msgstr "Text slider post type"
+
+#: includes/textslider/class-widcoltextslidercore.php:149
+#: includes/textslider/class-widcoltextslidercore.php:168
+msgid "Text slider Categories"
+msgstr "Text slider Categorieën"
+
+#: includes/textslider/class-widcoltextslidercore.php:150
+msgid "Text slider Category"
+msgstr "Hoofd Text slider Categorie"
+
+#: includes/textslider/class-widcoltextslidercore.php:151
+msgid "Search Text slider Categories"
+msgstr "Zoek Text slider Categorieën"
+
+#: includes/textslider/class-widcoltextslidercore.php:152
+msgid "Popular Text slider Categories"
+msgstr "Populaire Text slider Categorieën"
+
+#: includes/textslider/class-widcoltextslidercore.php:153
+msgid "All Text slider Categories"
+msgstr "Alle Text slider Categorieën"
+
+#: includes/textslider/class-widcoltextslidercore.php:154
+msgid "Parent Text slider Category"
+msgstr "Hoofd Text slider Categorie"
+
+#: includes/textslider/class-widcoltextslidercore.php:155
+msgid "Parent Text slider Category:"
+msgstr "Hoofd Text slider Categorie:"
+
+#: includes/textslider/class-widcoltextslidercore.php:156
+msgid "Edit Text slider Category"
+msgstr "Bewerk Text slider Categorie"
+
+#: includes/textslider/class-widcoltextslidercore.php:157
+msgid "View Text slider Category"
+msgstr "Bekijk Text slider Categorie"
+
+#: includes/textslider/class-widcoltextslidercore.php:158
+msgid "Update Text slider Category"
+msgstr "Update Text slider Categorie"
+
+#: includes/textslider/class-widcoltextslidercore.php:159
+msgid "Add New Text slider Category"
+msgstr "Nieuwe Text slider Categorie Toevoegen"
+
+#: includes/textslider/class-widcoltextslidercore.php:160
+msgid "New Text slider Category Name"
+msgstr "Nieuwe Text slider Categorie Naam"
+
+#: includes/textslider/class-widcoltextslidercore.php:161
+msgid "Separate Text slider Categories with commas"
+msgstr "Scheidt Text slider Categorieën met komma’s"
+
+#: includes/textslider/class-widcoltextslidercore.php:162
+msgid "Add or remove text slider categories"
+msgstr "Text slider Categorieën toevoegen of verwijderen"
+
+#: includes/textslider/class-widcoltextslidercore.php:163
+msgid "Choose from the most used text slider categories"
+msgstr "Kies uit de meest gebruikte text slider categorieën"
+
+#: includes/textslider/class-widcoltextslidercore.php:164
+msgid "No text slider categories found"
+msgstr "Geen text slider categorieën gevonden"
+
+#: includes/textslider/class-widcoltextslidercore.php:165
+msgid "No text slider categories"
+msgstr "Geen text slider categorie"
+
+#: includes/textslider/class-widcoltextslidercore.php:166
+msgid "Filter by text slider category"
+msgstr "Filter op text slider categorie"
+
+#: includes/textslider/class-widcoltextslidercore.php:192
+msgid "Text slider content"
+msgstr "Text slider inhoud"
+
+#: includes/textslider/class-widcoltextslidercore.php:193
+msgid "Content of the text slider"
+msgstr "Inhoud van de T=text slider"
+
+#: includes/textslider/class-widcoltextslidercore.php:198
+msgid "Text slider icon"
+msgstr "Text slider icoon"
+
+#: includes/textslider/class-widcoltextslidercore.php:199
+msgid ""
+"Icon to be displayed with the text slider (enter as fontawesome classes)"
+msgstr ""
+"Icoon om bij de tekst van de text slider weer te geven (voer in als "
+"fontawesome klasses)"
+
 #: views/widcol-admin-dashboard-view.php:10
 msgid "Widgets Collection Dashboard"
 msgstr "Widgets Collection Dashboard"
@@ -504,6 +711,11 @@ msgstr "Widgets Collection Dashboard"
 #: views/widcol-admin-dashboard-view.php:12
 msgid "Widgets Collection settings"
 msgstr "Widgets Collection instellingen"
+
+#, fuzzy
+#~| msgid "Testimonial content"
+#~ msgid "Testimonial icon"
+#~ msgstr "Recensie inhoud"
 
 #~ msgid "Testimonial settings"
 #~ msgstr "Recensie instellingen"

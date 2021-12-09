@@ -195,7 +195,7 @@ if ( ! class_exists( 'WidColTextSliderCore' ) ) {
 						'type'  => 'text',
 					),
 					array(
-						'label' => __( 'Testimonial icon', 'widgets-collection' ),
+						'label' => __( 'Text slider icon', 'widgets-collection' ),
 						'desc'  => __( 'Icon to be displayed with the text slider (enter as fontawesome classes)', 'widgets-collection' ),
 						'id'    => 'widcol_text_sliders_icon',
 						'type'  => 'text',
