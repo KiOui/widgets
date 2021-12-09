@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Widgets Collection 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
 "POT-Creation-Date: 2021-12-09T09:33:52+00:00\n"
-"PO-Revision-Date: 2021-12-09 10:34+0100\n"
+"PO-Revision-Date: 2021-12-09 10:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -61,7 +61,7 @@ msgstr "Schakel Galerijen in"
 
 #: includes/class-widcolsettings.php:123
 msgid "Enable Text Sliders"
-msgstr "Ingeschakelde Text Sliders"
+msgstr "Schakel Text Sliders in"
 
 #: includes/gallery/class-widcolgallerycore.php:112
 #: includes/gallery/class-widcolgallerycore.php:114
@@ -691,7 +691,7 @@ msgstr "Text slider inhoud"
 
 #: includes/textslider/class-widcoltextslidercore.php:193
 msgid "Content of the text slider"
-msgstr "Inhoud van de T=text slider"
+msgstr "Inhoud van de text slider"
 
 #: includes/textslider/class-widcoltextslidercore.php:198
 msgid "Text slider icon"
