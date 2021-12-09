@@ -10,15 +10,8 @@ for (let i = 0; i < swiper_configs.length; i++) {
             }
         },
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
         autoplay: {
-            delay: 5000,
+            delay: 2000,
         },
     });
 }
