@@ -12,6 +12,7 @@ for (let i = 0; i < swiper_configs.length; i++) {
         loop: true,
         autoplay: {
             delay: 2000,
+            disableOnInteraction: false,
         },
     });
 }

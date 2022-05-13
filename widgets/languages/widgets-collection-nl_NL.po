@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Widgets Collection 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/widgets\n"
-"POT-Creation-Date: 2021-12-09T09:33:52+00:00\n"
-"PO-Revision-Date: 2021-12-09 10:54+0100\n"
+"POT-Creation-Date: 2022-05-13T12:14:31+00:00\n"
+"PO-Revision-Date: 2022-05-13 14:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Plugin Name of the plugin
 msgid "Widgets Collection"
@@ -35,33 +35,37 @@ msgstr "Lars van Rhijn"
 msgid "https://larsvanrhijn.nl/"
 msgstr "https://larsvanrhijn.nl/"
 
-#: includes/class-widcolsettings.php:74 includes/class-widcolsettings.php:75
+#: includes/class-widcolsettings.php:78 includes/class-widcolsettings.php:79
 msgid "Widgets"
 msgstr "Widgets"
 
-#: includes/class-widcolsettings.php:84
+#: includes/class-widcolsettings.php:88
 msgid "Widgets Dashboard"
 msgstr "Widgets Dashboard"
 
-#: includes/class-widcolsettings.php:85
+#: includes/class-widcolsettings.php:89
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: includes/class-widcolsettings.php:103 includes/class-widcolsettings.php:176
+#: includes/class-widcolsettings.php:107 includes/class-widcolsettings.php:198
 msgid "Enabled widgets"
 msgstr "Ingeschakelde widgets"
 
-#: includes/class-widcolsettings.php:109
+#: includes/class-widcolsettings.php:113
 msgid "Enable Testimonials"
 msgstr "Schakel Recensies in"
 
-#: includes/class-widcolsettings.php:116
+#: includes/class-widcolsettings.php:120
 msgid "Enable Galleries"
 msgstr "Schakel Galerijen in"
 
-#: includes/class-widcolsettings.php:123
+#: includes/class-widcolsettings.php:127
 msgid "Enable Text Sliders"
 msgstr "Schakel Text Sliders in"
+
+#: includes/class-widcolsettings.php:134
+msgid "Enable Badges"
+msgstr "Schakel Badges in"
 
 #: includes/gallery/class-widcolgallerycore.php:112
 #: includes/gallery/class-widcolgallerycore.php:114

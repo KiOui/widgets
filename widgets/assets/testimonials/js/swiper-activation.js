@@ -20,6 +20,7 @@ for (let i = 0; i < swiper_configs.length; i++) {
         },
         autoplay: {
             delay: 5000,
+            disableOnInteraction: false,
         },
     });
 }

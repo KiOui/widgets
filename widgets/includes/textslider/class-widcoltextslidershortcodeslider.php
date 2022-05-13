@@ -120,8 +120,8 @@ if ( ! class_exists( 'WidColTextSliderShortcodeSlider' ) ) {
 		public function include_styles_and_scripts() {
 			wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), '1.0' );
 			wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), '1.0' );
-			wp_enqueue_script( 'swiper-activation', WIDCOL_PLUGIN_URI . 'assets/textslider/js/swiper-activation.js', array( 'swiper-js' ), '1.0', true );
-			wp_enqueue_style( 'swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/textslider/css/swiper-overrides.css', array(), '1.0' );
+			wp_enqueue_script( 'text-swiper-activation', WIDCOL_PLUGIN_URI . 'assets/textslider/js/text-swiper-activation.js', array( 'swiper-js' ), '1.0', true );
+			wp_enqueue_style( 'text-swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/textslider/css/text-swiper-overrides.css', array(), '1.0' );
 		}
 
 		/**
@@ -137,7 +137,7 @@ if ( ! class_exists( 'WidColTextSliderShortcodeSlider' ) ) {
 					'slides_per_view' => $slider->get_slides_per_view(),
 				);
 			}
-			wp_localize_script( 'swiper-activation', 'swiper_configs', $configs );
+			wp_localize_script( 'text-swiper-activation', 'swiper_configs', $configs );
 		}
 
 		/**

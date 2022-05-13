@@ -84,3 +84,16 @@ shortcode: `[widcol_gallery_slider]`. The shortcode has the following parameters
 - `pagination_enabled`: Wheter to enable pagination of the slider.
 - `slides_per_view`: Amount of slides to display per view. Will automatically default to 1 if the screen size gets too
   small.
+
+
+## Badges
+
+Badges can also be created (for example handy for product pages) with the `[widcol_badge`
+
+- `id`: The id of the Gallery to use for the shortcode. This parameter is obligatory, without it the gallery will show a
+  warning message.
+- `badge_text`: Text to display on badge.
+- `icon`: Fontawesome icon to display on badge (such as `fas fa-allergies`).
+- `badge_color`: Background color of badge.
+- `text_color`: Color of badge text.
+- `popup_text`: Text to display on popup.

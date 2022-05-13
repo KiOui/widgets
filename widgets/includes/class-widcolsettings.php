@@ -25,7 +25,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		protected static ?WidColSettings $_instance = null;
 
 		/**
-		 * Widgets Collection Core
+		 * Widgets Collection Settings instance
 		 *
 		 * Uses the Singleton pattern to load 1 instance of this class at maximum
 		 *
@@ -63,6 +63,10 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 			if ( get_option( 'widgets_collection_settings' )['widgets_collection_text_slider_enabled'] ) {
 				include_once WIDCOL_ABSPATH . '/includes/textslider/class-widcoltextslidercore.php';
 				WidColTextSliderCore::instance();
+			}
+			if ( get_option( 'widgets_collection_settings' )['widgets_collection_badges_enabled'] ) {
+				include_once WIDCOL_ABSPATH . '/includes/badges/class-widcolbadgescore.php';
+				WidColBadgesCore::instance();
 			}
 		}
 
@@ -125,6 +129,13 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 				'widgets_collection_settings',
 				'enabled_widgets_section'
 			);
+			add_settings_field(
+				'widgets_collection_badges_enabled',
+				__( 'Enable Badges', 'widgets-collection' ),
+				array( $this, 'widgets_collection_badges_enabled_renderer' ),
+				'widgets_collection_settings',
+				'enabled_widgets_section'
+			);
 		}
 
 		/**
@@ -137,6 +148,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 			$output['widgets_collection_testimonials_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_testimonials_enabled'] );
 			$output['widgets_collection_gallery_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_gallery_enabled'] );
 			$output['widgets_collection_text_slider_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_text_slider_enabled'] );
+			$output['widgets_collection_badges_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_badges_enabled'] );
 			return $output;
 		}
 
@@ -160,12 +172,22 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		}
 
 		/**
-		 * Render widget collection gallery enabled setting.
+		 * Render widget collection text slider enabled setting.
 		 */
 		public function widgets_collection_text_slider_enabled_renderer() {
 			$options = get_option( 'widgets_collection_settings' );
 			?>
 			<input type='checkbox' name='widgets_collection_settings[widgets_collection_text_slider_enabled]' <?php checked( $options['widgets_collection_text_slider_enabled'], 1 ); ?> value='1'>
+			<?php
+		}
+
+		/**
+		 * Render widget collection badges enabled setting.
+		 */
+		public function widgets_collection_badges_enabled_renderer() {
+			$options = get_option( 'widgets_collection_settings' );
+			?>
+			<input type='checkbox' name='widgets_collection_settings[widgets_collection_badges_enabled]' <?php checked( $options['widgets_collection_badges_enabled'], 1 ); ?> value='1'>
 			<?php
 		}
 
