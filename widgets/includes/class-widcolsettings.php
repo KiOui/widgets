@@ -49,7 +49,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Add actions and filters.
 		 */
-		public function actions_and_filters() {
+		public function actions_and_filters(): void {
 			add_action( 'admin_menu', array( $this, 'add_menu_page' ), 99 );
 			add_action( 'admin_init', array( $this, 'register_settings' ) );
 			if ( get_option( 'widgets_collection_settings' )['widgets_collection_testimonials_enabled'] ) {
@@ -73,7 +73,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Add Widget Collection menu page.
 		 */
-		public function add_menu_page() {
+		public function add_menu_page(): void {
 			add_menu_page(
 				esc_html__( 'Widgets', 'widgets-collection' ),
 				esc_html__( 'Widgets', 'widgets-collection' ),
@@ -96,7 +96,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Register Widget Collection settings.
 		 */
-		public function register_settings() {
+		public function register_settings(): void {
 			register_setting(
 				'widgets_collection_settings',
 				'widgets_collection_settings',
@@ -155,7 +155,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Render widget collection testimonials enabled setting.
 		 */
-		public function widgets_collection_testimonials_enabled_renderer() {
+		public function widgets_collection_testimonials_enabled_renderer(): void {
 			$options = get_option( 'widgets_collection_settings' ); ?>
 			<input type='checkbox' name='widgets_collection_settings[widgets_collection_testimonials_enabled]' <?php checked( $options['widgets_collection_testimonials_enabled'], 1 ); ?> value='1'>
 			<?php
@@ -164,7 +164,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Render widget collection gallery enabled setting.
 		 */
-		public function widgets_collection_gallery_enabled_renderer() {
+		public function widgets_collection_gallery_enabled_renderer(): void {
 			$options = get_option( 'widgets_collection_settings' );
 			?>
 			<input type='checkbox' name='widgets_collection_settings[widgets_collection_gallery_enabled]' <?php checked( $options['widgets_collection_gallery_enabled'], 1 ); ?> value='1'>
@@ -174,7 +174,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Render widget collection text slider enabled setting.
 		 */
-		public function widgets_collection_text_slider_enabled_renderer() {
+		public function widgets_collection_text_slider_enabled_renderer(): void {
 			$options = get_option( 'widgets_collection_settings' );
 			?>
 			<input type='checkbox' name='widgets_collection_settings[widgets_collection_text_slider_enabled]' <?php checked( $options['widgets_collection_text_slider_enabled'], 1 ); ?> value='1'>
@@ -184,7 +184,7 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Render widget collection badges enabled setting.
 		 */
-		public function widgets_collection_badges_enabled_renderer() {
+		public function widgets_collection_badges_enabled_renderer(): void {
 			$options = get_option( 'widgets_collection_settings' );
 			?>
 			<input type='checkbox' name='widgets_collection_settings[widgets_collection_badges_enabled]' <?php checked( $options['widgets_collection_badges_enabled'], 1 ); ?> value='1'>
@@ -194,14 +194,14 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		/**
 		 * Render the section title of enabled widgets.
 		 */
-		public function widgets_collection_enabled_widgets_callback() {
+		public function widgets_collection_enabled_widgets_callback(): void {
 			echo esc_html( __( 'Enabled widgets', 'widgets-collection' ) );
 		}
 
 		/**
 		 * Admin menu dashboard callback.
 		 */
-		public function widgets_admin_menu_dashboard_callback() {
+		public function widgets_admin_menu_dashboard_callback(): void {
 			include_once WIDCOL_ABSPATH . 'views/widcol-admin-dashboard-view.php';
 		}
 	}
