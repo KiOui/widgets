@@ -237,7 +237,7 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 				return $post_id;
 			}
 
-			if ( isset( $_POST['post_type'] ) && wp_unslash( $_POST['post_type'] ) == $this->post_type && current_user_can( 'edit_post' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			if ( isset( $_POST['post_type'] ) && wp_unslash( $_POST['post_type'] ) == $this->post_type && current_user_can( 'edit_post', $post_id ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				foreach ( $this->meta_fields as $field ) {
 					$old = get_post_meta( $post_id, $field['id'], true );
 					$new = isset( $_POST[ $field['id'] ] ) ? wp_unslash( $_POST[ $field['id'] ] ) : false; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
