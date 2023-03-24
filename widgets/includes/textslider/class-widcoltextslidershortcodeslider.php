@@ -66,7 +66,7 @@ if ( ! class_exists( 'WidColTextSliderShortcodeSlider' ) ) {
 					)
 				);
 			}
-			if ( key_exists( 'category', $atts ) & 'string' === gettype( $atts['category'] ) ) {
+			if ( key_exists( 'category', $atts ) && 'string' === gettype( $atts['category'] ) ) {
 				include_once WIDCOL_ABSPATH . 'includes/textslider/widcol-textslider-functions.php';
 				$this->category = widcol_text_sliders_string_to_array_ints( $atts['category'] );
 			}

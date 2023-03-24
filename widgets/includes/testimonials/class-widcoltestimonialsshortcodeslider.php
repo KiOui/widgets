@@ -125,11 +125,11 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 					)
 				);
 			}
-			if ( key_exists( 'enable_star_rating', $atts ) & 'string' === gettype( $atts['enable_star_rating'] ) ) {
+			if ( key_exists( 'enable_star_rating', $atts ) && 'string' === gettype( $atts['enable_star_rating'] ) ) {
 				$star_rating_enabled = filter_var( $atts['enable_star_rating'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
 				$this->enable_star_rating = $star_rating_enabled ?? false;
 			}
-			if ( key_exists( 'category', $atts ) & 'string' === gettype( $atts['category'] ) ) {
+			if ( key_exists( 'category', $atts ) && 'string' === gettype( $atts['category'] ) ) {
 				include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-functions.php';
 				$this->category = widcol_testimonials_string_to_array_ints( $atts['category'] );
 			}
