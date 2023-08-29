@@ -251,7 +251,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 								<div class="swiper-slide-body">
 									<div class="text-content">
 										<h3><?php echo esc_html( get_the_title( $post ) ); ?></h3>
-										<p class="testimonial-text"><?php echo esc_html( get_post_meta( $post->ID, 'widcol_testimonials_content', true ) ); ?></p>
+										<p class="testimonial-text"><?php echo wp_kses_post( get_post_meta( $post->ID, 'widcol_testimonials_content', true ) ); ?></p>
 									</div>
 								</div>
 								<div class="swiper-slide-footer">

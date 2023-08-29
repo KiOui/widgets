@@ -160,17 +160,26 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 										break;
 									case 'textarea':
 										?>
-											<textarea style="width: 100%; min-height: 200px;"
-													<?php
-													if ( array_key_exists( 'required', $field ) && $field['required'] ) :
-														?>
-														required
+											<?php if ( array_key_exists( 'editor', $field ) && 'tinymce' === $field['editor'] ) : ?>
+												<?php
+													wp_editor(
+														$meta,
+														$field['id'],
+													);
+												?>
+											<?php else : ?>
+												<textarea style="width: 100%; min-height: 200px;"
 														<?php
-													endif;
-													?>
-												   name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>"><?php echo esc_textarea( $meta ); ?></textarea>
-											<br>
-											<span class="description"><?php echo esc_html( $field['desc'] ); ?></span>
+														if ( array_key_exists( 'required', $field ) && $field['required'] ) :
+															?>
+															required
+															<?php
+														endif;
+														?>
+													   name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>"><?php echo esc_textarea( $meta ); ?></textarea>
+												<br>
+												<span class="description"><?php echo esc_html( $field['desc'] ); ?></span>
+											<?php endif; ?>
 																	<?php
 										break;
 									case 'checkbox':

@@ -194,6 +194,7 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 						'desc'  => __( 'Content of the testimonial', 'widgets-collection' ),
 						'id'    => 'widcol_testimonials_content',
 						'type'  => 'textarea',
+						'editor' => 'tinymce',
 					),
 					array(
 						'label' => __( 'Testimonial author', 'widgets-collection' ),

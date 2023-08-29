@@ -10,10 +10,10 @@
 	<h1 class="wp-heading-inline"><?php esc_html_e( 'Widgets Collection Dashboard', 'widgets-collection' ); ?></h1>
 	<hr class="wp-header-end">
 	<p><?php esc_html_e( 'Widgets Collection settings', 'widgets-collection' ); ?></p>
-	<form action='options.php' method='post'>
+	<form action='/wp-admin/admin.php?page=widcol_admin_menu' method='post'>
 		<?php
-			settings_fields( 'widgets_collection_settings' );
-			do_settings_sections( 'widgets_collection_settings' );
+			settings_fields( 'widcol_settings' );
+			do_settings_sections( 'widcol_admin_menu' );
 			submit_button();
 		?>
 	</form>

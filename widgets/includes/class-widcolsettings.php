@@ -25,6 +25,20 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		protected static ?WidColSettings $_instance = null;
 
 		/**
+		 * The instance of the settings class.
+		 *
+		 * @var Settings
+		 */
+		private Settings $settings;
+
+		/**
+		 * The instance of the settings group class.
+		 *
+		 * @var SettingsGroup
+		 */
+		private SettingsGroup $settings_group;
+
+		/**
 		 * Widgets Collection Settings instance
 		 *
 		 * Uses the Singleton pattern to load 1 instance of this class at maximum
@@ -40,169 +54,67 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 		}
 
 		/**
-		 * WidColSettings constructor.
+		 * SUCSettings constructor.
 		 */
 		public function __construct() {
+			include_once WIDCOL_ABSPATH . 'includes/settings/settings-init.php';
+			include_once WIDCOL_ABSPATH . 'includes/widcol-settings-config.php';
+			initialize_settings_fields();
+
+			$this->settings = SettingsFactory::create_settings( widcol_get_settings_config() );
+			$this->settings->initialize_settings();
+			$this->settings_group = SettingsFactory::create_settings_group( widcol_get_settings_screen_config() );
+
 			$this->actions_and_filters();
+		}
+
+		/**
+		 * Execute custom actions.
+		 */
+		public function do_custom_actions() {
+			if ( get_current_screen()->id === 'toplevel_page_widcol_admin_menu' ) {
+				if ( isset( $_POST['option_page'] ) && isset( $_POST['action'] ) && 'update' == $_POST['action'] && 'widcol_settings' === $_POST['option_page'] && isset( $_POST['_wpnonce'] ) && wp_verify_nonce( wp_unslash( $_POST['_wpnonce'] ), 'widcol_settings-options' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					$this->settings->update_settings( $_POST );
+					$this->settings->save_settings();
+					wp_redirect( '/wp-admin/admin.php?page=widcol_admin_menu' );
+					exit;
+				}
+			}
+		}
+
+		/**
+		 * Register the settings group settings.
+		 *
+		 * @return void
+		 */
+		public function register_settings(): void {
+			$this->settings_group->register( $this->settings );
 		}
 
 		/**
 		 * Add actions and filters.
 		 */
 		public function actions_and_filters(): void {
-			add_action( 'admin_menu', array( $this, 'add_menu_page' ), 99 );
-			add_action( 'admin_init', array( $this, 'register_settings' ) );
-			if ( get_option( 'widgets_collection_settings' )['widgets_collection_testimonials_enabled'] ) {
+			add_action( 'admin_init', array( $this->settings, 'register' ) );
+			add_action( 'admin_menu', array( $this, 'register_settings' ) );
+			add_action( 'current_screen', array( $this, 'do_custom_actions' ), 99 );
+
+			if ( $this->settings->get_value( 'widcol_testimonials_enabled' ) ) {
 				include_once WIDCOL_ABSPATH . '/includes/testimonials/class-widcoltestimonialscore.php';
 				WidColTestimonialsCore::instance();
 			}
-			if ( get_option( 'widgets_collection_settings' )['widgets_collection_gallery_enabled'] ) {
+			if ( $this->settings->get_value( 'widcol_galleries_enabled' ) ) {
 				include_once WIDCOL_ABSPATH . '/includes/gallery/class-widcolgallerycore.php';
 				WidColGalleryCore::instance();
 			}
-			if ( get_option( 'widgets_collection_settings' )['widgets_collection_text_slider_enabled'] ) {
+			if ( $this->settings->get_value( 'widcol_text_sliders_enabled' ) ) {
 				include_once WIDCOL_ABSPATH . '/includes/textslider/class-widcoltextslidercore.php';
 				WidColTextSliderCore::instance();
 			}
-			if ( get_option( 'widgets_collection_settings' )['widgets_collection_badges_enabled'] ) {
+			if ( $this->settings->get_value( 'widcol_badges_enabled' ) ) {
 				include_once WIDCOL_ABSPATH . '/includes/badges/class-widcolbadgescore.php';
 				WidColBadgesCore::instance();
 			}
-		}
-
-		/**
-		 * Add Widget Collection menu page.
-		 */
-		public function add_menu_page(): void {
-			add_menu_page(
-				esc_html__( 'Widgets', 'widgets-collection' ),
-				esc_html__( 'Widgets', 'widgets-collection' ),
-				'edit_plugins',
-				'widgets_collection_admin_menu',
-				null,
-				'dashicons-awards',
-				56
-			);
-			add_submenu_page(
-				'widgets_collection_admin_menu',
-				esc_html__( 'Widgets Dashboard', 'widgets-collection' ),
-				esc_html__( 'Dashboard', 'widgets-collection' ),
-				'edit_plugins',
-				'widgets_collection_admin_menu',
-				array( $this, 'widgets_admin_menu_dashboard_callback' )
-			);
-		}
-
-		/**
-		 * Register Widget Collection settings.
-		 */
-		public function register_settings(): void {
-			register_setting(
-				'widgets_collection_settings',
-				'widgets_collection_settings',
-				array( $this, 'widgets_collection_settings_validate' )
-			);
-			add_settings_section(
-				'enabled_widgets_section',
-				__( 'Enabled widgets', 'widgets-collection' ),
-				array( $this, 'widgets_collection_enabled_widgets_callback' ),
-				'widgets_collection_settings'
-			);
-			add_settings_field(
-				'widgets_collection_testimonials_enabled',
-				__( 'Enable Testimonials', 'widgets-collection' ),
-				array( $this, 'widgets_collection_testimonials_enabled_renderer' ),
-				'widgets_collection_settings',
-				'enabled_widgets_section'
-			);
-			add_settings_field(
-				'widgets_collection_gallery_enabled',
-				__( 'Enable Galleries', 'widgets-collection' ),
-				array( $this, 'widgets_collection_gallery_enabled_renderer' ),
-				'widgets_collection_settings',
-				'enabled_widgets_section'
-			);
-			add_settings_field(
-				'widgets_collection_text_slider_enabled',
-				__( 'Enable Text Sliders', 'widgets-collection' ),
-				array( $this, 'widgets_collection_text_slider_enabled_renderer' ),
-				'widgets_collection_settings',
-				'enabled_widgets_section'
-			);
-			add_settings_field(
-				'widgets_collection_badges_enabled',
-				__( 'Enable Badges', 'widgets-collection' ),
-				array( $this, 'widgets_collection_badges_enabled_renderer' ),
-				'widgets_collection_settings',
-				'enabled_widgets_section'
-			);
-		}
-
-		/**
-		 * Validate Widget Collection settings.
-		 *
-		 * @param $input
-		 * @return array
-		 */
-		public function widgets_collection_settings_validate( $input ): array {
-			$output['widgets_collection_testimonials_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_testimonials_enabled'] );
-			$output['widgets_collection_gallery_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_gallery_enabled'] );
-			$output['widgets_collection_text_slider_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_text_slider_enabled'] );
-			$output['widgets_collection_badges_enabled'] = widgets_collection_sanitize_boolean_default_false( $input['widgets_collection_badges_enabled'] );
-			return $output;
-		}
-
-		/**
-		 * Render widget collection testimonials enabled setting.
-		 */
-		public function widgets_collection_testimonials_enabled_renderer(): void {
-			$options = get_option( 'widgets_collection_settings' ); ?>
-			<input type='checkbox' name='widgets_collection_settings[widgets_collection_testimonials_enabled]' <?php checked( $options['widgets_collection_testimonials_enabled'], 1 ); ?> value='1'>
-			<?php
-		}
-
-		/**
-		 * Render widget collection gallery enabled setting.
-		 */
-		public function widgets_collection_gallery_enabled_renderer(): void {
-			$options = get_option( 'widgets_collection_settings' );
-			?>
-			<input type='checkbox' name='widgets_collection_settings[widgets_collection_gallery_enabled]' <?php checked( $options['widgets_collection_gallery_enabled'], 1 ); ?> value='1'>
-			<?php
-		}
-
-		/**
-		 * Render widget collection text slider enabled setting.
-		 */
-		public function widgets_collection_text_slider_enabled_renderer(): void {
-			$options = get_option( 'widgets_collection_settings' );
-			?>
-			<input type='checkbox' name='widgets_collection_settings[widgets_collection_text_slider_enabled]' <?php checked( $options['widgets_collection_text_slider_enabled'], 1 ); ?> value='1'>
-			<?php
-		}
-
-		/**
-		 * Render widget collection badges enabled setting.
-		 */
-		public function widgets_collection_badges_enabled_renderer(): void {
-			$options = get_option( 'widgets_collection_settings' );
-			?>
-			<input type='checkbox' name='widgets_collection_settings[widgets_collection_badges_enabled]' <?php checked( $options['widgets_collection_badges_enabled'], 1 ); ?> value='1'>
-			<?php
-		}
-
-		/**
-		 * Render the section title of enabled widgets.
-		 */
-		public function widgets_collection_enabled_widgets_callback(): void {
-			echo esc_html( __( 'Enabled widgets', 'widgets-collection' ) );
-		}
-
-		/**
-		 * Admin menu dashboard callback.
-		 */
-		public function widgets_admin_menu_dashboard_callback(): void {
-			include_once WIDCOL_ABSPATH . 'views/widcol-admin-dashboard-view.php';
 		}
 	}
 }
