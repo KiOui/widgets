@@ -51,7 +51,6 @@ if ( ! class_exists( 'WidColBadgesCore' ) ) {
 		 * Add actions and filters.
 		 */
 		public function actions_and_filters(): void {
-
 		}
 
 		/**

@@ -23,6 +23,6 @@ if ( ! defined( 'WIDCOL_PLUGIN_URI' ) ) {
 	define( 'WIDCOL_PLUGIN_URI', plugin_dir_url( __FILE__ ) );
 }
 
-include_once dirname( __FILE__ ) . '/includes/class-widcolcore.php';
+include_once __DIR__ . '/includes/class-widcolcore.php';
 
 WidColCore::instance();

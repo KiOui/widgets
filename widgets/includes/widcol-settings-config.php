@@ -73,7 +73,7 @@ if ( ! function_exists( 'widcol_get_settings_screen_config' ) ) {
 					'menu_title'        => esc_html__( 'Dashboard', 'widgets-collection' ),
 					'capability_needed' => 'manage_options',
 					'menu_slug'         => 'widcol_admin_menu',
-					'renderer'          => function() {
+					'renderer'          => function () {
 						include_once WIDCOL_ABSPATH . 'views/widcol-admin-dashboard-view.php';
 					},
 					'settings_sections' => array(

@@ -165,6 +165,9 @@ if ( ! class_exists( 'WidColMetabox' ) ) {
 													wp_editor(
 														$meta,
 														$field['id'],
+														array(
+															'wpautop' => true,
+														)
 													);
 												?>
 											<?php else : ?>

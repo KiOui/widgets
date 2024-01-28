@@ -59,7 +59,7 @@ if ( ! class_exists( 'SettingsGroup' ) ) {
 		 *
 		 * @var int
 		 */
-		private int $position;
+		private ?int $position;
 
 		/**
 		 * The settings pages in this group.
@@ -76,10 +76,10 @@ if ( ! class_exists( 'SettingsGroup' ) ) {
 		 * @param string         $capability_needed WordPress' capability needed to access this SettingsPage.
 		 * @param string         $menu_slug slug of the SettingsPage.
 		 * @param string         $icon WordPress' icon of the SettingsPage.
-		 * @param int            $position the position to render this SettingsPage in.
+		 * @param ?int           $position the position to render this SettingsPage in.
 		 * @param SettingsPage[] $settings_pages an array of SettingsMenu's to register under this SettingsPage.
 		 */
-		public function __construct( string $page_title, string $menu_title, string $capability_needed, string $menu_slug, string $icon, int $position, array $settings_pages = array() ) {
+		public function __construct( string $page_title, string $menu_title, string $capability_needed, string $menu_slug, string $icon, ?int $position, array $settings_pages = array() ) {
 			$this->page_title = $page_title;
 			$this->menu_title = $menu_title;
 			$this->capability_needed = $capability_needed;
