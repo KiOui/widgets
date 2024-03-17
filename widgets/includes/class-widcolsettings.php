@@ -115,6 +115,10 @@ if ( ! class_exists( 'WidColSettings' ) ) {
 				include_once WIDCOL_ABSPATH . '/includes/badges/class-widcolbadgescore.php';
 				WidColBadgesCore::instance();
 			}
+			if ( $this->settings->get_value( 'widcol_counters_enabled' ) ) {
+				include_once WIDCOL_ABSPATH . '/includes/counters/WidColCountersCore.php';
+				WidColCountersCore::instance();
+			}
 		}
 	}
 }

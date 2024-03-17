@@ -48,6 +48,13 @@ if ( ! function_exists( 'widcol_get_settings_config' ) ) {
 					'default' => false,
 					'hint'    => __( 'Whether badges are enabled.', 'widgets-collection' ),
 				),
+				array(
+					'type'    => 'bool',
+					'id'      => 'widcol_counters_enabled',
+					'name'    => __( 'Counters Enabled', 'widgets-collection' ),
+					'default' => false,
+					'hint'    => __( 'Whether counters are enabled.', 'widgets-collection' ),
+				),
 			),
 		);
 	}
@@ -85,6 +92,7 @@ if ( ! function_exists( 'widcol_get_settings_screen_config' ) ) {
 								'widcol_galleries_enabled',
 								'widcol_text_sliders_enabled',
 								'widcol_badges_enabled',
+								'widcol_counters_enabled',
 							),
 						),
 					),
