@@ -62,7 +62,7 @@
     font-weight: bold;
 }
 
-.widcol-swiper-container .star-rating {
+.widcol-swiper-container .widcol-star-rating {
     width: 100%;
     display: flex;
     justify-content: center;

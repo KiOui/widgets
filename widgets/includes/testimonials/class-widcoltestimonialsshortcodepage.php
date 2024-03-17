@@ -185,7 +185,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodePage' ) ) {
 											<h3><?php echo esc_html( get_the_title( $post ) ); ?></h3>
 											<p class="testimonial-text"><?php echo wpautop( wp_kses_post( get_post_meta( $post->ID, 'widcol_testimonials_content', true ) ) ); ?></p>
 											<?php if ( $this->enable_star_rating ) : ?>
-												<div class="star-rating">
+												<div class="widcol-star-rating">
 													<?php for ( $i = 0; $i < get_post_meta( $post->ID, 'widcol_testimonials_rating', true ); $i++ ) : ?>
 														<span class="dashicons dashicons-star-filled"></span>
 													<?php endfor; ?>

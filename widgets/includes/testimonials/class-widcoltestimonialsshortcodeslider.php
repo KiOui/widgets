@@ -241,7 +241,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 							<div class="swiper-slide">
 								<div class="swiper-slide-header">
 									<?php if ( $this->enable_star_rating ) : ?>
-										<div class="star-rating">
+										<div class="widcol-star-rating">
 											<?php for ( $i = 0; $i < get_post_meta( $post->ID, 'widcol_testimonials_rating', true ); $i++ ) : ?>
 												<span class="dashicons dashicons-star-filled"></span>
 											<?php endfor; ?>
