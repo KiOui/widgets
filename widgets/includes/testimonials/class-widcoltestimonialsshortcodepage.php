@@ -140,6 +140,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodePage' ) ) {
 		 * Include all styles and scripts required for this slider to work.
 		 */
 		public function include_styles_and_scripts() {
+			wp_enqueue_style( 'dashicons' );
 			wp_enqueue_style( 'widcol-testimonial-shortcode-page', WIDCOL_PLUGIN_URI . 'assets/testimonials/css/widcol-testimonial-shortcode-page.css', array(), '1.0' );
 			if ( $this->theme_color ) {
 				wp_add_inline_style(

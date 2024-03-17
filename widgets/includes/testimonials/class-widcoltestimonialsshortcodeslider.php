@@ -183,6 +183,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		public function include_styles_and_scripts() {
 			wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), '1.0' );
 			wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), '1.0' );
+			wp_enqueue_style( 'dashicons' );
 			wp_enqueue_script( 'swiper-activation', WIDCOL_PLUGIN_URI . 'assets/testimonials/js/swiper-activation.js', array( 'swiper-js' ), '1.0', true );
 			wp_enqueue_style( 'swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/testimonials/css/swiper-overrides.css', array(), '1.0' );
 			if ( $this->theme_color ) {
