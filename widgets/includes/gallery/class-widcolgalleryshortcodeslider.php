@@ -153,10 +153,11 @@ if ( ! class_exists( 'WidColGalleryShortcodeSlider' ) ) {
 		/**
 		 * Include all styles and scripts required for the gallery to work.
 		 */
-		public function include_styles_and_scripts() {
-			wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), '1.0' );
-			wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), '1.0' );
-			wp_enqueue_script( 'gallery-swiper-activation', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-swiper-activation.js', array( 'swiper-js' ), '1.0', true );
+		public function include_styles_and_scripts(): void
+        {
+			wp_enqueue_style( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/css/swiper/swiper-bundle.min.css', array(), '11.1.0' );
+			wp_enqueue_script( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/js/swiper/swiper-bundle.min.js', array(), '11.1.0' );
+			wp_enqueue_script( 'gallery-swiper-activation', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-swiper-activation.js', array( 'swiper' ), '1.0', true );
 			wp_enqueue_style( 'gallery-swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/gallery/css/gallery-swiper-overrides.css', array(), '1.0' );
 		}
 
@@ -165,7 +166,8 @@ if ( ! class_exists( 'WidColGalleryShortcodeSlider' ) ) {
 		 *
 		 * @param WidColGalleryShortcodeSlider[] $sliders sliders to localize the activation script for.
 		 */
-		public static function localize_gallery_activation( array $sliders ) {
+		public static function localize_gallery_activation( array $sliders ): void
+        {
 			$configs = array();
 			foreach ( $sliders as $slider ) {
 				if ( $slider->get_id() !== null ) {
@@ -184,7 +186,8 @@ if ( ! class_exists( 'WidColGalleryShortcodeSlider' ) ) {
 		 *
 		 * @return false|string
 		 */
-		public function do_shortcode() {
+		public function do_shortcode(): bool|string
+        {
 			ob_start();
 			$gallery_post = $this->get_gallery_post();
 			if ( isset( $gallery_post ) ) {

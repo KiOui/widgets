@@ -123,8 +123,8 @@ if ( ! class_exists( 'WidColBadgesShortcodeBadge' ) ) {
 		public function include_styles_and_scripts(): void {
 			wp_enqueue_style( 'widcol-badges', WIDCOL_PLUGIN_URI . 'assets/badges/css/widcol-badges.css', array(), '1.0' );
 			if ( isset( $this->popup_text ) ) {
-				wp_enqueue_style( 'bootstrap', WIDCOL_PLUGIN_URI . 'assets/badges/css/bootstrap.min.css', array(), '5.1.3' );
-				wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array(), '5.1.3' );
+				wp_enqueue_style( 'bootstrap', WIDCOL_PLUGIN_URI . 'assets/global/css/bootstrap/bootstrap.min.css', array(), '5.3.3' );
+				wp_enqueue_script( 'bootstrap', WIDCOL_PLUGIN_URI . 'assets/global/js/bootstrap/bootstrap.bundle.min.js', array(), '5.3.3' );
 			}
 		}
 
