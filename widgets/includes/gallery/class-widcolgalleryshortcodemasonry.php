@@ -93,8 +93,7 @@ if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 		/**
 		 * Include all styles and scripts required for the gallery to work.
 		 */
-		public function include_styles_and_scripts(): void
-        {
+		public function include_styles_and_scripts(): void {
 			wp_enqueue_script( 'macy', WIDCOL_PLUGIN_URI . 'assets/global/js/macy/macy.js', array(), '2.5.1', false );
 			wp_enqueue_script( 'gallery-masonry-activation', WIDCOL_PLUGIN_URI . 'assets/gallery/js/gallery-masonry-activation.js', array( 'macy' ), '1.0', true );
 		}
@@ -104,8 +103,7 @@ if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 		 *
 		 * @param WidColGalleryShortcodeMasonry[] $galleries galleries to localize the activation script for.
 		 */
-		public static function localize_gallery_activation( array $galleries ): void
-        {
+		public static function localize_gallery_activation( array $galleries ): void {
 			$configs = array();
 			foreach ( $galleries as $gallery ) {
 				$configs[] = array(
@@ -121,8 +119,7 @@ if ( ! class_exists( 'WidColGalleryShortcodeMasonry' ) ) {
 		 *
 		 * @return false|string
 		 */
-		public function do_shortcode(): bool|string
-        {
+		public function do_shortcode(): bool|string {
 			ob_start();
 			$gallery_post = $this->get_gallery_post();
 			if ( isset( $gallery_post ) ) {

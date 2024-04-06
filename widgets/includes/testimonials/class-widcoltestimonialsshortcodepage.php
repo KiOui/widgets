@@ -139,8 +139,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodePage' ) ) {
 		/**
 		 * Include all styles and scripts required for this slider to work.
 		 */
-		public function include_styles_and_scripts(): void
-        {
+		public function include_styles_and_scripts(): void {
 			wp_enqueue_style( 'dashicons' );
 			wp_enqueue_style( 'widcol-testimonial-shortcode-page', WIDCOL_PLUGIN_URI . 'assets/testimonials/css/widcol-testimonial-shortcode-page.css', array(), '1.0' );
 			if ( $this->theme_color ) {
@@ -165,8 +164,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodePage' ) ) {
 		 *
 		 * @return false|string
 		 */
-		public function do_shortcode(): bool|string
-        {
+		public function do_shortcode(): bool|string {
 			ob_start();
 			$posts = $this->get_posts(); ?>
 				<div id="testimonial-page-container-<?php echo esc_attr( $this->id ); ?>" class="testimonial-container widcol-testimonial-page-container">

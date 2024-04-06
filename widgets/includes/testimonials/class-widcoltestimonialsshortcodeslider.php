@@ -180,10 +180,10 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		/**
 		 * Include all styles and scripts required for this slider to work.
 		 */
-		public function include_styles_and_scripts(): void
-        {
-            wp_enqueue_style( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/css/swiper/swiper-bundle.min.css', array(), '11.1.0' );
-            wp_enqueue_script( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/js/swiper/swiper-bundle.min.js', array(), '11.1.0' );			wp_enqueue_style( 'dashicons' );
+		public function include_styles_and_scripts(): void {
+			wp_enqueue_style( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/css/swiper/swiper-bundle.min.css', array(), '11.1.0' );
+			wp_enqueue_script( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/js/swiper/swiper-bundle.min.js', array(), '11.1.0' );
+			wp_enqueue_style( 'dashicons' );
 			wp_enqueue_script( 'swiper-activation', WIDCOL_PLUGIN_URI . 'assets/testimonials/js/swiper-activation.js', array( 'swiper' ), '1.0', true );
 			wp_enqueue_style( 'swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/testimonials/css/swiper-overrides.css', array(), '1.0' );
 			if ( $this->theme_color ) {
@@ -215,8 +215,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		 *
 		 * @param WidColTestimonialsShortcodeSlider[] $sliders sliders to localize the activation script for.
 		 */
-		public static function localize_swiper_activation( array $sliders ): void
-        {
+		public static function localize_swiper_activation( array $sliders ): void {
 			$configs = array();
 			foreach ( $sliders as $slider ) {
 				$configs[] = array(
@@ -232,8 +231,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		 *
 		 * @return false|string
 		 */
-		public function do_shortcode(): bool|string
-        {
+		public function do_shortcode(): bool|string {
 			ob_start();
 			$posts = $this->get_posts(); ?>
 				<div id="swiper-container-<?php echo esc_attr( $this->id ); ?>" class="swiper-container widcol-swiper-container">

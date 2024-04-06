@@ -118,8 +118,8 @@ if ( ! class_exists( 'WidColTextSliderShortcodeSlider' ) ) {
 		 * Include all styles and scripts required for this slider to work.
 		 */
 		public function include_styles_and_scripts() {
-            wp_enqueue_style( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/css/swiper/swiper-bundle.min.css', array(), '11.1.0' );
-            wp_enqueue_script( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/js/swiper/swiper-bundle.min.js', array(), '11.1.0' );
+			wp_enqueue_style( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/css/swiper/swiper-bundle.min.css', array(), '11.1.0' );
+			wp_enqueue_script( 'swiper', WIDCOL_PLUGIN_URI . 'assets/global/js/swiper/swiper-bundle.min.js', array(), '11.1.0' );
 			wp_enqueue_script( 'text-swiper-activation', WIDCOL_PLUGIN_URI . 'assets/textslider/js/text-swiper-activation.js', array( 'swiper' ), '1.0', true );
 			wp_enqueue_style( 'text-swiper-overrides', WIDCOL_PLUGIN_URI . 'assets/textslider/css/text-swiper-overrides.css', array(), '1.0' );
 		}
