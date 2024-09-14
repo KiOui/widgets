@@ -211,7 +211,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		/**
 		 * Render the custom meta box for gallery images.
 		 *
-		 * @param $post WP_Post post to render the metabox for
+		 * @param WP_Post $post post to render the metabox for.
 		 */
 		public function render_meta_box_gallery( WP_Post $post ) {
 			wp_nonce_field( basename( __FILE__ ), 'widcol-gallery_nonce' );
@@ -262,7 +262,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		/**
 		 * Save the custom meta box gallery images.
 		 *
-		 * @param $post_id int the post id to save the gallery images for.
+		 * @param int $post_id the post id to save the gallery images for.
 		 *
 		 * @return int the post ID.
 		 */
@@ -287,7 +287,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		/**
 		 * Do the masonry shortcode of a gallery.
 		 *
-		 * @param $atts string|array shortcode attributes
+		 * @param string|array $atts shortcode attributes.
 		 * @return false|string a string with the shortcode or false on failure
 		 */
 		public function do_shortcode_masonry( string|array $atts ): string|false {
@@ -304,7 +304,7 @@ if ( ! class_exists( 'WidColGalleryCore' ) ) {
 		/**
 		 * Do the slider shortcode of a gallery.
 		 *
-		 * @param $atts string|array shortcode attributes
+		 * @param string|array $atts shortcode attributes.
 		 * @return false|string a string with the shortcode or false on failure
 		 */
 		public function do_shortcode_slider( string|array $atts ): string|false {

@@ -67,3 +67,8 @@
     display: flex;
     justify-content: center;
 }
+
+.widcol-swiper-container .widcol-testimonial-slider-image {
+    margin: auto;
+    max-width: 300px;
+}

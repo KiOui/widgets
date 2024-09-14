@@ -261,7 +261,7 @@ if ( ! class_exists( 'SettingsField' ) ) {
 		/**
 		 * Validate a value for this setting.
 		 *
-		 * @param $value_to_validate mixed the value to validate for this setting.
+		 * @param mixed $value_to_validate the value to validate for this setting.
 		 *
 		 * @return bool whether the value could be validated correctly.
 		 */

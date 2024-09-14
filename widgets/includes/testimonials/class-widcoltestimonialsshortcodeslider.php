@@ -67,6 +67,13 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		private bool $enable_star_rating = true;
 
 		/**
+		 * Whether image should be shown.
+		 *
+		 * @var bool
+		 */
+		private bool $enable_image = false;
+
+		/**
 		 * Categories to include in slider.
 		 *
 		 * @var array
@@ -91,6 +98,7 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 		 *      @type string    $slides_per_view        How many slides per view to show. Defaults to 1.
 		 *      @type string    $enable_star_rating     Whether or not to enable the star rating on the slider, defaults
 		 *                                              to true.
+		 *      @type string    $enable_image           Whether to enable the image on the slider, defaults to false.
 		 *      @type string    $category               List of comma-separated categories of testimonials to include,
 		 *                                              defaults to all categories (array(0)).
 		 * }
@@ -128,6 +136,10 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 			if ( key_exists( 'enable_star_rating', $atts ) && 'string' === gettype( $atts['enable_star_rating'] ) ) {
 				$star_rating_enabled = filter_var( $atts['enable_star_rating'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
 				$this->enable_star_rating = $star_rating_enabled ?? false;
+			}
+			if ( key_exists( 'enable_image', $atts ) && 'string' === gettype( $atts['enable_image'] ) ) {
+				$enable_image = filter_var( $atts['enable_image'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
+				$this->enable_image = $enable_image ?? true;
 			}
 			if ( key_exists( 'category', $atts ) && 'string' === gettype( $atts['category'] ) ) {
 				include_once WIDCOL_ABSPATH . 'includes/testimonials/widcol-testimonials-functions.php';
@@ -241,6 +253,11 @@ if ( ! class_exists( 'WidColTestimonialsShortcodeSlider' ) ) {
 							?>
 							<div class="swiper-slide">
 								<div class="swiper-slide-header">
+									<?php if ( $this->enable_image ) : ?>
+										<div class="widcol-testimonial-slider-image">
+											<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
+										</div>
+									<?php endif; ?>
 									<?php if ( $this->enable_star_rating ) : ?>
 										<div class="widcol-star-rating">
 											<?php for ( $i = 0; $i < get_post_meta( $post->ID, 'widcol_testimonials_rating', true ); $i++ ) : ?>

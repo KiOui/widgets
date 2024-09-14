@@ -209,7 +209,7 @@ if ( ! class_exists( 'WidColTextSliderCore' ) ) {
 		/**
 		 * Do the shortcode of a text slider.
 		 *
-		 * @param $atts
+		 * @param mixed $atts shortcode attributes.
 		 * @return false|string
 		 */
 		public function do_shortcode_slider( $atts ) {

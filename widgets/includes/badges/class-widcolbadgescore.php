@@ -63,7 +63,7 @@ if ( ! class_exists( 'WidColBadgesCore' ) ) {
 		/**
 		 * Do the shortcode of badge.
 		 *
-		 * @param $atts
+		 * @param mixed $atts shortcode attributes.
 		 * @return string
 		 */
 		public function do_shortcode_badge( $atts ): string {

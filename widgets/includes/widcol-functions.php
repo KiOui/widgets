@@ -13,7 +13,7 @@ if ( ! function_exists( 'widgets_collection_sanitize_boolean_default_false' ) ) 
 	/**
 	 * Sanitize boolean value (default to false).
 	 *
-	 * @param $input
+	 * @param mixed $input Input of the sanitization.
 	 * @return bool
 	 */
 	function widgets_collection_sanitize_boolean_default_false( $input ): bool {

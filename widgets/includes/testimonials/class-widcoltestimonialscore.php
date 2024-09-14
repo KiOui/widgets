@@ -219,7 +219,7 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 		/**
 		 * Do the shortcode of a slider.
 		 *
-		 * @param $atts
+		 * @param mixed $atts Attributes given to the shortcode.
 		 * @return false|string
 		 */
 		public function do_shortcode_slider( $atts ) {
@@ -236,7 +236,7 @@ if ( ! class_exists( 'WidColTestimonialsCore' ) ) {
 		/**
 		 * Do the shortcode of a testimonials page.
 		 *
-		 * @param $atts
+		 * @param mixed $atts Attributes given to the shortcode.
 		 * @return false|string
 		 */
 		public function do_shortcode_page( $atts ) {

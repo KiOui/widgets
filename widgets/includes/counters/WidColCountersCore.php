@@ -63,7 +63,7 @@ if ( ! class_exists( 'WidColCountersCore' ) ) {
 		/**
 		 * Do the shortcode of counter.
 		 *
-		 * @param $atts
+		 * @param mixed $atts shortcode attributes.
 		 * @return string
 		 */
 		public function do_shortcode_counter( $atts ): string {
